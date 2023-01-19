@@ -9,16 +9,20 @@ const Header = () => {
       <div className='header__logo-container'>
         <Logo />
       </div>
+      <div className='header__line'></div>
       <nav>
         <ul className='header__navigation'>
-          <li>
-            <p>Предмет</p>
+          <li className='header__link-container'>
+            <a className='header__link' href='/'>Главная</a>
           </li>
-          <li>
-            <p>О проекте</p>
+          <li className='header__link-container'>
+            <a className='header__link' href='/about-project'>О проекте</a>
           </li>
         </ul>
       </nav>
+      <div className='header__search'>
+        <p>Поиск по сайту</p>
+      </div>
     </header>
   );
 }

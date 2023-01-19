@@ -15,7 +15,11 @@ function App() {
   return (
     <div>
       {
-        location.pathname === '/' ?
+        location.pathname === '/' ||
+        location.pathname === '/works-list' ||
+        location.pathname === '/work-preview' ||
+        location.pathname === '/about-project'
+          ?
         <Header/> : <></>
       }
       <Routes>
@@ -44,10 +48,13 @@ function App() {
         Privet!!!!
       </p>
       {
-        location.pathname === '/' ?
+        location.pathname === '/' ||
+        location.pathname === '/works-list' ||
+        location.pathname === '/work-preview' ||
+        location.pathname === '/about-project'
+          ?
           <Footer/> : <></>
       }
-
     </div>
   );
 }
