@@ -1,13 +1,12 @@
 .footer {
-    margin-left: 362px;
-    margin-top: 729px;
-    min-height: 64px;
+    margin-left: 96px;
     max-width: 948px;
     border-top: #7A7A7A 1px solid;
 }
 
 .footer-text {
     margin-top: 17px;
+    margin-bottom: 0;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

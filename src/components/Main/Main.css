@@ -2,6 +2,8 @@
     min-height: 801px;
     border: red 1px solid;
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
 .main__image-wave {
@@ -14,4 +16,13 @@
     position: absolute;
     left: 354px;
     bottom: 9px;
+}
+
+.main__content-container {
+    border: darkred 1px solid;
+}
+
+.main__content {
+    min-height: 736px;
+    border: blue 1px solid;
 }
