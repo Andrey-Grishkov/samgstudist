@@ -1,0 +1,17 @@
+.main {
+    min-height: 801px;
+    border: red 1px solid;
+    position: relative;
+}
+
+.main__image-wave {
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+}
+
+.main__image-women {
+    position: absolute;
+    left: 354px;
+    bottom: 9px;
+}

@@ -44,17 +44,6 @@ function App() {
         }>
         </Route>
       </Routes>
-      <p>
-        Privet!!!!
-      </p>
-      {
-        location.pathname === '/' ||
-        location.pathname === '/works-list' ||
-        location.pathname === '/work-preview' ||
-        location.pathname === '/about-project'
-          ?
-          <Footer/> : <></>
-      }
     </div>
   );
 }

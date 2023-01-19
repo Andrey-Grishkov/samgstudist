@@ -4,8 +4,9 @@ import './Footer.css'
 const Footer = () => {
 
   return (
-    <section>
-      <p>Footer</p>
+    <section className='footer'>
+      <p className='footer-text'>Все материалы представленные на сайте исключительно с целью ознакомления читателями и
+        не преследуют коммерческих целей или нарушение авторских прав</p>
     </section>
   );
 }

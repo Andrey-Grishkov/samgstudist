@@ -1,0 +1,16 @@
+.footer {
+    margin-left: 362px;
+    margin-top: 729px;
+    min-height: 64px;
+    max-width: 948px;
+    border-top: #7A7A7A 1px solid;
+}
+
+.footer-text {
+    margin-top: 17px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 131.52%;
+    color: #7A7A7A;
+}
