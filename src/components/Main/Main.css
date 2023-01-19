@@ -4,12 +4,14 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
 }
 
 .main__image-wave {
     position: absolute;
     z-index: -2;
     bottom: 0;
+    width: 100%;
 }
 
 .main__image-women {

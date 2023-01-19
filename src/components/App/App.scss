@@ -1,5 +1,5 @@
 .page {
-    max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
     font-family: Source Serif Pro, Arial, sans-serif;
     color: black;
@@ -9,5 +9,6 @@
     -moz-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
 }
 
