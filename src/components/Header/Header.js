@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css'
 import Logo from "../Logo/Logo";
+import search from "../../images/search__img.svg";
 
 const Header = () => {
 
@@ -20,9 +21,19 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className='header__search'>
-        <p>Поиск по сайту</p>
-      </div>
+      <form className='header__search-form'>
+        <button className='search__search-button' type='submit'>
+          <img className='search__search-img' src={search} alt='кнопка поиска'/>
+        </button>
+        <input
+          className='search-form__name'
+          placeholder='Поиск по сайту'
+          type='text'
+          id="search-form"
+          name="search-form"
+          required
+        />
+      </form>
     </header>
   );
 }

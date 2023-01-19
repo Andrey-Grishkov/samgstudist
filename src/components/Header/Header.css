@@ -34,7 +34,6 @@
 
 .header__link-container {
 
-
 }
 
 .header__link-container:last-of-type {
@@ -50,9 +49,40 @@
     color: black;
 }
 
-
-
-.header__search {
+.header__search-form {
     margin-left: 215px;
+    min-width: 512px;
+    min-height: 49px;
     border: darkred 1px solid;
+    border-radius: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.search__search-button {
+    padding: 0;
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.search__search-img {
+    max-width: 49px;
+}
+
+.search-form__name {
+    background: none;
+    color: black;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 32px;
+    min-width: 417px;
+
+    border-radius: 1000px;
+    padding-left: 95px;
 }
