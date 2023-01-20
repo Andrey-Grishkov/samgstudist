@@ -10,6 +10,26 @@
     position: relative;
     overflow: hidden;
 
+    &__button {
+       
+        position: absolute;
+        top: 22px;
+        left: 18px;
+        border-radius: 10px;
+        color: white;
+        border: 3px solid #8F01FF;
+        background-color: #580BFF;
+        padding: 7px 3px 7px 16px;
+        max-width: 175px;
+        height: 39px;
+    }
+
+    &__link {
+        @include flex(row, space-around, center);
+        color: white;
+        text-decoration: none;
+    }
+
     &__list {   
         @include flex(row, center, center);
         position: absolute;
@@ -28,13 +48,10 @@
         &_title {
             margin: 0;
             color: white;
+            text-align: center;
         }
     }
 
-    &_container {
-        width: 100%;
-        height: 100%;
-    }
     
     &__img {
         &_cart {

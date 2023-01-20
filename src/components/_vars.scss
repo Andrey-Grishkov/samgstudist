@@ -1,5 +1,5 @@
-@mixin font($weight, $size, $height) {
-    font-family: 'Inter', Arial, sans-serif;
+@mixin font($fntfml, $weight, $size, $height) {
+    font-family: '$fntfml', Arial, sans-serif;
     font-size: $size;
     font-weight: $weight;
     line-height: $height;
