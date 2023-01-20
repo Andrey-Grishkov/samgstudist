@@ -8,17 +8,22 @@
     background-color: black;
     background-repeat: no-repeat;
     position: relative;
+    overflow: hidden;
 
-    &__list {
+    &__list {   
+        @include flex(row, center, center);
         position: absolute;
+        padding: 0;
         top: 47px;
         right: 41px;
         margin: 0;
         list-style: none;
         width: 39%;
         height: 86%;
-        border: 3px solid white;
-        border-radius: 20px;
+        border-width: 3px;
+        border-style: solid;
+        border-image: linear-gradient(rgba(0, 255, 133, 1), rgba(0, 102, 255, 1), rgba(173, 0, 255, .97)) 1;
+        z-index: 2;    
 
         &_title {
             margin: 0;
@@ -26,13 +31,16 @@
         }
     }
 
+    &_container {
+        width: 100%;
+        height: 100%;
+    }
+    
     &__img {
         &_cart {
             position: absolute;
             bottom: 0;
             left: 40px;
-            object-fit: cover;
-            // width: 100%;
         }
 
         &_peoples {

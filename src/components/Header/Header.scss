@@ -7,17 +7,16 @@
     padding: 0 38px 0 64px;
     box-sizing: border-box;
     @include flex(row, flex-start, center);
-    border: yellow 1px solid;
+    // border: yellow 1px solid;
     background-image: linear-gradient(270deg, rgba(0, 255, 148, 0.42) 0%, rgba(0, 102, 255, 0.42) 48.66%, rgba(219, 0, 255, 0.2436) 100%);
     
     &__team {
         background-image: linear-gradient(90deg, #8F00FF 49.06%, rgba(66, 0, 255, 0.95) 100%, rgba(255, 0, 0, 0) 100%);
-
     }
 
     &__logo-container {
         margin: 0 0 8px;
-        border: forestgreen 1px solid;
+        // border: forestgreen 1px solid;
 
     }
     
@@ -45,7 +44,7 @@
 
     &__navigation {
         margin: 47px auto 40px 74px;
-        border: blue 1px solid;
+        // border: blue 1px solid;
         padding: 0;
         box-sizing: border-box;
         height: 33px;
@@ -66,19 +65,12 @@
         font-size: 21px;
         line-height: 32px;
         color: black;
-
-        &-container {
-
-            &:last-of-type {
-                // margin-left: 59px;
-            }
-        }
     }
 
     &__search-form {
         min-width: 512px;
         min-height: 49px;
-        border: darkred 1px solid;
+        // border: darkred 1px solid;
         border-radius: 1000px;
         @include flex(row, flex-start, stretch);
         position: relative;
@@ -110,8 +102,7 @@
             font-size: 21px;
             line-height: 32px;
             min-width: 417px;
-
-            border-radius: 1000px;
+            border-radius: 100px;
             padding-left: 95px;
         }
     }
