@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainPageWorkPreview.css'
+import './MainPageWorkPreview.scss'
 
 const MainPageWorkPreview = () => {
 

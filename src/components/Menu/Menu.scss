@@ -1,0 +1,93 @@
+$base-width:193px;
+$base-height:44px;
+%text {
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 32px;
+}
+
+// Добавить в свойства text, чтобы обрезался текст, который не влез...
+//    overflow: hidden;
+//    text-overflow: ellipsis;
+//    white-space: nowrap;
+
+%base-cell {
+    border: 1px solid #2ED7D9;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+}
+
+.menu {
+    margin: 22px 0 16px 71px;
+    width: $base-width;
+    height: 763px;
+    border: blue 1px solid;
+}
+
+// выпадающее меню
+.menu__dropdown {
+    position: relative;
+    display: inline-block;
+
+    .menu__dropdown_btn {
+        background: none;
+        @extend %text;
+        min-height: $base-height;
+        border: 3px solid #2ED7D9;
+        cursor: pointer;
+        min-width: $base-width;
+        &:hover, &:focus {
+            background-color: rgba(204, 230, 228, 0.42);
+        }
+        &:focus {
+            border: 5px solid #2E49D9;
+        }
+    }
+
+    .menu__dropdown-content {
+        display: none;
+        position: absolute;
+        background-color:white;
+        max-width: $base-width;
+        z-index: 1;
+
+        a {
+            min-height: $base-height;
+            text-decoration: none;
+            @extend %text;
+            @extend %base-cell;
+
+            &:hover {
+                background-color: rgba(204, 230, 228, 0.42);
+            }
+        }
+
+        &.menu__dropdown-content-show {
+            display: block;
+        }
+    }
+}
+
+// колонки
+.menu__table {
+    margin-top: 15px;
+    min-width: $base-width;
+    tr {
+        min-height: $base-height;
+        max-width: $base-width - 28px;
+        @extend %base-cell;
+        background-color: rgba(204, 230, 228, 0.42);
+
+        &:hover, &:focus {
+            border: 5px solid #2E49D9;
+        }
+
+        a {
+            @extend %text;
+            text-decoration: none;
+    }
+    }
+}

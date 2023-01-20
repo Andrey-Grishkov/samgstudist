@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.css'
+import './Main.scss'
 import wave from "../../images/main__image-wave.svg";
 import women from "../../images/main__image-women.svg";
 import Footer from "../Footer/Footer";

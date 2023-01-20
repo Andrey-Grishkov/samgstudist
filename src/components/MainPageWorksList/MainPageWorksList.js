@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainPageWorksList.css'
+import './MainPageWorksList.scss'
 
 const MainPageWorksList = () => {
 

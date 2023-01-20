@@ -3,8 +3,7 @@ import Header from '../Header/Header';
 import Main from '../Main/Main';
 import MainPageWorksList from '../MainPageWorksList/MainPageWorksList';
 import MainPageWorkPreview from '../MainPageWorkPreview/MainPageWorkPreview';
-import Footer from '../Footer/Footer';
-import './App.css'
+import './App.scss'
 import {Route, Routes, useLocation} from "react-router-dom";
 import AboutProject from "../AboutProject/AboutProject";
 import AboutTeam from "../AboutTeam/AboutTeam";
