@@ -1,10 +1,10 @@
 .header__logo {
     margin: 0;
     padding: 0;
-    min-width: 190px;
-    min-height: 109px;
+    // width: 13%;
+    max-width: 190px;
+    max-height: 109px;
     cursor: pointer;
-    /* border: coral 1px solid; */
 }
 
 .header__logo:hover {
