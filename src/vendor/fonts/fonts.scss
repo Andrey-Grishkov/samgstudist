@@ -4,6 +4,7 @@
     font-weight: 400;
     font-display: swap;
     src: url(../../fonts/Poppins/Poppins-Regular.ttf) format("ttf"),
+    url(../../fonts/Poppins/Poppins-Regular.woff2) format("woff2"),
 }
 
 @font-face {
@@ -12,6 +13,7 @@
     font-weight: 400;
     font-display: swap;
     src: url(../../fonts/Proza_Libre/ProzaLibre-Regular.ttf) format("ttf"),
+    url(../../fonts/Proza_Libre/ProzaLibre-Regular.woff2) format("woff2"),
 }
 
 @font-face {
@@ -20,6 +22,7 @@
     font-weight: 400;
     font-display: swap;
     src: url(../../fonts/Pacifico/Pacifico-Regular.ttf) format("ttf"),
+    url(../../fonts/Pacifico/Pacifico-Regular.woff2) format("woff2"),
 }
 
 @font-face {
@@ -27,5 +30,6 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(../../fonts/Podkova/Podkova-Regular.ttf) format("ttf"),
+    src: url('../../fonts/Podkova/Podkova-Regular.ttf') format("ttf"),
+    url('../../fonts/Podkova/Podkova-Regular.woff2') format("woff2"),
 }

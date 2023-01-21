@@ -17,10 +17,8 @@ const Header = () => {
       </div>
       <div className='header__line'></div>
       {
-        location.pathname === '/about-team' ?
-        <div className='header__box'> 
+        about_team ?
           <h1 className='header__title'>О команде</h1>
-        </div>
           :
           <div className='header__container'>
             <nav className='header__navigation'>

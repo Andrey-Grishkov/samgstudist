@@ -11,7 +11,7 @@
     overflow: hidden;
 
     &__button {
-       
+        box-sizing: border-box;
         position: absolute;
         top: 22px;
         left: 18px;
@@ -19,18 +19,30 @@
         color: white;
         border: 3px solid #8F01FF;
         background-color: #580BFF;
-        padding: 7px 3px 7px 16px;
-        max-width: 175px;
+        padding: 4px 0 4px 13px;
+        width: 175px;
         height: 39px;
     }
 
-    &__link {
-        @include flex(row, space-around, center);
-        color: white;
-        text-decoration: none;
+    &__subtitle {
+        @include font('Proza_Libre', 21px, 26px);
+        width: 120px;
     }
 
-    &__list {   
+    &__link {
+        @include flex(row, center, center);
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+        margin: 0 auto;
+    }
+
+    &__arrow {
+        align-self: center;
+        padding-bottom: 4px;
+    }
+
+    &__list {
         @include flex(row, center, center);
         position: absolute;
         padding: 0;
@@ -43,16 +55,24 @@
         border-width: 3px;
         border-style: solid;
         border-image: linear-gradient(rgba(0, 255, 133, 1), rgba(0, 102, 255, 1), rgba(173, 0, 255, .97)) 1;
-        z-index: 2;    
+        z-index: 2;
 
         &_title {
             margin: 0;
             color: white;
             text-align: center;
+
+            @media screen and (max-width: 1280px) {
+                
+            }
+
+            @media screen and (max-width: 1280px) {
+                
+            }
         }
     }
 
-    
+
     &__img {
         &_cart {
             position: absolute;
