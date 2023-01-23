@@ -24,7 +24,7 @@ const Menu = () => {
   return (
     <section className='menu'>
       <div className='menu__dropdown'>
-        <button onClick={dropdown} className='menu__dropdown_btn'>Предметы</button>
+        <button onClick={dropdown} className='menu__dropdown_btn'>Дисциплины</button>
         <div id="myDropdown" className='menu__dropdown-content'>
           <a href="#">{theme[0]}</a>
           <a href="#">{theme[1]}</a>

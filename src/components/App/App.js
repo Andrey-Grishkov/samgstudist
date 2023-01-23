@@ -13,14 +13,7 @@ function App() {
 
   return (
     <div>
-      {
-        location.pathname === '/' ||
-        location.pathname === '/works-list' ||
-        location.pathname === '/work-preview' ||
-        location.pathname === '/about-project'
-          ?
-        <Header/> : <></>
-      }
+        <Header/>
       <Routes>
         <Route exact path='/' element={
           <Main/>

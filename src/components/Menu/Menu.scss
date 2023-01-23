@@ -1,5 +1,5 @@
-$base-width:193px;
-$base-height:44px;
+$base-width:271px;
+$base-height:81px;
 %text {
     color: #000000;
     font-style: normal;
@@ -80,6 +80,7 @@ $base-height:44px;
         max-width: $base-width - 28px;
         @extend %base-cell;
         background-color: rgba(204, 230, 228, 0.42);
+        cursor: pointer;
 
         &:hover, &:focus {
             border: 5px solid #2E49D9;

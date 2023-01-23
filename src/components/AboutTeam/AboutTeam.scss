@@ -1,0 +1,89 @@
+@import '../vars';
+
+.about-team {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-image: url('../../images/matrix_1.png');
+  background-color: black;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  &__button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 22px;
+    left: 18px;
+    border-radius: 10px;
+    color: white;
+    border: 3px solid #8F01FF;
+    background-color: #580BFF;
+    padding: 4px 0 4px 13px;
+    width: 175px;
+    height: 39px;
+  }
+
+  &__subtitle {
+    @include font('Proza_Libre', 21px, 26px);
+    width: 120px;
+  }
+
+  &__link {
+    @include flex(row, center, center);
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+
+  &__arrow {
+    align-self: center;
+    padding-bottom: 4px;
+  }
+
+  &__list {
+    @include flex(row, center, center);
+    position: absolute;
+    padding: 0;
+    top: 47px;
+    right: 41px;
+    margin: 0;
+    list-style: none;
+    width: 39%;
+    height: 86%;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(rgba(0, 255, 133, 1), rgba(0, 102, 255, 1), rgba(173, 0, 255, .97)) 1;
+    z-index: 2;
+
+    &_title {
+      margin: 0;
+      color: white;
+      text-align: center;
+
+      @media screen and (max-width: 1280px) {
+
+      }
+
+      @media screen and (max-width: 1280px) {
+
+      }
+    }
+  }
+
+
+  &__img {
+    &_cart {
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+    }
+
+    &_peoples {
+      position: absolute;
+      bottom: 0;
+      left: -36px;
+    }
+  }
+}
