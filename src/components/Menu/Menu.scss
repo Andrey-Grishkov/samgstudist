@@ -1,6 +1,7 @@
 $base-width:271px;
 $base-height:81px;
 %text {
+    font-family: Proza_Libre;
     color: #000000;
     font-style: normal;
     font-weight: 400;
@@ -25,6 +26,7 @@ $base-height:81px;
     width: $base-width;
     height: 763px;
     border: blue 1px solid;
+    z-index: 3;
 }
 
 // выпадающее меню

@@ -1,0 +1,51 @@
+.main-page-work-preview {
+  min-height: 801px;
+  border: red 1px solid;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  &__content {
+    min-height: 736px;
+    border: blue 1px solid;
+  }
+
+  &__image-wave {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+  }
+
+  &__triangle {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+  }
+
+  &__triangle-2 {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__commercial-container {
+    margin: 21px 0 0 154px;
+    width: 728px;
+    max-height: 90px;
+    border: #2ED7D9 3px solid;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 115.52%;
+  }
+
+  &__content-container {
+    z-index: 3;
+  }
+}

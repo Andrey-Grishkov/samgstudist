@@ -1,18 +1,21 @@
 .main {
+    font-family: Proza_Libre;
     min-height: 801px;
     border: red 1px solid;
     position: relative;
     display: flex;
     flex-direction: row;
+
     .main__image-wave {
         position: absolute;
-        z-index: -2;
+        z-index: 1;
         bottom: 0;
     }
     .main__image-women {
         position: absolute;
         left: 354px;
         bottom: 9px;
+        z-index: 2;
     }
     .main__commercial-container {
         right: 141px;
@@ -23,14 +26,29 @@
         border: red 1px solid;
         z-index: 2;
     }
+    .main__content-container {
+        z-index: 3;
+    }
 }
 
 .main__content {
+    margin-left: 60px;
+    max-width: 937px;
     min-height: 736px;
     border: blue 1px solid;
+
+    .main__title {
+        margin: 28px 0 0 0;
+        font-family: 'Source Serif Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 80.52%;
+    }
+
     .main__greetings {
         color: #4D4848;
-        margin: 42px 141px 0 96px;
+        margin: 25px 0 0 0;
         font-style: normal;
         font-weight: 400;
         font-size: 24px;
@@ -38,16 +56,17 @@
         border: blue 1px solid;
     }
     .main__quotes-title {
-        margin: 70px 141px 0 96px;
+        margin: 26px 0 0 0;
         font-style: normal;
         font-weight: 400;
         font-size: 24px;
         line-height: 33px;
     }
     .main__quotes-container {
-        margin: 29px 141px 0 96px;
+        margin: 29px 0 0 0;
         border: red 1px solid;
         min-height: 84px;
+
     }
     .main__quotes {
         margin: 0;
@@ -55,6 +74,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        z-index: 3;
     }
     .main__quot {
         max-width: 250px;
@@ -71,5 +91,6 @@
         justify-content: flex-start;
         overflow: hidden;
         text-overflow: ellipsis;
+        z-index: 3;
     }
 }

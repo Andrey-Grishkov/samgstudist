@@ -12,11 +12,12 @@ const Main = () => {
   return (
     <section className='main'>
       <Menu/>
-      <img className='main__image-wave' src={wave} alt='кнопка поиска'/>
-      <img className='main__image-women' src={women} alt='кнопка поиска'/>
+      <img className='main__image-wave' src={wave} alt='волна'/>
+      <img className='main__image-women' src={women} alt='девушка учится'/>
       <div className='main__commercial-container'><Commercial/></div>
       <div className='main__content-container'>
         <div className='main__content'>
+          <h2 className='main__title'>Наша работа - Ваша работа!</h2>
           <h3 className='main__greetings'>Добро пожаловать на наш сайт.  Здесь вы найдете примеры выполненных
             студенческих работ, которые помогут вам в выполнении собственных работ</h3>
           <h4 className='main__quotes-title'>Популярные цитаты</h4>

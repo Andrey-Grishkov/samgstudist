@@ -12,7 +12,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div>
+    <div className='page'>
         <Header/>
       <Routes>
         <Route exact path='/' element={
