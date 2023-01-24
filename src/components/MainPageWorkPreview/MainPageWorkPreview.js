@@ -12,6 +12,7 @@ import Commercial from "../Commercial/Commercial";
 const MainPageWorkPreview = () => {
   return (
     <section className="main-page-work-preview">
+      <Menu />
       <img
         className="main-page-work-preview__image-wave"
         src={wave}

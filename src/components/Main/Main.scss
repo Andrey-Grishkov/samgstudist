@@ -1,10 +1,12 @@
 .main {
+    background: url("../../images/main__image-wave.svg") bottom  no-repeat;
     font-family: Proza_Libre;
     min-height: 801px;
     border: red 1px solid;
     position: relative;
     display: flex;
     flex-direction: row;
+    
 
     .main__image-wave {
         position: absolute;
