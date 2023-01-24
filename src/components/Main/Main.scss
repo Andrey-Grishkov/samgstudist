@@ -1,3 +1,4 @@
+
 .main {
     background:url("../../images/main__image-wave.svg") bottom  no-repeat;
     font-family: Proza_Libre;
@@ -6,6 +7,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
+   
     
 
     .main__image-wave {
@@ -98,3 +100,6 @@
         z-index: 3;
     }
 }
+    .triangle{
+        background:url("../../images/main-page-work-preview__triangle.svg") 0% 100%  no-repeat, url("../../images/main-page-work-preview__triangle-2.svg") right 100% no-repeat;
+    }
