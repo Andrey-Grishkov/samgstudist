@@ -1,31 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MainPageWorkPreview.scss";
-import Footer from "../Footer/Footer";
-// import wave from "../../images/main-page-work-preview__image-wave.svg";
-// import triangle from "../../images/main-page-work-preview__triangle.svg";
-// import triangle2 from "../../images/main-page-work-preview__triangle-2.svg";
-import arrow from "../../images/main-page-work-preview__arrow.svg";
 import Commercial from "../Commercial/Commercial";
 
 const MainPageWorkPreview = ({ mainContent }) => {
+  const [numberPage, setNumberPage] = useState(0);
   return (
-    // <section className="main-page-work-preview">
-    //   <Menu />
-    //   <img
-    //     className="main-page-work-preview__image-wave"
-    //     src={wave}
-    //     alt="волна"
-    //   />
-    //   <img
-    //     className="main-page-work-preview__triangle"
-    //     src={triangle}
-    //     alt="треугольники слева"
-    //   />
-    //   <img
-    //     className="main-page-work-preview__triangle-2"
-    //     src={triangle2}
-    //     alt="треугольники справа"
-    //   />
     <div className="main-page-work-preview__content-container">
       <div className="main-page-work-preview__content">
         <div className="main-page-work-preview__commercial-container">
@@ -35,25 +14,24 @@ const MainPageWorkPreview = ({ mainContent }) => {
         <div className="main-page-work-preview__preview">preview</div>
         <div className="main-page-work-preview__nav-container">
           <div className="main-page-work-preview__page-btn-container">
-            <button className="main-page-work-preview__btn">
-              <img
-                className="main-page-work-preview__arrow"
-                src={arrow}
-                alt="стрелка"
-              />
+            <button
+              onClick={() => numberPage && setNumberPage(numberPage - 1)}
+              className="main-page-work-preview__btn"
+            >
               <p className="main-page-work-preview__btn-text">
-                Предыдущая страница
+                ← Предыдущая страница
               </p>
             </button>
-            <div className="main-page-work-preview__page-number">4</div>
-            <button className="main-page-work-preview__btn">
-              <img
-                className="main-page-work-preview__arrow main-page-work-preview__arrow_reversed"
-                src={arrow}
-                alt="стрелка"
-              />
+            <div className="main-page-work-preview__page-number">
+              {numberPage + 1}
+            </div>
+
+            <button
+              onClick={() => setNumberPage(numberPage + 1)}
+              className="main-page-work-preview__btn"
+            >
               <p className="main-page-work-preview__btn-text main-page-work-preview__btn-text_reversed">
-                Следующая страница
+                Следующая страница →
               </p>
             </button>
           </div>
@@ -62,10 +40,7 @@ const MainPageWorkPreview = ({ mainContent }) => {
           </button>
         </div>
       </div>
-
-      <Footer />
     </div>
-    // </section>
   );
 };
 

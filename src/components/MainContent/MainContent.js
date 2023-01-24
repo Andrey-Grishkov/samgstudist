@@ -1,6 +1,5 @@
 import { qutes } from "../../utils/constants";
 import Commercial from "../Commercial/Commercial";
-import Footer from "../Footer/Footer";
 export const MainContent = () => {
   return (
     <div className="main__content-container">
@@ -22,8 +21,6 @@ export const MainContent = () => {
           <Commercial />
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

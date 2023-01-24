@@ -7,12 +7,13 @@ import MainPageWorkPreview from "../MainPageWorkPreview/MainPageWorkPreview";
 const Main = () => {
   const [mainContent, setMainContent] = useState("");
   return (
-    <section className="main">
+    <section className={`main`}>
+      {mainContent && <div className="triangle"></div>}
       <Menu setMainContent={setMainContent} />
-      {!mainContent ? (
-        <MainContent />
-      ) : (
+      {mainContent ? (
         <MainPageWorkPreview mainContent={mainContent} />
+      ) : (
+        <MainContent />
       )}
     </section>
   );
