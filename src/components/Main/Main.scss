@@ -1,5 +1,5 @@
 .main {
-    background: url("../../images/main__image-wave.svg") bottom  no-repeat;
+    background:url("../../images/main__image-wave.svg") bottom  no-repeat;
     font-family: Proza_Libre;
     min-height: 801px;
     border: red 1px solid;
@@ -34,6 +34,8 @@
 }
 
 .main__content {
+    background:url("../../images/main__image-women.svg") 0% 115%  no-repeat;
+
     margin-left: 60px;
     max-width: 937px;
     min-height: 736px;

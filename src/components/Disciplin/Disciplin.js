@@ -1,11 +1,8 @@
-import { useNavigate } from "react-router-dom";
-
-export const Disciplin = ({ disciplin }) => {
-  const navigate = useNavigate();
+export const Disciplin = ({ disciplin, setMainContent }) => {
   return (
     <tr
       onClick={() => {
-        navigate("/works-list");
+        setMainContent(disciplin);
       }}
     >
       {disciplin}
