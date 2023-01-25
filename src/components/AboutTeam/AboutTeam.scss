@@ -30,11 +30,13 @@
   }
 
   &__link {
+    position: relative;
     @include flex(row, center, center);
     gap: 10px;
     color: white;
     text-decoration: none;
     margin: 0 auto;
+    z-index: 2;
   }
 
   &__arrow {

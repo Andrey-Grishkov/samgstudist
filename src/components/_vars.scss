@@ -1,7 +1,9 @@
-@mixin font($weight, $size, $height) {
-    font-family: 'Inter', Arial, sans-serif;
+@import '../vendor/fonts/fonts.scss';
+
+@mixin font($font-family, $size, $height) {
+    font-family: $font-family;
     font-size: $size;
-    font-weight: $weight;
+    font-weight: 400;
     line-height: $height;
 }
 
