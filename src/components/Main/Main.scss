@@ -1,10 +1,25 @@
+
 .main {
+    background:url("../../images/main__image-wave.svg") bottom  no-repeat;
     font-family: Proza_Libre;
     min-height: 801px;
-    border: red 1px solid;
+    // border: red 1px solid;
     position: relative;
     display: flex;
     flex-direction: row;
+   
+    .triangle{
+        position: absolute;
+        width: 1440px;
+        height: 800px;
+        animation: mymove 4s ;
+        background:url("../../images/main-page-work-preview__triangle.svg") 0% 100%  no-repeat,
+         url("../../images/main-page-work-preview__triangle-2.svg") right 100% no-repeat,
+         url("../../images/main__image-wave.svg") bottom  no-repeat;
+    }
+    @keyframes mymove {
+        0% {opacity: 0;}
+    }
 
     .main__image-wave {
         position: absolute;
@@ -23,7 +38,7 @@
         position: absolute;
         min-height: 280px;
         min-width: 336px;
-        border: red 1px solid;
+        // border: red 1px solid;
         z-index: 2;
     }
     .main__content-container {
@@ -32,10 +47,13 @@
 }
 
 .main__content {
+    background:url("../../images/main__image-women.svg") 0% 109.5%  no-repeat,
+     url("../../images/books.svg") 39% 102.3%  no-repeat;
+
     margin-left: 60px;
     max-width: 937px;
     min-height: 736px;
-    border: blue 1px solid;
+    // border: blue 1px solid;
 
     .main__title {
         margin: 28px 0 0 0;
@@ -53,7 +71,7 @@
         font-weight: 400;
         font-size: 24px;
         line-height: 115.52%;
-        border: blue 1px solid;
+        // border: blue 1px solid;
     }
     .main__quotes-title {
         margin: 26px 0 0 0;
@@ -64,7 +82,7 @@
     }
     .main__quotes-container {
         margin: 29px 0 0 0;
-        border: red 1px solid;
+        // border: red 1px solid;
         min-height: 84px;
 
     }
@@ -94,3 +112,4 @@
         z-index: 3;
     }
 }
+   

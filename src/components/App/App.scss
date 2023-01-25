@@ -1,14 +1,16 @@
 .page {
-    max-width: 1440px;
-    margin: 0 auto;
+    width: 1440px;
+    height: 930px;
+
+    // max-width: 1440px;
+    margin: 1% auto ;
     font-family: 'Pacifico', 'Podkova', 'Poppins', 'Proza_Libre',Source Serif Pro, Arial, sans-serif;
-    color: black;
-    background-color: #FFFFFF;
+    color: black;   
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border: chartreuse 1px solid;
+    border: black 1px solid;
 }
 
