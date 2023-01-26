@@ -1,5 +1,6 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import Main from '../Main/Main'
 import MainPageWorksList from '../MainPageWorksList/MainPageWorksList'
 import MainPageWorkPreview from '../MainPageWorkPreview/MainPageWorkPreview'
@@ -42,6 +43,7 @@ function App() {
         }>
         </Route>
       </Routes>
+      { location.pathname !== '/about-team' && <Footer /> }
     </div>
   );
 }

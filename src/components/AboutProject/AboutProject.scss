@@ -74,6 +74,11 @@
 
     &__link {
         position: relative;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .5;
+        }
 
         &_vector {
             margin-right: 20px;

@@ -1,11 +1,10 @@
-import React from 'react';
 import './Main.scss'
-import wave from "../../images/main__image-wave.svg";
-import women from "../../images/main__image-women.svg";
-import Footer from "../Footer/Footer";
-import Menu from "../Menu/Menu";
-import {qutes} from '../../utils/constants'
-import Commercial from "../Commercial/Commercial";
+import wave from '../../images/main__image-wave.svg'
+import women from '../../images/main__image-women.svg'
+// import Footer from '../Footer/Footer'
+import Menu from '../Menu/Menu'
+import { qutes } from '../../utils/constants'
+import Commercial from '../Commercial/Commercial'
 
 const Main = () => {
 
@@ -18,7 +17,7 @@ const Main = () => {
       <div className='main__content-container'>
         <div className='main__content'>
           <h2 className='main__title'>Наша работа - Ваша работа!</h2>
-          <h3 className='main__greetings'>Добро пожаловать на наш сайт.  Здесь вы найдете примеры выполненных
+          <h3 className='main__greetings'>Добро пожаловать на наш сайт. Здесь вы найдете примеры выполненных
             студенческих работ, которые помогут вам в выполнении собственных работ</h3>
           <h4 className='main__quotes-title'>Популярные цитаты</h4>
           <nav className='main__quotes-container'>
@@ -29,7 +28,7 @@ const Main = () => {
             </ul>
           </nav>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     </section>
   );

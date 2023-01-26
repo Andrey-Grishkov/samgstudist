@@ -1,9 +1,8 @@
-import React from 'react'
 import './AboutProject.scss'
 import { Link } from 'react-router-dom'
-import Vector from '../../images/Vector.svg'
-import Glass from '../../images/glass.svg'
-import Group from '../../images/group.svg'
+import Vector from '../../images/about-Porject__vector.svg'
+import Glass from '../../images/about-Porject__glass.svg'
+import Group from '../../images/about-Porject__group.svg'
 
 const AboutProject = ({ inputFocus }) => {
 

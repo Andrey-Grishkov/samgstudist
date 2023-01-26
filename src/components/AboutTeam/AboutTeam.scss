@@ -45,12 +45,13 @@
   }
 
   &__list {
-    @include flex(row, center, center);
+    @include flex(column, flex-start, flex-start);
     position: absolute;
-    padding: 0;
+    padding: 3% 5%;
+    box-sizing: border-box;
     top: 47px;
     right: 41px;
-    margin: 0;
+    margin: 0 auto;
     list-style: none;
     width: 39%;
     height: 86%;
@@ -58,22 +59,14 @@
     border-style: solid;
     border-image: linear-gradient(rgba(0, 255, 133, 1), rgba(0, 102, 255, 1), rgba(173, 0, 255, .97)) 1;
     z-index: 2;
+    overflow: scroll;
 
     &_title {
-      margin: 0;
+      @include font('Proza_Libre', 24px, 1.33);
+      margin: 0 0 5px;
       color: white;
-      text-align: center;
-
-      @media screen and (max-width: 1280px) {
-
-      }
-
-      @media screen and (max-width: 1280px) {
-
-      }
     }
   }
-
 
   &__img {
     &_cart {
@@ -85,7 +78,7 @@
     &_peoples {
       position: absolute;
       bottom: 0;
-      left: -36px;
+      left: 5px;
     }
   }
 }
