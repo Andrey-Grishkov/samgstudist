@@ -18,18 +18,20 @@ const AboutTeam = () => {
           </span>
         </Link>
       </button>
-      <ul className='about-team__list'>
-
-        {
-          developers.map(developer => {
-            return (
-              <p className='about-team__list_title'>
-                {developer.role}: {developer.name}
-              </p>
+      <div className='about-team__container'>
+        <ul className='about-team__list'>
+          <h3 className='about-team__title'>Команда:</h3>
+          {
+            developers.map(developer => {
+              return (
+                <p className='about-team__list_title'>
+                  {developer.role}: {developer.name}
+                </p>
               )
             })
           }
-      </ul>
+        </ul>
+      </div>
       <img className='about-team__img_cart' src={Cart} alt='тележка' />
       <img className='about-team__img_peoples' src={Peoples} alt='люди' />
     </section>
