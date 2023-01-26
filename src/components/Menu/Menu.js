@@ -1,28 +1,40 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 import "./Menu.scss";
 import { theme } from "../../utils/constants";
 import { Disciplin } from "../Disciplin/Disciplin";
 
 const Menu = ({ setMainContent }) => {
-  // const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
 
   return (
     <section className="menu">
       <div className="menu__dropdown">
         <button
-          // onClick={() => setDropdown(!dropdown)}
+          onClick={() => setDropdown(!dropdown)}
           className="menu__dropdown_btn"
         >
           Дисциплины
         </button>
         <table className="menu__table">
-          {theme.map((disciplin, i) => (
-            <Disciplin
-              key={i}
-              disciplin={disciplin}
-              setMainContent={setMainContent}
-            ></Disciplin>
-          ))}
+          <div>
+            {theme.map((disciplin, i) => (
+              <Disciplin
+                key={i}
+                disciplin={disciplin}
+                setMainContent={setMainContent}
+              ></Disciplin>
+            ))}
+          </div>
+          <div className="more-disciplin">
+            {dropdown &&
+              theme.map((disciplin, i) => (
+                <Disciplin
+                  key={i}
+                  disciplin={"другая_дисциплина__" + i}
+                  setMainContent={setMainContent}
+                ></Disciplin>
+              ))}
+          </div>
         </table>
       </div>
     </section>

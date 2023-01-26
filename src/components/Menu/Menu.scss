@@ -75,6 +75,7 @@ $base-height:81px;
 
 // колонки
 .menu__table {
+    display: flex;
     margin-top: 15px;
     min-width: $base-width;
     tr {

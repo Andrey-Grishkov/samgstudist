@@ -6,6 +6,7 @@ import MainPageWorkPreview from "../MainPageWorkPreview/MainPageWorkPreview";
 
 const Main = () => {
   const [mainContent, setMainContent] = useState("");
+
   return (
     <section className={`main`}>
       {mainContent && <div className="triangle"></div>}
