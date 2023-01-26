@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Menu.scss";
 import { theme } from "../../utils/constants";
 import { Disciplin } from "../Disciplin/Disciplin";
+import { Link } from "react-router-dom";
 
 const Menu = ({ setMainContent }) => {
   const [dropdown, setDropdown] = useState(false);
@@ -18,11 +19,13 @@ const Menu = ({ setMainContent }) => {
         <table className="menu__table">
           <div>
             {theme.map((disciplin, i) => (
-              <Disciplin
-                key={i}
-                disciplin={disciplin}
-                setMainContent={setMainContent}
-              ></Disciplin>
+              <Link to={`MainPageWorkPreview/${disciplin}`}>
+                <Disciplin
+                  key={i}
+                  disciplin={disciplin}
+                  setMainContent={setMainContent}
+                ></Disciplin>
+              </Link>
             ))}
           </div>
           <div className="more-disciplin">
