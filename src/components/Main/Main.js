@@ -7,7 +7,7 @@ import { qutes } from '../../utils/constants'
 import Commercial from '../Commercial/Commercial'
 
 const Main = () => {
-
+  const [mainContent, setMainContent] = useState("");
   return (
     <section className='main'>
       <Menu/>
@@ -32,6 +32,6 @@ const Main = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Main;

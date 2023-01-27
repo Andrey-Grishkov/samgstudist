@@ -3,7 +3,7 @@ $base-width: 728px;
 .main-page-work-preview {
   max-width: 1440px;
   min-height: 801px;
-  border: red 1px solid;
+  // border: red 1px solid;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -11,7 +11,7 @@ $base-width: 728px;
   &__content {
     margin-left: 154px;
     min-height: 736px;
-    border: blue 1px solid;
+    // border: blue 1px solid;
   }
 
   &__image-wave {
@@ -63,6 +63,7 @@ $base-width: 728px;
   }
 
   &__preview {
+    background-color: #fff;
     margin: 0;
     max-width: $base-width;
     min-height: 438px;
@@ -81,7 +82,7 @@ $base-width: 728px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: brown 1px solid;
+    // border: brown 1px solid;
   }
 
   &__btn {
@@ -105,14 +106,6 @@ $base-width: 728px;
       justify-content: flex-end;
     }
 
-    .main-page-work-preview__arrow {
-      margin-left: 24px;
-    }
-
-    .main-page-work-preview__arrow_reversed {
-      margin-left: 11px;
-      transform: rotate(180deg);
-    }
 
     .main-page-work-preview__btn-text {
       margin-left: 11px;

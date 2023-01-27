@@ -32,8 +32,8 @@ const AboutProject = ({ inputFocus }) => {
               <div className='project__circle glass'></div>
             </div>
           </li>
-          <li className='project__el'>
-            <span className='project__text'>
+          <li className="project__el">
+            <span className="project__text">
               Познакомиться с командой проекта
             </span>
             <Link to='/about-team' className='project__link'>
@@ -45,6 +45,6 @@ const AboutProject = ({ inputFocus }) => {
       </div>
     </section>
   );
-}
+};
 
 export default AboutProject;
