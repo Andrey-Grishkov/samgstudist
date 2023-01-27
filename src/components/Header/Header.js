@@ -1,10 +1,9 @@
-import React from 'react'
 import './Header.scss'
 import Logo from '../Logo/Logo'
 import search from '../../images/search__img.svg'
 import { useLocation, Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ inputRef }) => {
 
   const location = useLocation();
   let about_team;
@@ -42,6 +41,7 @@ const Header = () => {
                 id="search-form"
                 name="search-form"
                 required
+                ref={inputRef}
               />
             </form>
           </div>

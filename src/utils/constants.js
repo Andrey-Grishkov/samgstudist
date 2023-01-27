@@ -23,3 +23,25 @@ export const qutes = [
   'Устройство продолжало свою работу, и когда оно продолжило работу с питанием только от одного элемента, Александр ' +
   'Белл пустился в пляс, заявив, что теперь он знает, как нужно делать телефоны.'
 ]
+
+export const developers = [
+ { name: 'Инна Панина', role: 'Project manager (LEAD)' },
+ { name: 'Сергей Майоров', role: 'Project manager' },
+ { name: 'Наталья Маслова', role: 'Project manager' },
+ { name: 'Андрей Торгованов', role: 'Project manager' },
+ { name: 'Андрей Гришков', role: 'Frontend' },
+ { name: 'Николай Фоменко', role: 'Frontend' },
+ { name: 'Александр Гойкфис', role: 'Frontend' },
+ { name: 'Дмитрий Федоров', role: 'Backend (TECH LEAD)' },
+ { name: 'Ира Андреева', role: 'Backend' },
+ { name: 'Дмитрий Паршин', role: 'Backend' },
+ { name: 'Владимир Максимов', role: 'Backend' },
+ { name: 'Виталий Асташкевич', role: 'Backend' },
+ { name: 'Максим Цымлов', role: 'Backend' },
+ { name: 'Катерина Урусова', role: 'QA Engineer' },
+ { name: 'Борис Суханов', role: 'QA Engineer' },
+ { name: 'Никита Турук', role: 'QA Engineer' },
+ { name: 'Наталья Верясова', role: 'QA Engineer' },
+ { name: 'Валентина Асташкевич', role: 'Design' },
+ { name: 'Александр', role: 'Сustomer' },
+]

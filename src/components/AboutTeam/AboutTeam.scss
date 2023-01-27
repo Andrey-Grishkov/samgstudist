@@ -30,48 +30,60 @@
   }
 
   &__link {
+    position: relative;
     @include flex(row, center, center);
     gap: 10px;
     color: white;
     text-decoration: none;
     margin: 0 auto;
+    z-index: 2;
   }
 
   &__arrow {
     align-self: center;
     padding-bottom: 4px;
   }
-
-  &__list {
-    @include flex(row, center, center);
+  &__container {
+    @include flex(column, flex-start, flex-start);
     position: absolute;
-    padding: 0;
     top: 47px;
     right: 41px;
-    margin: 0;
-    list-style: none;
+    box-sizing: border-box;
     width: 39%;
     height: 86%;
-    border-width: 3px;
-    border-style: solid;
-    border-image: linear-gradient(rgba(0, 255, 133, 1), rgba(0, 102, 255, 1), rgba(173, 0, 255, .97)) 1;
-    z-index: 2;
-
-    &_title {
-      margin: 0;
-      color: white;
-      text-align: center;
-
-      @media screen and (max-width: 1280px) {
-
-      }
-
-      @media screen and (max-width: 1280px) {
-
-      }
-    }
+    padding: 3px;
+    border-radius: 10px;
+    z-index: 1;
+    mask-composite: exclude;
+    overflow: scroll;
+    background-image: linear-gradient(rgba(0, 255, 133, 1), rgba(0, 102, 255, 1), rgba(173, 0, 255, .97));
   }
 
+  &__title {
+    margin: 10px auto;
+    text-align: center;
+    color: white;
+    @include font('Proza_Libre', 32px, 1.33);
+  }
+
+  &__list {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    list-style: none;
+    overflow: scroll;
+    background-color: black;
+    border-radius: 10px;
+    z-index: 2;
+    box-sizing: border-box;
+    margin: 0;
+
+    &_title {
+      @include font('Proza_Libre', 24px, 1.33);
+      margin: 0 0 5px;
+      color: white;
+    }
+  }
 
   &__img {
     &_cart {
@@ -83,7 +95,7 @@
     &_peoples {
       position: absolute;
       bottom: 0;
-      left: -36px;
+      left: 5px;
     }
   }
 }

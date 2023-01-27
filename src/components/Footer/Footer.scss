@@ -1,19 +1,24 @@
+@import '../vars';
+
 .footer {
-    position: relative;
-    bottom: 6%;
-    margin-left: 28.5%;
-    width: 65%;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 9px;
+    left: 18%;
+    margin-left: 96px;
+    max-width: 948px;
     border-top: #7A7A7A 1px solid;
+    z-index: 5;
+
+    &__about-team {
+        bottom: 36px;
+        right: 17%;
+    }
 }
 
 .footer-text {
-    font-family: Proza_Libre;
+    @include font('Proza_Libre', 14px, 1.3);
     margin-top: 17px;
     margin-bottom: 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 131.52%;
     color: #7A7A7A;
-
 }
