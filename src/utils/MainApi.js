@@ -10,8 +10,13 @@ export const fetchDisciplins = async (page = 0, limit = 8) =>
   getRequest("index/", {
     params: { limit, offset: limit * page },
   });
-//запрос работ
+//запрос списка работ
 export const fetchListOfWorks = async (id, page = 0, limit = 8) =>
   getRequest(`${id}/material/`, {
+    params: { limit, offset: limit * page },
+  });
+//запрос работы
+export const fetchWork = async (listId, materialId, page = 0, limit = 8) =>
+  getRequest(`${listId}/material/${materialId}/`, {
     params: { limit, offset: limit * page },
   });
