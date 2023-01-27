@@ -5,6 +5,7 @@ import women from '../../images/main__image-women.svg'
 import Menu from '../Menu/Menu'
 import { qutes } from '../../utils/constants'
 import Commercial from '../Commercial/Commercial'
+import { useState } from 'react';
 
 const Main = () => {
   const [mainContent, setMainContent] = useState("");
