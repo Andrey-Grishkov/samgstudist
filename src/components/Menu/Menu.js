@@ -1,23 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Menu.scss";
-import { theme } from "../../utils/constants";
 import { Disciplin } from "../Disciplin/Disciplin";
 import { Link } from "react-router-dom";
-import { fetchDisciplins } from "../../utils/MainApi";
 
-const Menu = ({ setMainContent }) => {
+const Menu = ({ disciplins, setDisciplin, setIdDisciplin }) => {
   const [dropdown, setDropdown] = useState(false);
-
-  const [disciplins, setDisciplins] = useState([]);
-  const fetchData = async () => {
-    const { results, count } = await fetchDisciplins();
-    // console.log(results);
-    setDisciplins(results);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <section className="menu">
@@ -30,23 +17,25 @@ const Menu = ({ setMainContent }) => {
         </button>
         <table className="menu__table">
           <div>
-            {theme.map((disciplin, i) => (
+            {disciplins.map((disciplin) => (
               <Link to={`MainPageWorkPreview/${disciplin}`}>
                 <Disciplin
-                  key={`disciplin-${i}`}
-                  disciplin={disciplin}
-                  setMainContent={setMainContent}
+                  key={`disciplin-${disciplin.id}`}
+                  id={disciplin.id}
+                  disciplin={disciplin.subject_title}
+                  setDisciplin={setDisciplin}
+                  setIdDisciplin={setIdDisciplin}
                 ></Disciplin>
               </Link>
             ))}
           </div>
           <div className="more-disciplin">
             {dropdown &&
-              disciplins.map((disciplin, i) => (
+              disciplins.map((disciplin) => (
                 <Disciplin
                   key={`disciplin-${disciplin.id}`}
-                  disciplin={disciplin.subject_title}
-                  setMainContent={setMainContent}
+                  disciplin={disciplin.subject_title + "доп"}
+                  setDisciplin={setDisciplin}
                 ></Disciplin>
               ))}
           </div>
