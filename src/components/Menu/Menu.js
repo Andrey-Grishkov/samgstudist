@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Menu.scss";
 import { theme } from "../../utils/constants";
 import { Disciplin } from "../Disciplin/Disciplin";
 import { Link } from "react-router-dom";
+import { fetchDisciplins } from "../../utils/MainApi";
 
 const Menu = ({ setMainContent }) => {
   const [dropdown, setDropdown] = useState(false);
+
+  const [disciplins, setDisciplins] = useState([]);
+  const fetchData = async () => {
+    const { results, count } = await fetchDisciplins();
+    // console.log(results);
+    setDisciplins(results);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <section className="menu">
@@ -21,7 +33,7 @@ const Menu = ({ setMainContent }) => {
             {theme.map((disciplin, i) => (
               <Link to={`MainPageWorkPreview/${disciplin}`}>
                 <Disciplin
-                  key={i}
+                  key={`disciplin-${i}`}
                   disciplin={disciplin}
                   setMainContent={setMainContent}
                 ></Disciplin>
@@ -30,10 +42,10 @@ const Menu = ({ setMainContent }) => {
           </div>
           <div className="more-disciplin">
             {dropdown &&
-              theme.map((disciplin, i) => (
+              disciplins.map((disciplin, i) => (
                 <Disciplin
-                  key={i}
-                  disciplin={"другая_дисциплина__" + i}
+                  key={`disciplin-${disciplin.id}`}
+                  disciplin={disciplin.subject_title}
                   setMainContent={setMainContent}
                 ></Disciplin>
               ))}
