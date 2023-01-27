@@ -4,18 +4,18 @@ import Commercial from "../Commercial/Commercial";
 import { Work } from "../Work/Work";
 import { fetchListOfWorks } from "../../utils/MainApi";
 
-const MainPageWorkPreview = ({ disciplin, idDisciplin }) => {
+const MainPageWorkPreview = ({ disciplin }) => {
   const [numberPage, setNumberPage] = useState(0);
   const [works, setWorks] = useState([]);
   const fetchData = async () => {
-    const { results, count } = await fetchListOfWorks(idDisciplin);
-    console.log(results);
+    const { results, count } = await fetchListOfWorks(disciplin.id);
+
     setWorks(results);
   };
 
   useEffect(() => {
     fetchData();
-  }, [idDisciplin]);
+  }, [disciplin]);
 
   return (
     <div className="main-page-work-preview__content-container">
@@ -23,7 +23,9 @@ const MainPageWorkPreview = ({ disciplin, idDisciplin }) => {
         <div className="main-page-work-preview__commercial-container">
           <Commercial />
         </div>
-        <h3 className="main-page-work-preview__title">{disciplin}</h3>
+        <h3 className="main-page-work-preview__title">
+          {disciplin.subject_title}
+        </h3>
         <div className="main-page-work-preview__preview">
           {works.map(
             (work) =>

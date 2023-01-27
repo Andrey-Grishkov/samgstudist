@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Menu.scss";
 import { Disciplin } from "../Disciplin/Disciplin";
 import { Link } from "react-router-dom";
 
-const Menu = ({ disciplins, setDisciplin, setIdDisciplin }) => {
+const Menu = ({ disciplins, setDisciplin }) => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
@@ -21,10 +21,8 @@ const Menu = ({ disciplins, setDisciplin, setIdDisciplin }) => {
               <Link to={`MainPageWorkPreview/${disciplin}`}>
                 <Disciplin
                   key={`disciplin-${disciplin.id}`}
-                  id={disciplin.id}
-                  disciplin={disciplin.subject_title}
+                  disciplin={disciplin}
                   setDisciplin={setDisciplin}
-                  setIdDisciplin={setIdDisciplin}
                 ></Disciplin>
               </Link>
             ))}
