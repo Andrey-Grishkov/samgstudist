@@ -27,6 +27,8 @@ $base-height:81px;
     height: 763px;
     // border: blue 1px solid;
     z-index: 3;
+
+    
 }
 
 // выпадающее меню
@@ -75,6 +77,7 @@ $base-height:81px;
 
 // колонки
 .menu__table {
+    display: flex;
     margin-top: 15px;
     min-width: $base-width;
     tr {

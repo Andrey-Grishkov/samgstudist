@@ -1,11 +1,11 @@
-export const Disciplin = ({ disciplin, setMainContent }) => {
+export const Disciplin = ({ disciplin, setDisciplin }) => {
   return (
     <tr
       onClick={() => {
-        setMainContent(disciplin);
+        setDisciplin(disciplin);
       }}
     >
-      {disciplin}
+      {disciplin.subject_title}
     </tr>
   );
 };

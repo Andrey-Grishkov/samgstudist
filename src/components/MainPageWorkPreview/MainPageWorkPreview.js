@@ -1,17 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MainPageWorkPreview.scss";
 import Commercial from "../Commercial/Commercial";
+import { Work } from "../Work/Work";
+import { fetchListOfWorks } from "../../utils/MainApi";
 
-const MainPageWorkPreview = ({ mainContent }) => {
+const MainPageWorkPreview = ({ disciplin }) => {
   const [numberPage, setNumberPage] = useState(0);
+  const [works, setWorks] = useState([]);
+  const fetchData = async () => {
+    const { results, count } = await fetchListOfWorks(disciplin.id);
+
+    setWorks(results);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [disciplin]);
+
   return (
     <div className="main-page-work-preview__content-container">
       <div className="main-page-work-preview__content">
         <div className="main-page-work-preview__commercial-container">
           <Commercial />
         </div>
-        <h3 className="main-page-work-preview__title">{mainContent}</h3>
-        <div className="main-page-work-preview__preview">preview</div>
+        <h3 className="main-page-work-preview__title">
+          {disciplin.subject_title}
+        </h3>
+        <div className="main-page-work-preview__preview">
+          {works.map(
+            (work) =>
+              (work = (
+                <Work
+                  key={`material_title${work.idDisciplin}`}
+                  material_title={work.material_title}
+                ></Work>
+              ))
+          )}
+        </div>
         <div className="main-page-work-preview__nav-container">
           <div className="main-page-work-preview__page-btn-container">
             <button
