@@ -1,8 +1,8 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import Cart from '../../images/cart_1.svg'
-import Peoples from '../../images/peoples.svg'
-import Arrow from '../../images/Arrow_3.svg'
+import Cart from '../../images/about-team__cart.svg'
+import Peoples from '../../images/about-team__peoples.svg'
+import Arrow from '../../images/about-team__arrow.svg'
+import { developers } from '../../utils/constants'
 import './AboutTeam.scss'
 
 const AboutTeam = () => {
@@ -18,9 +18,20 @@ const AboutTeam = () => {
           </span>
         </Link>
       </button>
-      <ul className='about-team__list'>
-        <h2 className='about-team__list_title'>список команды</h2>
-      </ul>
+      <div className='about-team__container'>
+        <ul className='about-team__list'>
+          <h3 className='about-team__title'>Команда:</h3>
+          {
+            developers.map(developer => {
+              return (
+                <p className='about-team__list_title'>
+                  {developer.role}: {developer.name}
+                </p>
+              )
+            })
+          }
+        </ul>
+      </div>
       <img className='about-team__img_cart' src={Cart} alt='тележка' />
       <img className='about-team__img_peoples' src={Peoples} alt='люди' />
     </section>

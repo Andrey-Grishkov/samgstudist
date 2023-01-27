@@ -8,7 +8,9 @@ import AboutTeam from "../AboutTeam/AboutTeam";
 import Footer from "../Footer/Footer";
 
 function App() {
-  // const location = useLocation();
+  const location = useLocation();
+  const inputRef = useRef(null);
+  const inputFocus = () => inputRef.current.focus();
 
   return (
     <div className="page">
@@ -19,7 +21,7 @@ function App() {
         <Route path="/about-project" element={<AboutProject />}></Route>
         <Route path="/about-team" element={<AboutTeam />}></Route>
       </Routes>
-      <Footer />
+      { location.pathname !== '/about-team' && <Footer /> }
     </div>
   );
 }
