@@ -3,10 +3,15 @@ import "./MainPageWorkPreview.scss";
 import Commercial from "../Commercial/Commercial";
 import { Work } from "../Work/Work";
 import { fetchListOfWorks } from "../../utils/MainApi";
+import { Link, Route, Routes } from "react-router-dom";
+import { replaceSpace } from "../../utils/functions";
+import { WorkPreview } from "../WorkPreview/WorkPreview";
 
 const MainPageWorkPreview = ({ disciplin }) => {
   const [numberPage, setNumberPage] = useState(0);
   const [works, setWorks] = useState([]);
+  const [workLink, setWorkLink] = useState(" ");
+  const [materialId, setMaterialId] = useState(NaN);
   const fetchData = async () => {
     const { results, count } = await fetchListOfWorks(disciplin.id);
     setWorks(results);
@@ -26,15 +31,34 @@ const MainPageWorkPreview = ({ disciplin }) => {
           {disciplin.subject_title}
         </h3>
         <div className="main-page-work-preview__preview">
-          {works.map(
-            (work) =>
-              (work = (
-                <Work
-                  key={`material_title${work.idDisciplin}`}
-                  material_title={work.material_title}
-                ></Work>
-              ))
-          )}
+          <Routes>
+            <Route
+              path={replaceSpace(disciplin.subject_title)}
+              element={works.map(
+                (work) =>
+                  (work = (
+                    <Link to={replaceSpace(work.material_title)}>
+                      <Work
+                        key={`work${work.id}`}
+                        work={work}
+                        setWorkLink={setWorkLink}
+                        setMaterialId={setMaterialId}
+                      />
+                    </Link>
+                  ))
+              )}
+            ></Route>
+            <Route
+              path={`${replaceSpace(disciplin.subject_title)}/${workLink}/`}
+              element={
+                <WorkPreview
+                  numberPage={numberPage}
+                  listId={disciplin.id}
+                  materialId={materialId}
+                />
+              }
+            ></Route>
+          </Routes>
         </div>
         <div className="main-page-work-preview__nav-container">
           <div className="main-page-work-preview__page-btn-container">
