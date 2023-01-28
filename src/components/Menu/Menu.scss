@@ -80,7 +80,8 @@ $base-height:8.7vh;
     display: flex;
     margin-top: 1.61vh;
     min-width: $base-width;
-    tr {
+
+    &-column {
         min-height: $base-height;
         min-width: $base-width - 1.94vw;
         @extend %base-cell;

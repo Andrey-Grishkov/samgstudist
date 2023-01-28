@@ -1,6 +1,11 @@
 import { qutes } from "../../utils/constants";
 import Commercial from "../Commercial/Commercial";
 export const MainContent = () => {
+
+
+
+
+
   return (
     <div className="main__content-container">
       <div className="main__content">
