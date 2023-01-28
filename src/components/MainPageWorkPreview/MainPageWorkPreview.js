@@ -14,7 +14,6 @@ const MainPageWorkPreview = ({ disciplin }) => {
   const [materialId, setMaterialId] = useState(NaN);
   const fetchData = async () => {
     const { results, count } = await fetchListOfWorks(disciplin.id);
-
     setWorks(results);
   };
 

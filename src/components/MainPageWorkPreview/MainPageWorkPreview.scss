@@ -1,16 +1,16 @@
-$base-width: 728px;
+$base-width: 50.56vw;
 
 .main-page-work-preview {
-  max-width: 1440px;
-  min-height: 801px;
+  max-width: 100vw;
+  min-height: 86.12vh;
   // border: red 1px solid;
   position: relative;
   display: flex;
   flex-direction: row;
 
   &__content {
-    margin-left: 154px;
-    min-height: 736px;
+    margin-left: 10.69vw;
+    min-height: 79.13vh;
     // border: blue 1px solid;
   }
 
@@ -35,15 +35,15 @@ $base-width: 728px;
   }
 
   &__commercial-container {
-    margin: 21px 0 0 0;
+    margin: 2.25vh 0 0 0;
     width: $base-width;
-    height: 90px;
+    height: 9.67vh;
     border: 1px solid #7A7A7A;
     overflow: hidden;
   }
 
   &__title {
-    margin: 21px 0 0 0;
+    margin: 2.25vh 0 0 0;
     font-family: Poppins;
     font-style: normal;
     font-weight: 400;
@@ -51,11 +51,10 @@ $base-width: 728px;
     line-height: 115.52%;
     border: #2ED7D9 3px solid;
     max-width: $base-width;
-    max-height: 44px;
+    max-height: 4.73vh;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    padding-top: 1.07vh;
+    padding-bottom: 1.07vh;
   }
 
   &__content-container {
@@ -66,7 +65,7 @@ $base-width: 728px;
     background-color: #fff;
     margin: 0;
     max-width: $base-width;
-    min-height: 438px;
+    min-height: 47.09vh;
     border-bottom: #2ED7D9 3px solid;
     border-left: #2ED7D9 3px solid;
     border-right: #2ED7D9 3px solid;
@@ -86,8 +85,8 @@ $base-width: 728px;
   }
 
   &__btn {
-    min-height: 54px;
-    min-width: 255px;
+    min-height: 5.8vh;
+    min-width: 17.71vw;
     border: 3px solid #0066FF;
     border-radius: 10px;
     background: white;
@@ -108,7 +107,7 @@ $base-width: 728px;
 
 
     .main-page-work-preview__btn-text {
-      margin-left: 11px;
+      margin-left: 0.76vw;
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 400;
@@ -117,13 +116,13 @@ $base-width: 728px;
     }
 
     .main-page-work-preview__btn-text_reversed {
-      margin-left: 24px;
+      margin-left: 1.67vw;
     }
   }
 
   &__page-number {
-    min-width: 54px;
-    min-height: 54px;
+    min-width: 3.75vw;
+    min-height: 3.75vw;
     border: 3px solid #2ED7D9;
     font-family: 'Podkova';
     font-style: normal;
@@ -137,8 +136,8 @@ $base-width: 728px;
   }
 
   &__btn-toggle-view {
-    margin-left: 32px;
-    min-width: 100px;
+    margin-left: 2.22vw;
+    min-width: 6.94vw;
     background: white;
     display: flex;
     align-items: center;

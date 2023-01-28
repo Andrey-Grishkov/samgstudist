@@ -1,5 +1,6 @@
-$base-width:271px;
-$base-height:81px;
+$base-width:18.82vw;
+$base-height:8.7vh;
+
 %text {
     font-family: Proza_Libre;
     color: #000000;
@@ -18,21 +19,20 @@ $base-height:81px;
     border: 1px solid #2ED7D9;
     display: flex;
     align-items: center;
-    padding-left: 28px;
+    padding-left: 1.94vw;
 }
 
 .menu {
-    margin: 22px 0 16px 71px;
+    margin: 2.36vh 0 1.72vh 4.93vw;
     width: $base-width;
     height: 763px;
     // border: blue 1px solid;
     z-index: 3;
-
-    
 }
 
 // выпадающее меню
 .menu__dropdown {
+    max-width: $base-width;
     position: relative;
     display: inline-block;
 
@@ -78,11 +78,11 @@ $base-height:81px;
 // колонки
 .menu__table {
     display: flex;
-    margin-top: 15px;
+    margin-top: 1.61vh;
     min-width: $base-width;
     tr {
         min-height: $base-height;
-        max-width: $base-width - 28px;
+        min-width: $base-width - 1.94vw;
         @extend %base-cell;
         background-color: rgba(204, 230, 228, 0.42);
         cursor: pointer;
