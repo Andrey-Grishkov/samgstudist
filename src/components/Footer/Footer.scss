@@ -2,23 +2,23 @@
 
 .footer {
     position: absolute;
-    margin: 0 auto;
-    bottom: 9px;
-    left: 18%;
-    margin-left: 96px;
-    max-width: 948px;
+
+    bottom: 1.2vh;
+    left: 28.14vw;
+
+    max-width: 65.83vw;
     border-top: #7A7A7A 1px solid;
     z-index: 5;
 
     &__about-team {
-        bottom: 36px;
+        bottom: 3.87vh;
         right: 17%;
     }
 }
 
 .footer-text {
     @include font('Proza_Libre', 14px, 1.3);
-    margin-top: 17px;
+    margin-top: 1.82vh;
     margin-bottom: 0;
     color: #7A7A7A;
 }

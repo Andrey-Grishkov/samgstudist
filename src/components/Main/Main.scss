@@ -1,43 +1,46 @@
-
 .main {
-    background:url("../../images/main__image-wave.svg") bottom  no-repeat;
+
     font-family: Proza_Libre;
-    min-height: 801px;
-    // border: red 1px solid;
+    min-width: 100vw;
+    min-height: 86vh;
     position: relative;
     display: flex;
     flex-direction: row;
-   
+
     .triangle{
         position: absolute;
-        width: 1440px;
-        height: 800px;
+        width: 100vw;
+        height: 86.12vh;
+        bottom: 0;
         animation: mymove 4s ;
-        background:url("../../images/main-page-work-preview__triangle.svg") 0% 100%  no-repeat,
-         url("../../images/main-page-work-preview__triangle-2.svg") right 100% no-repeat,
-         url("../../images/main__image-wave.svg") bottom  no-repeat;
+        background:
+         url("../../images/main-page-work-preview__triangle.svg") 0% 100%  no-repeat,
+         url("../../images/main-page-work-preview__triangle-2.svg") right 100% no-repeat;
+        z-index: 1;
     }
     @keyframes mymove {
         0% {opacity: 0;}
     }
 
     .main__image-wave {
+        min-width: 100vw;
         position: absolute;
         z-index: 1;
         bottom: 0;
+        object-fit: cover;
     }
     .main__image-women {
         position: absolute;
-        left: 354px;
-        bottom: 9px;
+        left: 24.58vw;
+        bottom:  1.2vh;
         z-index: 2;
     }
     .main__commercial-container {
-        right: 141px;
-        bottom: 91px;
+        right: 9.79vw;
+        bottom: 9.78vh;
         position: absolute;
-        min-height: 280px;
-        min-width: 336px;
+        min-height: 30vh;
+        min-width: 9.79vw;
         // border: red 1px solid;
         z-index: 2;
     }
@@ -50,13 +53,13 @@
     background:url("../../images/main__image-women.svg") 0% 109.5%  no-repeat,
      url("../../images/books.svg") 39% 102.3%  no-repeat;
 
-    margin-left: 60px;
-    max-width: 937px;
-    min-height: 736px;
+    margin-left: 4.17vw;
+    max-width: 65.07vw;
+    min-height: 79vh;
     // border: blue 1px solid;
 
     .main__title {
-        margin: 28px 0 0 0;
+        margin: 3vh 0 0 0;
         font-family: 'Source Serif Pro';
         font-style: normal;
         font-weight: 400;
@@ -66,7 +69,7 @@
 
     .main__greetings {
         color: #4D4848;
-        margin: 25px 0 0 0;
+        margin: 2.7vh 0 0 0;
         font-style: normal;
         font-weight: 400;
         font-size: 24px;
@@ -74,14 +77,14 @@
         // border: blue 1px solid;
     }
     .main__quotes-title {
-        margin: 26px 0 0 0;
+        margin: 2.7vh 0 0 0;
         font-style: normal;
         font-weight: 400;
         font-size: 24px;
         line-height: 33px;
     }
     .main__quotes-container {
-        margin: 29px 0 0 0;
+        margin: 3.11vh 0 0 0;
         // border: red 1px solid;
         min-height: 84px;
 
@@ -95,9 +98,9 @@
         z-index: 3;
     }
     .main__quot {
-        max-width: 250px;
-        height: 84px;
-        padding-left: 23px;
+        max-width: 17.36vw;
+        height: 9.03vh;
+        padding-left: 1.60vw;
         border: 3px solid #2ED7D9;
         border-radius: 10px;
         list-style-type: none;
@@ -112,4 +115,3 @@
         z-index: 3;
     }
 }
-   

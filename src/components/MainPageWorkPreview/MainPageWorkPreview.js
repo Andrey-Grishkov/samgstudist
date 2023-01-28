@@ -9,7 +9,6 @@ const MainPageWorkPreview = ({ disciplin }) => {
   const [works, setWorks] = useState([]);
   const fetchData = async () => {
     const { results, count } = await fetchListOfWorks(disciplin.id);
-
     setWorks(results);
   };
 

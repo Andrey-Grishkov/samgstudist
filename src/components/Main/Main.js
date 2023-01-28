@@ -5,6 +5,7 @@ import { MainContent } from "../MainContent/MainContent";
 import MainPageWorkPreview from "../MainPageWorkPreview/MainPageWorkPreview";
 import { Route, Routes } from "react-router-dom";
 import { fetchDisciplins } from "../../utils/MainApi";
+import Wave from '../../images/main__image-wave.svg'
 
 const Main = () => {
   const [disciplins, setDisciplins] = useState([]);
@@ -20,6 +21,7 @@ const Main = () => {
 
   return (
     <section className={`main`}>
+      <img className='main__image-wave' src={Wave}/>
       {disciplins && <div className="triangle"></div>}
       <Menu
         disciplins={disciplins}
