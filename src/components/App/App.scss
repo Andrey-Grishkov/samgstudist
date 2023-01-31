@@ -1,15 +1,25 @@
 .page {
-    position: relative;
-    max-width: 100vw;
-    margin: 0 auto;
-    font-family: Source Serif Pro, Arial, sans-serif;
-    color: black;
-    background-color: #FFFFFF;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border: chartreuse 1px solid;
-    box-sizing: border-box;
+  width: 1440px;
+  height: 930px;
+  margin: auto;
+  margin-top: 1.8%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: Source Serif Pro, Arial, sans-serif;
+  color: black;
+  background-color: #ffffff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // border: chartreuse 1px solid;
+  box-shadow: inset 0px 0px 0px 1px black;
+  box-sizing: border-box;
+}
+.fullScreen {
+  margin-top: 0;
+  width: 100vw;
+  height: 100vh;
 }
