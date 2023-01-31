@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { qutes } from "../../utils/constants";
+// import { qutes } from "../../utils/constants";
 import { fetchWork } from "../../utils/MainApi";
 // import Commercial from "../Commercial/Commercial";
 export const MainContent = () => {

@@ -6,7 +6,7 @@ export const Disciplin = ({ disciplin, setDisciplin }) => {
       }}
       className="menu_table-column"
     >
-      {disciplin.subject_title}
+      <span>{disciplin.subject_title}</span>
     </div>
   );
 };

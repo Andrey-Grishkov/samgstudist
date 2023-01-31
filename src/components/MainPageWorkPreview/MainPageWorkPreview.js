@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./MainPageWorkPreview.scss";
-import Commercial from "../Commercial/Commercial";
 import { Work } from "../Work/Work";
 import { fetchListOfWorks } from "../../utils/MainApi";
 import { Link, Route, Routes } from "react-router-dom";
@@ -13,13 +12,13 @@ const MainPageWorkPreview = ({ disciplin }) => {
   const [workLink, setWorkLink] = useState(" ");
   const [materialId, setMaterialId] = useState(NaN);
   const fetchData = async () => {
-    const { results, count } = await fetchListOfWorks(disciplin.id);
+    const { results } = await fetchListOfWorks(disciplin.id);
     setWorks(results);
   };
 
   useEffect(() => {
     fetchData();
-  }, [disciplin]);
+  }, []);
 
   return (
     <div className="main-page-work">
