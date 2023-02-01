@@ -39,14 +39,14 @@ $base-height: 40%;
   &_table {
     width: 100%;
     margin-top: 15%;
-    height: 83%;
+    height: 70%;
     &_column {
       background-color: #eaf4f4;
       display: flex;
       align-items: center;
 
       width: 100%;
-      height: 12%;
+      height: 12.5%;
       border: 1px solid #2ed7d9;
       @extend %text;
       // background-color: rgba(204, 230, 228, 0.42);

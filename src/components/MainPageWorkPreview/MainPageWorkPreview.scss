@@ -9,6 +9,7 @@ $base: 1%;
     height: $base * 82;
     &__commercial {
       background-image: url(../../images/commertial__image.jpg);
+      background-position: 5% 5%;
       background-size: cover;
       width: $base * 95;
       height: $base * 14;

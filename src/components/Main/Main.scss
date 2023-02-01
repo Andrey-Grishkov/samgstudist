@@ -4,7 +4,7 @@
   background-size: cover;
   font-family: Proza_Libre;
   width: 100%;
-  height: 87%;
+  height: 86%;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -21,7 +21,7 @@
   height: 40%;
 }
 .main__content-container {
-  background: url("../../images/main__image-women.svg") -1% 115%/50% no-repeat;
+  background: url("../../images/main__image-women.svg") -2% 116.5%/50% no-repeat;
   margin-left: 5%;
   width: 65%;
   height: 93%;
@@ -34,6 +34,8 @@
   height: 38%;
 
   .main__title {
+    margin: 3% 0 0 0;
+    padding: 0 0 0 0;
     font-family: "Source Serif Pro";
     font-style: normal;
     font-weight: 400;
@@ -42,7 +44,7 @@
   }
 
   .main__greetings {
-    margin: 1% 0 0 0;
+    margin: 3% 0 0 0;
     padding: 0 0 0 0;
     color: #4d4848;
     width: 90%;

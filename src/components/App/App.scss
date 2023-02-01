@@ -15,11 +15,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-shadow: inset 0px 0px 0px 1px black;
-  box-sizing: border-box;
 }
 .fullScreen {
   margin-top: 0;
   width: 100vw;
   height: 100vh;
-  height: 100 * 0.646vw;
+  // height: 100 * 0.646vw;
 }

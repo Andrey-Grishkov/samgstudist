@@ -1,10 +1,10 @@
-@import '../vars';
+@import "../vars";
 
 .about-team {
   width: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
   height: 100%;
-  background-image: url('../../images/matrix_1.png');
+  background-image: url("../../images/matrix_1.png");
   background-color: black;
   background-repeat: no-repeat;
   position: relative;
@@ -17,15 +17,15 @@
     left: 18px;
     border-radius: 10px;
     color: white;
-    border: 3px solid #8F01FF;
-    background-color: #580BFF;
+    border: 3px solid #8f01ff;
+    background-color: #580bff;
     padding: 4px 0 4px 13px;
     width: 175px;
     height: 39px;
   }
 
   &__subtitle {
-    @include font('Proza_Libre', 21px, 26px);
+    @include font("Proza_Libre", 21px, 26px);
     width: 120px;
   }
 
@@ -56,14 +56,18 @@
     z-index: 1;
     mask-composite: exclude;
     overflow: scroll;
-    background-image: linear-gradient(rgba(0, 255, 133, 1), rgba(0, 102, 255, 1), rgba(173, 0, 255, .97));
+    background-image: linear-gradient(
+      rgba(0, 255, 133, 1),
+      rgba(0, 102, 255, 1),
+      rgba(173, 0, 255, 0.97)
+    );
   }
 
   &__title {
     margin: 10px auto;
     text-align: center;
     color: white;
-    @include font('Proza_Libre', 32px, 1.33);
+    @include font("Proza_Libre", 32px, 1.33);
   }
 
   &__list {
@@ -79,7 +83,7 @@
     margin: 0;
 
     &_title {
-      @include font('Proza_Libre', 24px, 1.33);
+      @include font("Proza_Libre", 24px, 1.33);
       margin: 0 0 5px;
       color: white;
     }
