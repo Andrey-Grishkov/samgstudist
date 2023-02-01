@@ -13,7 +13,6 @@ const MainPageWorkPreview = ({ disciplin }) => {
   const [materialId, setMaterialId] = useState(NaN);
   const fetchData = async () => {
     const { results } = await fetchListOfWorks(disciplin.id);
-    console.log(results);
     setWorks([...results]);
   };
 

@@ -1,5 +1,6 @@
 import "./Header.scss";
 import { ReactComponent as Logo } from "../../images/header__logo.svg";
+import { ReactComponent as searchImg } from "../../images/search__img.svg";
 import { useLocation, Link } from "react-router-dom";
 
 const Header = ({ inputRef, setFullScreen }) => {
@@ -38,8 +39,8 @@ const Header = ({ inputRef, setFullScreen }) => {
               </li>
             </ul>
           </nav>
-          <form className="header__search-form">
-            {/* <button className="search__search-button" type="submit"></button> */}
+          <form className="search-form">
+            <button className="search-form__button" type="submit"></button>
             <input
               className="search-form__name"
               placeholder="Поиск по сайту"
@@ -48,7 +49,7 @@ const Header = ({ inputRef, setFullScreen }) => {
               name="search-form"
               required
               ref={inputRef}
-            />
+            ></input>
           </form>
         </div>
       )}
