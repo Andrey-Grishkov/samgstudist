@@ -4,17 +4,17 @@ $base: 1%;
   margin-left: $base * 10;
   margin-top: $base * 1.5;
   height: $base * 90;
-  &_content {
+  &__content {
     width: $base * 80;
     height: $base * 82;
-    &_commercial {
+    &__commercial {
       background-image: url(../../images/commertial__image.jpg);
       background-size: cover;
       width: $base * 95;
       height: $base * 14;
       border: 1px solid #7a7a7a;
     }
-    &_title {
+    &__title {
       margin: $base * 3 0 0 0;
       font-family: Poppins;
       font-style: normal;
@@ -28,7 +28,7 @@ $base: 1%;
       padding-top: $base * 1;
       padding-bottom: $base * 1;
     }
-    &_preview {
+    &__preview {
       background-color: #fff;
       margin: 0;
       width: $base * 95;
@@ -38,67 +38,67 @@ $base: 1%;
       border-right: #2ed7d9 3px solid;
     }
   }
-}
-.nav-container {
-  margin: auto;
-  height: $base * 11;
-  display: flex;
-  &_without-illustrations {
+  .nav-container {
+    margin: auto;
+    height: $base * 11;
     display: flex;
-    width: $base * 76.5;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    &_page-number {
-      margin-top: auto;
-      width: $base * 6;
-      height: $base * 50;
-      border: 3px solid #2ed7d9;
-      font-family: "Podkova";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 35px;
+    &__without-illustrations {
+      display: flex;
+      width: $base * 76.5;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      &__page-number {
+        margin-top: auto;
+        width: $base * 6;
+        height: $base * 50;
+        border: 3px solid #2ed7d9;
+        font-family: "Podkova";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 35px;
+        background: white;
+        display: flex;
+        justify-content: center;
+      }
+      &__btn {
+        margin-top: auto;
+        height: $base * 60;
+        width: $base * 35;
+        border: 3px solid #0066ff;
+        border-radius: 10px;
+        background: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(204, 230, 228, 0.42);
+        }
+        .btn-text {
+          margin: auto;
+        }
+      }
+    }
+    &__illustrations {
+      margin-left: $base * 2;
+      min-width: $base * 7;
       background: white;
       display: flex;
+      align-items: center;
       justify-content: center;
-    }
-    &_btn {
-      margin-top: auto;
-      height: $base * 60;
-      width: $base * 35;
       border: 3px solid #0066ff;
       border-radius: 10px;
-      background: white;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: $base * 130;
       cursor: pointer;
       &:hover {
         background-color: rgba(204, 230, 228, 0.42);
       }
     }
   }
-  &_illustrations {
-    margin-left: $base * 2;
-    min-width: $base * 7;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #0066ff;
-    border-radius: 10px;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: $base * 130;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(204, 230, 228, 0.42);
-    }
-  }
-}
-.btn-text {
-  margin: auto;
 }

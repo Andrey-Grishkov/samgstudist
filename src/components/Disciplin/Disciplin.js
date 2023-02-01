@@ -4,7 +4,7 @@ export const Disciplin = ({ disciplin, setDisciplin }) => {
       onClick={() => {
         setDisciplin(disciplin);
       }}
-      className="menu_table-column"
+      className="menu_table_column"
     >
       <span>{disciplin.subject_title}</span>
     </div>

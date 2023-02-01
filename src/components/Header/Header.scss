@@ -91,12 +91,12 @@
   }
 
   &__search-form {
-    background: url("../../images/search__img.svg") 0% 50% / auto 100% no-repeat;
+    // background: url("../../images/search__img.svg") 0% 50% / auto 100% no-repeat;
     margin-right: 5%;
     width: 50%;
     height: 40%;
     // border: darkred 1px solid;
-    border-radius: 1000px;
+    border-radius: 0%;
     @include flex(row, flex-start, stretch);
     position: relative;
   }

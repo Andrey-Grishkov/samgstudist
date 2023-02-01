@@ -13,21 +13,22 @@ const MainPageWorkPreview = ({ disciplin }) => {
   const [materialId, setMaterialId] = useState(NaN);
   const fetchData = async () => {
     const { results } = await fetchListOfWorks(disciplin.id);
-    setWorks(results);
+    console.log(results);
+    setWorks([...results]);
   };
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [disciplin]);
 
   return (
     <div className="main-page-work">
-      <div className="main-page-work_content">
-        <div className="main-page-work_content_commercial"></div>
-        <h3 className="main-page-work_content_title">
+      <div className="main-page-work__content">
+        <div className="main-page-work__content__commercial"></div>
+        <h3 className="main-page-work__content__title">
           {disciplin.subject_title}
         </h3>
-        <div className="main-page-work_content_preview">
+        <div className="main-page-work__content__preview">
           <Routes>
             <Route
               path={replaceSpace(disciplin.subject_title)}
@@ -59,25 +60,25 @@ const MainPageWorkPreview = ({ disciplin }) => {
         </div>
       </div>
       <div className="nav-container">
-        <div className="nav-container_without-illustrations">
+        <div className="nav-container__without-illustrations">
           <button
             onClick={() => numberPage && setNumberPage(numberPage - 1)}
-            className="nav-container_without-illustrations_btn"
+            className="nav-container__without-illustrations__btn"
           >
             <p className="btn-text">← Предыдущая страница</p>
           </button>
-          <div className="nav-container_without-illustrations_page-number">
+          <div className="nav-container__without-illustrations__page-number">
             {numberPage + 1}
           </div>
 
           <button
             onClick={() => setNumberPage(numberPage + 1)}
-            className="nav-container_without-illustrations_btn"
+            className="nav-container__without-illustrations__btn"
           >
             <p className="btn-text">Следующая страница →</p>
           </button>
         </div>
-        <button className="nav-container_illustrations">Иллюстрации</button>
+        <button className="nav-container__illustrations">Иллюстрации</button>
       </div>
     </div>
   );

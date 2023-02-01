@@ -12,7 +12,8 @@ const Main = () => {
 
   const fetchData = async () => {
     const { results } = await fetchDisciplins();
-    setDisciplins(results);
+    console.log(disciplins);
+    setDisciplins([...results]);
   };
   useEffect(() => {
     fetchData();

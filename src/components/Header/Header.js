@@ -14,7 +14,7 @@ const Header = ({ inputRef, setFullScreen }) => {
       <Link to="/">
         <Logo
           onClick={() => {
-            setFullScreen((p) => !p);
+            setFullScreen((switchScreen) => !switchScreen);
           }}
           className="header__logo-container"
         ></Logo>
