@@ -25,13 +25,13 @@ export const MainContent = () => {
         <nav className="main__quotes-container">
           <ul className="main__quotes">
             {workPreview && (
-              <>
+              <nav className="main__quotes">
                 {[...Array(3)].map((_, i) => (
                   <Link to="" className="main__quot">
                     {workPreview[i].paragraph_text}
                   </Link>
                 ))}
-              </>
+              </nav>
             )}
           </ul>
         </nav>
