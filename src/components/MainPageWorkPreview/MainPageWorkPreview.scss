@@ -18,11 +18,7 @@
     }
     &__title {
       margin: 3% 0 0 0;
-      font-family: Poppins;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 21px;
-      line-height: 115%;
+      @include font("Poppins", 21px, 115%);
       border: #2ed7d9 3px solid;
       width: 95%;
       height: 5%;
@@ -47,22 +43,16 @@
     &__without-illustrations {
       display: flex;
       width: 76.5%;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+      @include flex(row, space-between, center);
+
       &__page-number {
         margin-top: auto;
         width: 6%;
         height: 50%;
         border: 3px solid #2ed7d9;
-        font-family: "Podkova";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 35px;
+        @include font("Podkova", 32px, 35px);
         background: white;
-        display: flex;
-        justify-content: center;
+        @include flex(row, center, flex-start);
       }
       &__btn {
         margin-top: auto;
@@ -71,9 +61,7 @@
         border: 3px solid #0066ff;
         border-radius: 10px;
         background: white;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        @include flex(row, flex-start, flex-start);
         cursor: pointer;
         &:hover {
           background-color: rgba(204, 230, 228, 0.42);
@@ -87,16 +75,10 @@
       margin-left: 2%;
       min-width: 7%;
       background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex(row, center, center);
       border: 3px solid #0066ff;
       border-radius: 10px;
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 130%;
+      @include font("Poppins", 16px, 130%);
       cursor: pointer;
       &:hover {
         background-color: rgba(204, 230, 228, 0.42);
