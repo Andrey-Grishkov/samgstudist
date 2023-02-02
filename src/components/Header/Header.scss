@@ -24,10 +24,14 @@
 
     @include font("Poppins", 24px, 19px);
   }
-
+  &__logo-link {
+    justify-items: center;
+    width: 37%;
+    height: 100%;
+  }
   &__logo-container {
-    margin-left: 50%;
-    height: 50%;
+    width: 100%;
+    height: 90%;
     fill: black;
   }
   &__logo-container:hover {
@@ -36,7 +40,7 @@
     // box-shadow: 10px 5px 5px red;
   }
   &__line {
-    margin: 0.7% 0 0 13%;
+    margin: 0.7% 0 0 0;
     height: 70%;
     border-right: 1px black solid;
   }
@@ -93,16 +97,14 @@
 
 .search-form {
   margin-right: 5%;
-  width: 50%;
-  height: 38%;
-  border-radius: 100px;
+  width: 45%;
+  height: 50%;
   @include flex(row, flex-start, stretch);
   position: relative;
   &__button {
-    background: none;
-    margin-left: 0.5%;
-    width: 10%;
-    height: 110%;
+    background: url("../../images/search__img.svg") 0/ 100% no-repeat;
+    width: 12.5%;
+    height: 100%;
     border-radius: 100%;
     border: none;
     cursor: pointer;
@@ -110,14 +112,16 @@
     position: absolute;
   }
   &__name {
-    background: url("../../images/search__img.svg") 0/ 11% no-repeat;
+    background: none;
     color: black;
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
     width: 100%;
-    height: 100%;
+    height: 80%;
+    margin-top: 1%;
     border-radius: 100px;
+    border-left: none;
     padding-left: 20%;
   }
 }

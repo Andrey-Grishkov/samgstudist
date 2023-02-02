@@ -21,7 +21,7 @@
   height: 40%;
 }
 .main__content-container {
-  background: url("../../images/main__image-women.svg") -2% 116.5%/50% no-repeat;
+  background: url("../../images/main__image-women.svg") 0 116.5%/50% no-repeat;
   margin-left: 5%;
   width: 65%;
   height: 93%;
@@ -77,9 +77,11 @@
     }
   }
   .main__quot {
-    width: 25%;
-    height: 25%;
-    padding-left: 1.6vw;
+    display: flex;
+    width: 28%;
+    height: 28%;
+    text-align: center;
+    // padding-left: 1.6vw;
     border: 3px solid #2ed7d9;
     border-radius: 10px;
     list-style-type: none;
@@ -87,13 +89,13 @@
     font-weight: 400;
     font-size: 21px;
     line-height: 29px;
-    display: flex;
     justify-content: flex-start;
     overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
 .triangle {
-  background-image: url("../../images/main-page-work-preview__triangle.svg");
+  background: url("../../images/main-page-work-preview__triangle.svg") center/
+      cover no-repeat,
+    url("../../images/main__image-wave.svg") center/cover no-repeat;
 }

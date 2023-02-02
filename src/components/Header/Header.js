@@ -12,7 +12,7 @@ const Header = ({ inputRef, setFullScreen }) => {
 
   return (
     <header className={`header ${about_team ? "header__team" : ""}`}>
-      <Link to="/">
+      <Link className="header__logo-link" to="/">
         <Logo
           onClick={() => {
             setFullScreen((switchScreen) => !switchScreen);
