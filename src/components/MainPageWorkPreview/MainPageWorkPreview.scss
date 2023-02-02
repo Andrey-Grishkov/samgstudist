@@ -1,39 +1,40 @@
-$base: 1%;
+@import "../vars";
+
 .main-page-work {
-  width: $base * 65;
-  margin-left: $base * 10;
-  margin-top: $base * 1.5;
-  height: $base * 90;
+  width: 65%;
+  margin-left: 10%;
+  margin-top: 1.5%;
+  height: 90%;
   &__content {
-    width: $base * 80;
-    height: $base * 82;
+    width: 80%;
+    height: 82%;
     &__commercial {
       background-image: url(../../images/commertial__image.jpg);
       background-position: 5% 5%;
       background-size: cover;
-      width: $base * 95;
-      height: $base * 14;
+      width: 95%;
+      height: 14%;
       border: 1px solid #7a7a7a;
     }
     &__title {
-      margin: $base * 3 0 0 0;
+      margin: 3% 0 0 0;
       font-family: Poppins;
       font-style: normal;
       font-weight: 400;
       font-size: 21px;
-      line-height: $base * 115;
+      line-height: 115%;
       border: #2ed7d9 3px solid;
-      width: $base * 95;
-      height: $base * 5;
+      width: 95%;
+      height: 5%;
       text-align: center;
-      padding-top: $base * 1;
-      padding-bottom: $base * 1;
+      padding-top: 1%;
+      padding-bottom: 1%;
     }
     &__preview {
       background-color: #fff;
       margin: 0;
-      width: $base * 95;
-      height: $base * 73;
+      width: 95%;
+      height: 73%;
       border-bottom: #2ed7d9 3px solid;
       border-left: #2ed7d9 3px solid;
       border-right: #2ed7d9 3px solid;
@@ -41,18 +42,18 @@ $base: 1%;
   }
   .nav-container {
     margin: auto;
-    height: $base * 11;
+    height: 11%;
     display: flex;
     &__without-illustrations {
       display: flex;
-      width: $base * 76.5;
+      width: 76.5%;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
       &__page-number {
         margin-top: auto;
-        width: $base * 6;
-        height: $base * 50;
+        width: 6%;
+        height: 50%;
         border: 3px solid #2ed7d9;
         font-family: "Podkova";
         font-style: normal;
@@ -65,8 +66,8 @@ $base: 1%;
       }
       &__btn {
         margin-top: auto;
-        height: $base * 60;
-        width: $base * 35;
+        height: 60%;
+        width: 35%;
         border: 3px solid #0066ff;
         border-radius: 10px;
         background: white;
@@ -83,8 +84,8 @@ $base: 1%;
       }
     }
     &__illustrations {
-      margin-left: $base * 2;
-      min-width: $base * 7;
+      margin-left: 2%;
+      min-width: 7%;
       background: white;
       display: flex;
       align-items: center;
@@ -95,7 +96,7 @@ $base: 1%;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
-      line-height: $base * 130;
+      line-height: 130%;
       cursor: pointer;
       &:hover {
         background-color: rgba(204, 230, 228, 0.42);

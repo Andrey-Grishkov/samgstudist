@@ -1,99 +1,11 @@
+@import "../vars";
+
 .main {
   background-image: url("../../images/main__image-wave.svg");
   background-position: center;
   background-size: cover;
-  font-family: Proza_Libre;
   width: 100%;
   height: 86%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-.main__commercial-container {
-  background-color: #fff;
-  background-image: url("../../images/commertial__image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  right: 6%;
-  bottom: 10%;
-  position: absolute;
-  width: 25%;
-  height: 40%;
-}
-.main__content-container {
-  background: url("../../images/main__image-women.svg") -2% 116.5%/50% no-repeat;
-  margin-left: 5%;
-  width: 65%;
-  height: 93%;
+  @include flex(row, flex-start, flex-start);
 }
 
-.main__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 38%;
-
-  .main__title {
-    margin: 3% 0 0 0;
-    padding: 0 0 0 0;
-    font-family: "Source Serif Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 80.52%;
-  }
-
-  .main__greetings {
-    margin: 3% 0 0 0;
-    padding: 0 0 0 0;
-    color: #4d4848;
-    width: 90%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 115.52%;
-    // border: blue 1px solid;
-  }
-  .main__quotes-title {
-    margin: 3% 0 0 0;
-    padding: 0 0 0 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 33px;
-  }
-  .main__quotes-container {
-    margin-top: 1%;
-    height: 100%;
-  }
-  .main__quotes {
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    &__nav {
-      height: 100%;
-    }
-  }
-  .main__quot {
-    width: 25%;
-    height: 25%;
-    padding-left: 1.6vw;
-    border: 3px solid #2ed7d9;
-    border-radius: 10px;
-    list-style-type: none;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 29px;
-    display: flex;
-    justify-content: flex-start;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-.triangle {
-  background-image: url("../../images/main-page-work-preview__triangle.svg");
-}

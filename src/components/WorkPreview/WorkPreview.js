@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { fetchWork } from "../../utils/MainApi";
-import { Paragraph } from "./Paragraph";
+import { useEffect, useState } from 'react'
+import { fetchWork } from '../../utils/MainApi'
+import { Paragraph } from './Paragraph'
 
 export const WorkPreview = ({ numberPage, listId, materialId }) => {
   const [workPreview, setWorkPreview] = useState();
