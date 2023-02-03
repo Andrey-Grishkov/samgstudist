@@ -29,7 +29,7 @@ const Header = ({ inputRef, setFullScreen }) => {
             <ul className='header__navigation_list'>
               <li className='header__link-container'>
                 <Link className='header__link' to='/'>
-                  Главная
+                  На главную
                 </Link>
               </li>
               <li className='header__link-container'>

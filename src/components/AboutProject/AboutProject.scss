@@ -37,14 +37,14 @@
 
   &__title {
     position: relative;
-    margin: 15px 0 0 80px;
-    @include font("Pacifico", 35px, 1);
+    margin: 1.61% 0 0 5.56%;
+    @include font("Pacifico", 220%, 100%);
   }
 
   &__list {
     @include flex(column, center, center);
-    gap: 50px;
-    margin: 30px auto 0;
+    gap: 5.37vh;
+    margin: 2.08% auto 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
@@ -54,14 +54,14 @@
   }
 
   &__el {
-    height: 150px;
+    height: 10.42vw;
     @include flex(row, space-between, center);
     border: 1px solid #2e49d9;
     background-color: #2e49d9;
     box-shadow: 2px 5px 4px 1px rgba(0, 0, 0, 0.25);
-    border-radius: 1000px;
-    padding: 40px 30px 40px 20px;
-    gap: 30px;
+    border-radius: 69.44vw;
+    padding: 2.78% 2.08% 2.78% 1.39%;
+    gap: 3.22vh;
     width: 59%;
     // width: 840px;
     z-index: 2;
@@ -71,9 +71,9 @@
   &__text {
     text-align: start;
     width: 69%;
-    @include font("Poppins", 21px, 1.52);
+    @include font("Poppins", 132%, 1.52);
     color: white;
-    margin: 0 auto 0 108px;
+    margin: 0 auto 0 7.50%;
     box-sizing: border-box;
   }
 
@@ -86,7 +86,7 @@
     }
 
     &_vector {
-      margin-right: 20px;
+      margin-right: 1.39%;
     }
   }
 
@@ -96,21 +96,21 @@
   }
 
   &__circle {
-    width: 87px;
-    height: 87px;
+    width: 6.04vw;
+    height: 6.04vw;
     position: absolute;
     background-image: url("../../images/circle.svg");
     background-repeat: no-repeat;
-    bottom: -18px;
-    left: -10px;
+    bottom: -1.25vw;
+    left: -0.69vw;
   }
 }
 
 .glass {
-  bottom: -2px;
+  bottom: -0.14vw;
 }
 
 .vector {
-  bottom: -25px;
-  left: -20px;
+  bottom: -1.74vw;
+  left: -1.39vw;
 }

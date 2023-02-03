@@ -28,12 +28,14 @@
     margin-left: 50%;
     height: 50%;
     fill: black;
+
+    &:hover {
+      fill: red;
+      transform: scale(1.05);
+      //box-shadow: 10px 5px 5px red;
+    }
   }
-  &__logo-container:hover {
-    fill: red;
-    transform: scale(1.05);
-    // box-shadow: 10px 5px 5px red;
-  }
+
   &__line {
     margin: 0.7% 0 0 13%;
     height: 70%;

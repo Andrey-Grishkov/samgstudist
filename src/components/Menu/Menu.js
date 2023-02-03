@@ -9,12 +9,12 @@ const Menu = ({ disciplins, setDisciplin }) => {
 
   return (
     <section className='menu'>
-      <button
-        onClick={() => setDropdown(!dropdown)}
-        className='menu_dropdown_btn'
-      >
-        Дисциплины
-      </button>
+      {/*<button*/}
+      {/*  onClick={() => setDropdown(!dropdown)}*/}
+      {/*  className='menu_dropdown_btn'*/}
+      {/*>*/}
+      {/*  Дисциплины*/}
+      {/*</button>*/}
       <div className='menu__table'>
         {disciplins.map((disciplin) => (
           <Link

@@ -19,19 +19,19 @@
   &__title {
     margin: 3% 0 0 0;
     padding: 0;
-    @include font("Source Serif Pro", 35px, 80.52%);
+    @include font("Source Serif Pro", 220%, 80.52%);
   }
 
   &__greetings {
     @extend %margin-padding;
     color: #4d4848;
     width: 90%;
-    @include font("Proza_Libre", 26px, 115.52%);
+    @include font("Proza_Libre", 163%, 115.52%);
   }
 
   &__quotes-title {
     @extend %margin-padding;
-    @include font("Proza_Libre", 24px, 33px);
+    @include font("Proza_Libre", 150%, 137.5%);
   }
 
   &__quotes-container {
@@ -48,16 +48,19 @@
   &__quot {
     width: 25%;
     height: 25%;
-    padding-left: 1.6vw;
+    padding-left: 1.6%;
     border: 3px solid #2ed7d9;
     border-radius: 10px;
     list-style-type: none;
-    @include font("Proza_Libre", 21px, 29px);
+    @include font("Proza_Libre", 132%, 130%);
     @include flex(column, flex-start, flex-start);
-    overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
     color: black;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__commercial-container {
