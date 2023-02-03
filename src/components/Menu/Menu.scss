@@ -1,13 +1,10 @@
+@import "../vars";
 $base-width: 20%;
 $base-height: 40%;
 
 %text {
-  font-family: Proza_Libre;
   color: #000000;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 160%;
-  line-height: 32px;
+  @include font("Proza_Libre", 21px, 32px);
 }
 
 %base-cell {

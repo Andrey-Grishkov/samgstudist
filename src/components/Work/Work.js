@@ -1,4 +1,4 @@
-import { replaceSpace } from "../../utils/functions";
+import { replaceSpace } from '../../utils/functions'
 
 export const Work = ({ work, setWorkLink, setMaterialId }) => {
   return (

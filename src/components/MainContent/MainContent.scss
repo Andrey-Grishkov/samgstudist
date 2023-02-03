@@ -1,0 +1,81 @@
+@import "../vars";
+%margin-padding {
+  margin: 3% 0 0 0;
+  padding: 0;
+}
+
+.main-content {
+  background: url("../../images/main__image-women.svg") -2% 116.5%/50% no-repeat;
+  margin-left: 5%;
+  width: 65%;
+  height: 93%;
+  font-family: Proza_Libre;
+
+  &__container {
+    @include flex(column, space-between, flex-start);
+    height: 38%;
+  }
+
+  &__title {
+    margin: 3% 0 0 0;
+    padding: 0;
+    @include font("Source Serif Pro", 220%, 80.52%);
+  }
+
+  &__greetings {
+    @extend %margin-padding;
+    color: #4d4848;
+    width: 90%;
+    @include font("Proza_Libre", 163%, 115.52%);
+  }
+
+  &__quotes-title {
+    @extend %margin-padding;
+    @include font("Proza_Libre", 150%, 137.5%);
+  }
+
+  &__quotes-container {
+    margin-top: 1%;
+    height: 100%;
+  }
+
+  &__quotes {
+    padding: 0;
+    height: 100%;
+    @include flex(row, space-between, flex-start);
+  }
+
+  &__quot {
+    width: 25%;
+    height: 25%;
+    padding-left: 1.6%;
+    border: 3px solid #2ed7d9;
+    border-radius: 10px;
+    list-style-type: none;
+    @include font("Proza_Libre", 132%, 130%);
+    @include flex(column, flex-start, flex-start);
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color: black;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__commercial-container {
+    background-color: #fff;
+    background-image: url("../../images/commertial__image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 6%;
+    bottom: 10%;
+    position: absolute;
+    width: 25%;
+    height: 40%;
+  }
+}
+
+.triangle {
+  background-image: url("../../images/main-page-work-preview__triangle.svg");
+}
