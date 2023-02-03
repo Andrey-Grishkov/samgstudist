@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import "./Main.scss";
-import Menu from "../Menu/Menu";
-import { MainContent } from "../MainContent/MainContent";
-import MainPageWorkPreview from "../MainPageWorkPreview/MainPageWorkPreview";
-import { Route, Routes } from "react-router-dom";
-import { fetchDisciplins } from "../../utils/MainApi";
+import React, { useEffect, useState } from 'react'
+import './Main.scss'
+import Menu from '../Menu/Menu'
+import { MainContent } from '../MainContent/MainContent'
+import MainPageWorkPreview from '../MainPageWorkPreview/MainPageWorkPreview'
+import { Route, Routes } from 'react-router-dom'
+import { fetchDisciplins } from '../../utils/MainApi'
 
 const Main = () => {
   const [disciplins, setDisciplins] = useState([]);
@@ -12,23 +12,24 @@ const Main = () => {
 
   const fetchData = async () => {
     const { results } = await fetchDisciplins();
-    setDisciplins(results);
+    console.log(disciplins);
+    setDisciplins([...results]);
   };
   useEffect(() => {
     fetchData();
   }, []);
 
   return (
-    <section className={`main ${disciplin.subject_title ? "triangle" : ""}`}>
+    <section className={`main ${disciplin.subject_title ? 'triangle' : ''}`}>
       <Menu
         disciplins={disciplins}
         setDisciplins={setDisciplins}
         setDisciplin={setDisciplin}
       />
       <Routes>
-        <Route path="" element={<MainContent />}></Route>
+        <Route path='' element={<MainContent />}></Route>
         <Route
-          path="MainPageWorkPreview/*"
+          path='MainPageWorkPreview/*'
           element={<MainPageWorkPreview disciplin={disciplin} />}
         ></Route>
       </Routes>

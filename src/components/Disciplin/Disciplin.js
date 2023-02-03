@@ -1,12 +1,14 @@
+import './Disciplin.scss'
+
 export const Disciplin = ({ disciplin, setDisciplin }) => {
   return (
-    <div
+    <p
       onClick={() => {
         setDisciplin(disciplin);
       }}
-      className="menu_table-column"
+      className='disciplin__table'
     >
-      {disciplin.subject_title}
-    </div>
+      <span>{disciplin.subject_title}</span>
+    </p>
   );
 };
