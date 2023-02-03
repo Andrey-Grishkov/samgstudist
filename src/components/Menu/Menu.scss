@@ -16,56 +16,16 @@ $base-height: 40%;
 
 .menu {
   width: 20%;
-  margin-left: 3%;
-  height: 99%;
-  &_dropdown {
-    &_btn {
-      cursor: pointer;
-      background-color: #fff;
-      border: 1px solid rgb(41 209 212);
-      width: 100%;
-      height: 8%;
-      margin-top: 8%;
-      overflow: hidden;
+  margin: 3% 0 0 3%;
+  height: 85%;
 
-      @extend %text;
-      &:hover,
-      &:focus {
-        box-shadow: inset 0 0 0 5px #2e49d9;
-      }
-    }
-  }
-  &_table {
-    // border: 5px solid red;
+  &__table {
     width: 100%;
-    margin-top: 15%;
-    height: 80%;
+    height: 100%;
     overflow: hidden;
+  }
 
-    &_link {
-      text-decoration: none;
-    }
-    &_column {
-      overflow: hidden;
-      background-color: #eaf4f4;
-      display: flex;
-      align-items: center;
-
-      width: 100%;
-      height: 12.5%;
-      box-shadow: inset 0px 0px 0px 1px #2ed7d9;
-
-      // border: 1px solid #2ed7d9;
-      @extend %text;
-      // background-color: rgba(204, 230, 228, 0.42);
-      cursor: pointer;
-      &:hover,
-      &:focus {
-        box-shadow: inset 0 0 0 5px #2e49d9;
-      }
-      span {
-        margin-left: 10%;
-      }
-    }
+  &__link {
+    text-decoration: none;
   }
 }
