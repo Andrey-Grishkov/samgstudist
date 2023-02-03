@@ -18,6 +18,7 @@ const Menu = ({ disciplins, setDisciplin }) => {
       <div className='menu__table'>
         {disciplins.map((disciplin) => (
           <Link
+            className="menu_table_link"
             to={`MainPageWorkPreview/${replaceSpace(disciplin.subject_title)}`}
             className='menu__link'
           >
