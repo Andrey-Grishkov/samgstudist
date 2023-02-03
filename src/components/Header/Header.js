@@ -1,57 +1,62 @@
-import './Header.scss'
-import Logo from '../Logo/Logo'
-import search from '../../images/search__img.svg'
-import { useLocation, Link } from 'react-router-dom'
+import "./Header.scss";
+import { ReactComponent as Logo } from "../../images/header__logo.svg";
+import { useLocation, Link } from "react-router-dom";
 
-const Header = ({ inputRef }) => {
-
+const Header = ({ inputRef, setFullScreen }) => {
   const location = useLocation();
   let about_team;
-  location.pathname === '/about-team' ? about_team = true : about_team = false;
+  location.pathname === "/about-team"
+    ? (about_team = true)
+    : (about_team = false);
 
   return (
-    <header className={`header ${about_team ? 'header__team' : ''}`}>
-      <div className='header__logo-container'>
-        <Logo />
-      </div>
-      <div className='header__line'></div>
-      {
-        about_team ?
-          <h1 className='header__title'>О команде</h1>
-          :
-          <div className='header__container'>
-            <nav className='header__navigation'>
-              <ul className='header__navigation_list'>
-                <li className='header__link-container'>
-                  <Link className='header__link' to='/'>Главная</Link>
-                </li>
-                <li className='header__link-container'>
-                  <Link className='header__link' to='/about-project'>О проекте</Link>
-                </li>
-              </ul>
-            </nav>
-            <form className='header__search-form'>
-              <button className='search__search-button' type='submit'>
-                <img className='search__search-img' src={search} alt='кнопка поиска' />
-              </button>
-              <input
-                className='search-form__name'
-                placeholder='Поиск по сайту'
-                type='text'
-                id="search-form"
-                name="search-form"
-                required
-                ref={inputRef}
-              />
-            </form>
-          </div>
-      }
+    <header className={`header ${about_team ? "header__team" : ""}`}>
+      <Link to="/">
+        <Logo
+          onClick={() => {
+            setFullScreen((p) => !p);
+          }}
+          className="header__logo-container"
+        ></Logo>
+      </Link>
+      <div className="header__line"></div>
+      {about_team ? (
+        <h1 className="header__title">О команде</h1>
+      ) : (
+        <div className="header__container">
+          <nav className="header__navigation">
+            <ul className="header__navigation_list">
+              <li className="header__link-container">
+                <Link className="header__link" to="/">
+                  Главная
+                </Link>
+              </li>
+              <li className="header__link-container">
+                <Link className="header__link" to="/about-project">
+                  О проекте
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <form className="header__search-form">
+            {/* <button className="search__search-button" type="submit"></button> */}
+            <input
+              className="search-form__name"
+              placeholder="Поиск по сайту"
+              type="text"
+              id="search-form"
+              name="search-form"
+              required
+              ref={inputRef}
+            />
+          </form>
+        </div>
+      )}
     </header>
   );
-}
+};
 
 export default Header;
-
 
 // import React from 'react';
 // import './Header.scss'

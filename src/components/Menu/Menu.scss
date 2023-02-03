@@ -1,100 +1,60 @@
-$base-width:18.82vw;
-$base-height:8.7vh;
+$base-width: 20%;
+$base-height: 40%;
 
 %text {
-    font-family: Proza_Libre;
-    color: #000000;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 32px;
+  font-family: Proza_Libre;
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 32px;
 }
 
-// Добавить в свойства text, чтобы обрезался текст, который не влез...
-//    overflow: hidden;
-//    text-overflow: ellipsis;
-//    white-space: nowrap;
-
 %base-cell {
-    border: 1px solid #2ED7D9;
-    display: flex;
-    align-items: center;
-    padding-left: 1.94vw;
+  width: 100%;
+  border: 1px solid #2ed7d9;
+  display: flex;
+  align-items: center;
 }
 
 .menu {
-    margin: 2.36vh 0 1.72vh 4.93vw;
-    width: $base-width;
-    height: 763px;
-    // border: blue 1px solid;
-    z-index: 3;
-}
-
-// выпадающее меню
-.menu__dropdown {
-    max-width: $base-width;
-    position: relative;
-    display: inline-block;
-
-    .menu__dropdown_btn {
-        background: none;
-        @extend %text;
-        min-height: $base-height;
-        border: 3px solid #2ED7D9;
-        cursor: pointer;
-        min-width: $base-width;
-        &:hover, &:focus {
-            background-color: rgba(204, 230, 228, 0.42);
-        }
-        &:focus {
-            border: 5px solid #2E49D9;
-        }
+  width: 21%;
+  margin-left: 3%;
+  height: 99%;
+  &_dropdown {
+    &_btn {
+      cursor: pointer;
+      background-color: #fff;
+      border: 1px solid rgb(41 209 212);
+      width: 100%;
+      height: 8%;
+      margin-top: 8%;
+      @extend %text;
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 0 5px #2e49d9;
+      }
     }
-
-    .menu__dropdown-content {
-        display: none;
-        position: absolute;
-        background-color:white;
-        max-width: $base-width;
-        z-index: 1;
-
-        a {
-            min-height: $base-height;
-            text-decoration: none;
-            @extend %text;
-            @extend %base-cell;
-
-            &:hover {
-                background-color: rgba(204, 230, 228, 0.42);
-            }
-        }
-
-        &.menu__dropdown-content-show {
-            display: block;
-        }
-    }
-}
-
-// колонки
-.menu__table {
-    display: flex;
-    margin-top: 1.61vh;
-    min-width: $base-width;
-
+  }
+  &_table {
+    width: 100%;
+    margin-top: 15%;
+    height: 83%;
     &-column {
-        min-height: $base-height;
-        min-width: $base-width - 1.94vw;
-        @extend %base-cell;
-        background-color: rgba(204, 230, 228, 0.42);
-        cursor: pointer;
+      background-color: #eaf4f4;
+      display: flex;
+      align-items: center;
 
-        &:hover, &:focus {
-            border: 5px solid #2E49D9;
-        }
-
-        a {
-            @extend %text;
-            text-decoration: none;
+      width: 100%;
+      height: 12%;
+      border: 1px solid #2ed7d9;
+      @extend %text;
+      // background-color: rgba(204, 230, 228, 0.42);
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 0 5px #2e49d9;
+      }
     }
-    }
+  }
 }

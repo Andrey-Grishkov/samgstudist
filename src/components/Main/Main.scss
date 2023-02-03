@@ -1,117 +1,96 @@
 .main {
+  background-image: url("../../images/main__image-wave.svg");
+  background-position: center;
+  background-size: cover;
+  font-family: Proza_Libre;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
 
-    font-family: Proza_Libre;
-    min-width: 100vw;
-    min-height: 86vh;
-    position: relative;
-    display: flex;
-    flex-direction: row;
+  // @keyframes mymove {
+  //   0% {
+  //     opacity: 0;
+  //   }
+  // }
 
-    .triangle{
-        position: absolute;
-        width: 100vw;
-        height: 86.12vh;
-        bottom: 0;
-        animation: mymove 4s ;
-        background:
-         url("../../images/main-page-work-preview__triangle.svg") 0% 100%  no-repeat,
-         url("../../images/main-page-work-preview__triangle-2.svg") right 100% no-repeat;
-        z-index: 1;
-    }
-    @keyframes mymove {
-        0% {opacity: 0;}
-    }
-
-    .main__image-wave {
-        min-width: 100vw;
-        position: absolute;
-        z-index: 1;
-        bottom: 0;
-        object-fit: cover;
-    }
-    .main__image-women {
-        position: absolute;
-        left: 24.58vw;
-        bottom:  1.2vh;
-        z-index: 2;
-    }
-    .main__commercial-container {
-        right: 9.79vw;
-        bottom: 9.78vh;
-        position: absolute;
-        min-height: 30vh;
-        min-width: 9.79vw;
-        // border: red 1px solid;
-        z-index: 2;
-    }
-    .main__content-container {
-        z-index: 3;
-    }
+  .main__commercial-container {
+    background-color: #fff;
+    background-image: url("../../images/commertial__image.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 6%;
+    bottom: 10%;
+    position: absolute;
+    width: 22rem;
+    height: 20rem;
+    // border: red 1px solid;
+    // z-index: 2;
+  }
+  .main__content-container {
+    background: url("../../images/main__image-women.svg") -1% 115%/50% no-repeat;
+    margin-left: 5%;
+    width: 65%;
+    height: 93%;
+  }
 }
 
 .main__content {
-    background:url("../../images/main__image-women.svg") 0% 109.5%  no-repeat,
-     url("../../images/books.svg") 39% 102.3%  no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 3%;
+  height: 38%;
 
-    margin-left: 4.17vw;
-    max-width: 65.07vw;
-    min-height: 79vh;
+  .main__title {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 80.52%;
+  }
+
+  .main__greetings {
+    color: #4d4848;
+    width: 90%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 115.52%;
     // border: blue 1px solid;
-
-    .main__title {
-        margin: 3vh 0 0 0;
-        font-family: 'Source Serif Pro';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 35px;
-        line-height: 80.52%;
-    }
-
-    .main__greetings {
-        color: #4D4848;
-        margin: 2.7vh 0 0 0;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 115.52%;
-        // border: blue 1px solid;
-    }
-    .main__quotes-title {
-        margin: 2.7vh 0 0 0;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 33px;
-    }
-    .main__quotes-container {
-        margin: 3.11vh 0 0 0;
-        // border: red 1px solid;
-        min-height: 84px;
-
-    }
-    .main__quotes {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        z-index: 3;
-    }
-    .main__quot {
-        max-width: 17.36vw;
-        height: 9.03vh;
-        padding-left: 1.60vw;
-        border: 3px solid #2ED7D9;
-        border-radius: 10px;
-        list-style-type: none;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 21px;
-        line-height: 29px;
-        display: flex;
-        justify-content: flex-start;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        z-index: 3;
-    }
+  }
+  .main__quotes-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+  }
+  .main__quotes {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main__quot {
+    width: 25%;
+    height: 3.5em;
+    padding-left: 1.6vw;
+    border: 3px solid #2ed7d9;
+    border-radius: 10px;
+    list-style-type: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 3;
+  }
+}
+.triangle {
+  background-image: url("../../images/main-page-work-preview__triangle.svg");
 }
