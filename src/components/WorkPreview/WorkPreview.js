@@ -1,17 +1,20 @@
-import { useEffect, useState } from 'react'
-import { fetchWork } from '../../utils/MainApi'
-import { Paragraph } from './Paragraph'
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { fetchWork } from "../../utils/MainApi";
+import { Paragraph } from "./Paragraph";
 
-export const WorkPreview = ({ numberPage, listId, materialId }) => {
+export const WorkPreview = ({ numberPage }) => {
+  const { id, workId } = useParams();
+
   const [workPreview, setWorkPreview] = useState();
   const fetchData = async () => {
-    const results = await fetchWork(listId, materialId);
+    const results = await fetchWork(id, workId);
     setWorkPreview(results.paragraph_text);
   };
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [workId]);
 
   return (
     <>
