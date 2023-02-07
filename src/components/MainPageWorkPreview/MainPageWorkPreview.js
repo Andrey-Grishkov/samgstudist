@@ -5,7 +5,7 @@ import { Link, Route, Routes, useParams } from "react-router-dom";
 import { replaceSpace } from "../../utils/functions";
 import { WorkPreview } from "../WorkPreview/WorkPreview";
 
-const MainPageWorkPreview = () => {
+const MainPageWorkPreview = ({ setTriangle }) => {
   const { disciplin, id } = useParams();
   const [numberPage, setNumberPage] = useState(0);
   const [works, setWorks] = useState([]);
@@ -16,6 +16,8 @@ const MainPageWorkPreview = () => {
   };
 
   useEffect(() => {
+    setTriangle(true);
+
     fetchData();
   }, [id]);
 
@@ -29,10 +31,11 @@ const MainPageWorkPreview = () => {
             <Route
               path={`/`}
               element={works.map(
-                (work) =>
+                (work, i) =>
                   (work = (
                     <Link
                       to={`${replaceSpace(work.material_title)}/${work.id}`}
+                      key={`work${i}`}
                     >
                       <div>{work.material_title}</div>
                     </Link>

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Menu.scss";
 import { Disciplin } from "../Disciplin/Disciplin";
 import { Link } from "react-router-dom";
@@ -14,6 +13,7 @@ const Menu = ({ disciplins }) => {
               disciplin.id
             }`}
             className="menu__link"
+            key={`Link-${disciplin.id}`}
           >
             <Disciplin
               key={`disciplin-${disciplin.id}`}
