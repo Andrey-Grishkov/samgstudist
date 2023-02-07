@@ -4,6 +4,7 @@ import { fetchListOfWorks } from "../../utils/MainApi";
 import { Link, Route, Routes, useParams } from "react-router-dom";
 import { replaceSpace } from "../../utils/functions";
 import { WorkPreview } from "../WorkPreview/WorkPreview";
+import { numberPageLimit } from "../../utils/constants";
 
 const MainPageWorkPreview = ({ setTriangle }) => {
   const { disciplin, id } = useParams();
@@ -18,6 +19,7 @@ const MainPageWorkPreview = ({ setTriangle }) => {
   useEffect(() => {
     setTriangle(true);
     setNumberPage(0);
+    numberPageLimit[0] = 0;
     fetchData();
   }, [id]);
 
@@ -62,7 +64,9 @@ const MainPageWorkPreview = ({ setTriangle }) => {
           </div>
 
           <button
-            onClick={() => setNumberPage(numberPage + 1)}
+            onClick={() =>
+              numberPageLimit[0] > numberPage && setNumberPage(numberPage + 1)
+            }
             className="nav-container__without-illustrations__btn"
           >
             <p className="btn-text">Следующая страница →</p>

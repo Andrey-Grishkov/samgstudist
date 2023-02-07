@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { numberPageLimit } from "../../utils/constants";
 import { fetchWork } from "../../utils/MainApi";
 
 export const WorkPreview = ({ numberPage }) => {
@@ -23,6 +24,7 @@ export const WorkPreview = ({ numberPage }) => {
         brokenText[counter] = `${text[i]}.`;
       }
     }
+    numberPageLimit[0] = brokenText.length - 1;
     setText(brokenText);
   };
 
