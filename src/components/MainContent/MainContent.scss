@@ -46,20 +46,19 @@
   }
 
   &__quot {
+    text-align: center;
     width: 25%;
     height: 25%;
-    padding-left: 1.6%;
+    // padding-left: 1.6%;
     border: 3px solid #2ed7d9;
     border-radius: 10px;
-    list-style-type: none;
+    // list-style-type: none;
     @include font("Proza_Libre", 132%, 130%);
-    @include flex(column, flex-start, flex-start);
-    text-overflow: ellipsis;
     text-decoration: none;
     color: black;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 2;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
     overflow: hidden;
   }
 

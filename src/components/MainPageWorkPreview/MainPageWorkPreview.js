@@ -17,7 +17,7 @@ const MainPageWorkPreview = ({ setTriangle }) => {
 
   useEffect(() => {
     setTriangle(true);
-
+    setNumberPage(0);
     fetchData();
   }, [id]);
 
