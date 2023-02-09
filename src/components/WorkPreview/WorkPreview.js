@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { numberPageLimit } from "../../utils/constants";
 import { fetchWork } from "../../utils/MainApi";
@@ -8,29 +8,29 @@ export const WorkPreview = ({ numberPage }) => {
 
   const [text, setText] = useState("");
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const results = await fetchWork(id, workId);
-    const text = results.paragraph_text
-      .map(({ paragraph_text }) => paragraph_text)
+    const paragraphTexts = results.paragraph_text
+      .map(({ paragraph_text: paragraphText }) => paragraphText)
       .join(" ")
-      .split(/[.;]/);
+      .split(/[.;]/); //надо подумать
     const brokenText = [""];
     let counter = 0;
-    for (let i = 0; i < text.length; i++) {
+    for (let i = 0; i < paragraphTexts.length; i++) {
       if (brokenText[counter].length < 1000) {
-        brokenText[counter] += `${text[i]}.`;
+        brokenText[counter] += `${paragraphTexts[i]}.`;
       } else {
         counter++;
-        brokenText[counter] = `${text[i]}.`;
+        brokenText[counter] = `${paragraphTexts[i]}.`;
       }
     }
     numberPageLimit[0] = brokenText.length - 1;
     setText(brokenText);
-  };
+  }, [id, workId, setText]);
 
   useEffect(() => {
     fetchData();
-  }, [workId]);
+  }, [fetchData]);
 
   return <span>{text[numberPage]}</span>;
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./MainPageWorkPreview.scss";
 import { fetchListOfWorks } from "../../utils/MainApi";
 import { Link, Route, Routes, useParams } from "react-router-dom";
@@ -10,18 +10,18 @@ const MainPageWorkPreview = ({ setTriangle }) => {
   const { disciplin, id } = useParams();
   const [numberPage, setNumberPage] = useState(0);
   const [works, setWorks] = useState([]);
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const { results } = await fetchListOfWorks(id);
 
     setWorks([...results]);
-  };
+  }, [id, setWorks]);
 
   useEffect(() => {
     setTriangle(true);
     setNumberPage(0);
     numberPageLimit[0] = 0;
     fetchData();
-  }, [id]);
+  }, [setTriangle, setNumberPage, fetchData]);
 
   return (
     <div className="main-page-work">
