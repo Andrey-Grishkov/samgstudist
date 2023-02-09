@@ -6,20 +6,21 @@ import MainPageWorkPreview from "../MainPageWorkPreview/MainPageWorkPreview";
 import { Route, Routes } from "react-router-dom";
 import { fetchDisciplins } from "../../utils/MainApi";
 
-const Main = () => {
-  const [disciplins, setDisciplins] = useState([]);
+const Main = ({disciplins, windowSmallSize}) => {
   const [triangle, setTriangle] = useState(false);
-  const fetchData = async () => {
-    const { results } = await fetchDisciplins();
-    setDisciplins([...results]);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+  //const [disciplins, setDisciplins] = useState([]);
+  // const fetchData = async () => {
+  //   const { results } = await fetchDisciplins();
+  //   setDisciplins([...results]);
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
 
   return (
     <section className={`main ${triangle ? "triangle" : ""}`}>
-      <Menu disciplins={disciplins} />
+      {!windowSmallSize ? <Menu disciplins={disciplins} /> : <></>}
       <Routes>
         <Route
           path=""

@@ -57,7 +57,7 @@ const MainPageWorkPreview = ({ setTriangle }) => {
             onClick={() => numberPage && setNumberPage(numberPage - 1)}
             className="nav-container__without-illustrations__btn"
           >
-            <p className="btn-text">← Предыдущая страница</p>
+            <p className="btn-text"><span>←</span> Предыдущая страница</p>
           </button>
           <div className="nav-container__without-illustrations__page-number">
             {numberPage + 1}
@@ -69,7 +69,7 @@ const MainPageWorkPreview = ({ setTriangle }) => {
             }
             className="nav-container__without-illustrations__btn"
           >
-            <p className="btn-text">Следующая страница →</p>
+            <p className="btn-text">Следующая страница <span>→</span></p>
           </button>
         </div>
         <button className="nav-container__illustrations">Иллюстрации</button>

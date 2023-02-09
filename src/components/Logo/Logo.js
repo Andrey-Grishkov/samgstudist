@@ -1,17 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Logo.scss'
-import LogoImg from "../../images/header__logo.svg"
+import { ReactComponent as LogoImg } from "../../images/header__logo.svg"
+import { ReactComponent as LogoImgSmall } from "../../images/header__logo-small.svg"
 import {Link} from "react-router-dom";
 
-function Logo({setFullScreen}) {
+function Logo({setFullScreen, windowSmallSize}) {
+
   return (
     <Link className='logo' to='/'>
-      <img
-        className='logo__container'
-        onClick={() => {setFullScreen((switchScreen) => !switchScreen)}}
-        src={LogoImg}
-        alt='Логотип'
-      />
+      {!windowSmallSize ?
+        <LogoImg
+          className='logo__img'
+          onClick={() => {
+            setFullScreen((switchScreen) => !switchScreen)
+          }}
+        /> :
+        <LogoImgSmall
+          className='logo__img'
+          onClick={() => {
+            setFullScreen((switchScreen) => !switchScreen)
+          }}
+        />
+      }
     </Link>
   );
 }

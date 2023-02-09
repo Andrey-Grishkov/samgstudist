@@ -2,36 +2,31 @@ import React from 'react';
 import './HeaderNav.scss'
 import {Link} from "react-router-dom";
 import { ReactComponent as searchImg } from "../../images/search__img.svg"
+import Search from "../Search/Search";
 
-function HeaderNav({inputRef}) {
+function HeaderNav({inputRef, onClick, windowSmallSize}) {
   return (
-    <div className='header__container'>
-      <nav className='header__navigation'>
-        <ul className='header__navigation_list'>
-          <li className='header__link-container'>
-            <Link className='header__link' to='/'>
+
+    <div className='header-nav'>
+      <nav className='header-nav__navigation'>
+        <ul className='header-nav__navigation_list'>
+          <li className='header-nav__link-container'>
+            <Link className='header-nav__link' to='/'>
               На главную
             </Link>
           </li>
-          <li className='header__link-container'>
-            <Link className='header__link' to='/about-project'>
+          <li className='header-nav__link-container'>
+            <Link className='header-nav__link' to='/about-project'>
               О проекте
             </Link>
           </li>
         </ul>
+        <button className='header-nav__menu-button' type='button' onClick={onClick}></button>
       </nav>
-      <form className='search-form'>
-        <button className='search-form__button' type='submit'></button>
-        <input
-          className='search-form__name'
-          placeholder='Поиск по сайту'
-          type='text'
-          id='search-form'
-          name='search-form'
-          required
-          ref={inputRef}
-        ></input>
-      </form>
+      {!windowSmallSize ?
+      <Search
+        inputRef={inputRef}
+      /> : <></>}
     </div>
   );
 }

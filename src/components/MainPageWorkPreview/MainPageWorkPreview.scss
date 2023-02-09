@@ -1,13 +1,28 @@
 @import "../vars";
+$base-width320: 320px;
 
 .main-page-work {
   width: 65%;
   margin-left: 10%;
   margin-top: 1.5%;
   height: 90%;
+
+  @media screen and (max-width: $base-width320) {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
   &__content {
     width: 80%;
     height: 82%;
+
+    @media screen and (max-width: $base-width320) {
+      width: 100%;
+      height: 70%;
+      @include flex(column, flex-start, center);
+    }
+
     &__commercial {
       background-image: url(../../images/commertial__image.jpg);
       background-position: 5% 5%;
@@ -15,7 +30,15 @@
       width: 95%;
       height: 14%;
       border: 1px solid #7a7a7a;
+      cursor: pointer;
+
+      @media screen and (max-width: $base-width320) {
+        margin: 12px auto 0 auto;
+        width: 90%;
+        height: 15%;
+      }
     }
+
     &__title {
       margin: 3% 0 0 0;
       @include font("Poppins", 21px, 115%);
@@ -25,6 +48,12 @@
       text-align: center;
       padding-top: 1%;
       padding-bottom: 1%;
+
+      @media screen and (max-width: $base-width320) {
+        @include font("Poppins", 16px, 80%);
+        height: 3%;
+      }
+
     }
     &__preview {
       background-color: #fff;
@@ -34,16 +63,34 @@
       border-bottom: #2ed7d9 3px solid;
       border-left: #2ed7d9 3px solid;
       border-right: #2ed7d9 3px solid;
+
+      @media screen and (max-width: $base-width320) {
+        @include font("Poppins", 11px, 80%);
+        height: 100%;
+      }
     }
   }
   .nav-container {
     margin: auto;
     height: 11%;
     display: flex;
+
+    @media screen and (max-width: $base-width320) {
+      margin-top: 20px;
+      @include flex(column, flex-start, center);
+      height: 11%;
+    }
+
     &__without-illustrations {
       display: flex;
       width: 76.5%;
       @include flex(row, space-between, center);
+
+      @media screen and (max-width: $base-width320) {
+        @include flex(row, space-between, center);
+        min-width: 90%;
+        height: 80%;
+      }
 
       &__page-number {
         margin-top: auto;
@@ -53,6 +100,12 @@
         @include font("Podkova", 32px, 35px);
         background: white;
         @include flex(row, center, flex-start);
+
+        @media screen and (max-width: $base-width320) {
+          @include font("Poppins", 15px, 130%);
+          height: 50%;
+          margin: 0;
+        }
       }
       &__btn {
         margin-top: auto;
@@ -66,11 +119,24 @@
         &:hover {
           background-color: rgba(204, 230, 228, 0.42);
         }
+
+        @media screen and (max-width: $base-width320) {
+          margin: 0;
+          height: 100%;
+          max-width: 50%;
+        }
+
         .btn-text {
-          margin: auto;
+          @include flex(row, center, center);
+          @media screen and (max-width: $base-width320) {
+            @include font("Poppins", 10px, 130%);
+            margin: 0;
+          }
         }
       }
     }
+
+
     &__illustrations {
       margin-left: 2%;
       min-width: 7%;
@@ -82,6 +148,12 @@
       cursor: pointer;
       &:hover {
         background-color: rgba(204, 230, 228, 0.42);
+      }
+
+      @media screen and (max-width: $base-width320) {
+        @include font("Poppins", 10px, 130%);
+        min-height: 70%;
+        margin: 0;
       }
     }
   }

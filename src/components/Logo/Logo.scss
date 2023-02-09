@@ -1,12 +1,25 @@
-logo {
+$base-width320: 320px;
+
+.logo {
   justify-items: center;
   width: 37%;
   height: 100%;
 
-  &__container {
+  @media screen and (max-width: $base-width320) {
+    margin-left: 53px;
+    width: 164px;
+    height: 35px;
+  }
+
+  &__img {
     width: 100%;
     height: 90%;
     fill: black;
+
+    @media screen and (max-width: $base-width320) {
+      width: 100%;
+      height: 100%;;
+    }
 
     &:hover {
       fill: red;

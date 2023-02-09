@@ -6,31 +6,18 @@ $base-width320: 320px;
   width: 100%;
   height: 13.87%;
   @include flex(row, flex-start, center);
-
-  @media screen and (max-width: $base-width320) {
-    width: 320px;
-    height: 38px;
-  }
-
   background: linear-gradient(
-    270deg,
-    rgba(0, 255, 148, 0.42) 0%,
-    rgba(0, 102, 255, 0.42) 48.66%,
-    rgba(219, 0, 255, 0.2436) 100%
+                  270deg,
+                  rgba(0, 255, 148, 0.42) 0%,
+                  rgba(0, 102, 255, 0.42) 48.66%,
+                  rgba(219, 0, 255, 0.2436) 100%
   );
 
-  &__team {
-    background-image: linear-gradient(
-      90deg,
-      #8f00ff 49.06%,
-      rgba(66, 0, 255, 0.95) 100%,
-      rgba(255, 0, 0, 0) 100%
-    );
-    color: white;
-
-    @include font("Poppins", 24px, 19px);
+  @media screen and (max-width: $base-width320) {
+    max-width: 320px;
+    height: 38px;
+    @include flex(row, space-between, center);
   }
-
 
   &__line {
     margin: 0.7% 0 0 0;
@@ -49,66 +36,15 @@ $base-width320: 320px;
     }
   }
 
-  &__container {
-    margin-left: 5%;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    @include flex(row, space-around, center);
-  }
+  &__team {
+    background-image: linear-gradient(
+      90deg,
+      #8f00ff 49.06%,
+      rgba(66, 0, 255, 0.95) 100%,
+      rgba(255, 0, 0, 0) 100%
+    );
 
-  &__navigation {
-    margin: 47px auto 40px 74px;
-    padding: 0;
-    box-sizing: border-box;
-    height: 33px;
-
-    &_list {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      @include flex(row, flex-start, center);
-      gap: 27px;
-    }
-  }
-
-  &__link {
-    margin-left: 0;
-    text-decoration: none;
-    @include font('Poppins', 21px, 32px);
-    color: black;
-    &:hover,
-    &:focus {
-      padding-bottom: 10px;
-      border-bottom: black 1px solid;
-    }
-  }
-}
-
-.search-form {
-  margin-right: 5%;
-  width: 45%;
-  height: 50%;
-  @include flex(row, flex-start, stretch);
-  position: relative;
-  &__button {
-    background: url("../../images/search__img.svg") 0/ 100% no-repeat;
-    width: 12.5%;
-    height: 100%;
-    border-radius: 100%;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-  }
-  &__name {
-    background: none;
-    color: black;
-    @include font('Poppins', 21px, 32px);
-    width: 100%;
-    height: 80%;
-    margin-top: 1%;
-    border-radius: 100px;
-    border-left: none;
-    padding-left: 20%;
+    color: white;
+    @include font("Poppins", 24px, 19px);
   }
 }

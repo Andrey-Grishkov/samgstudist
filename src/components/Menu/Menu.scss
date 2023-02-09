@@ -1,31 +1,56 @@
 @import "../vars";
 $base-width: 20%;
 $base-height: 40%;
+$base-width320: 320px;
 
-%text {
-  color: #000000;
-  @include font("Proza_Libre", 21px, 32px);
-}
-
-%base-cell {
-  width: 100%;
-  border: 1px solid #2ed7d9;
-  display: flex;
-  align-items: center;
-}
+//%text {
+//  color: #000000;
+//  @include font("Proza_Libre", 21px, 32px);
+//}
+//
+//%base-cell {
+//  width: 100%;
+//  border: 1px solid #2ed7d9;
+//  display: flex;
+//  align-items: center;
+//}
 
 .menu {
   width: 20%;
   margin: 3% 0 0 3%;
   height: 85%;
 
+  @media screen and (max-width: $base-width320) {
+    width: 90%;
+    height: 85%;
+    @include flex(row, space-between, center);
+    flex-wrap: wrap;
+
+  }
+
   &__table {
     width: 100%;
     height: 100%;
     overflow: hidden;
+
+    @media screen and (max-width: $base-width320) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+
+      //@include flex(row, space-between, center);
+      //flex-wrap: wrap;
+    }
+
   }
 
   &__link {
     text-decoration: none;
+    background-color: #eaf4f4;
+
+    @media screen and (max-width: $base-width320) {
+
+    }
+
   }
 }

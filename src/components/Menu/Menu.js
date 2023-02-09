@@ -3,7 +3,7 @@ import { Disciplin } from "../Disciplin/Disciplin";
 import { Link } from "react-router-dom";
 import { replaceSpace } from "../../utils/functions";
 
-const Menu = ({ disciplins }) => {
+const Menu = ({ disciplins, onClick }) => {
   return (
     <section className="menu">
       <div className="menu__table">
@@ -14,6 +14,7 @@ const Menu = ({ disciplins }) => {
             }`}
             className="menu__link"
             key={`Link-${disciplin.id}`}
+            onClick={onClick}
           >
             <Disciplin
               key={`disciplin-${disciplin.id}`}

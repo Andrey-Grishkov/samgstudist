@@ -3,6 +3,7 @@
   margin: 3% 0 0 0;
   padding: 0;
 }
+$base-width320: 320px;
 
 .main-content {
   background: url("../../images/main__image-women.svg") -2% 116.5%/50% no-repeat;
@@ -11,15 +12,33 @@
   height: 93%;
   font-family: Proza_Libre;
 
+  @media screen and (max-width: $base-width320) {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: url("../../images/main__image-women.svg") 20% 63%/70% no-repeat;
+  }
+
   &__container {
     @include flex(column, space-between, flex-start);
     height: 38%;
+
+    @media screen and (max-width: $base-width320) {
+      @include flex(column, space-between, center);
+    }
   }
 
   &__title {
     margin: 3% 0 0 0;
     padding: 0;
     @include font("Source Serif Pro", 220%, 80.52%);
+
+    @media screen and (max-width: $base-width320) {
+      margin-top: 20px;
+      @include font("Source Serif Pro", 80%, 80.52%);
+      font-weight: 600;
+    }
+
   }
 
   &__greetings {
@@ -27,11 +46,25 @@
     color: #4d4848;
     width: 90%;
     @include font("Proza_Libre", 163%, 115.52%);
+
+    @media screen and (max-width: $base-width320) {
+      margin-top: 12px;
+      @include font("Source Serif Pro", 60%, 80.52%);
+      text-align: center;
+    }
   }
 
   &__quotes-title {
     @extend %margin-padding;
     @include font("Proza_Libre", 150%, 137.5%);
+
+    @media screen and (max-width: $base-width320) {
+      margin-top: 10px;
+      @include font("Source Serif Pro", 80%, 80.52%);
+      text-align: center;
+      font-weight: 600;
+    }
+
   }
 
   &__quotes-container {
@@ -43,6 +76,11 @@
     padding: 0;
     height: 100%;
     @include flex(row, space-between, flex-start);
+
+    @media screen and (max-width: $base-width320) {
+      @include flex(column, space-between, center);
+      height: 120%;
+    }
   }
 
   &__quot {
@@ -60,6 +98,13 @@
     // display: -webkit-box;
     // -webkit-box-orient: vertical;
     overflow: hidden;
+
+    @media screen and (max-width: $base-width320) {
+      width: 85%;
+      height: 28%;
+      @include font("Proza_Libre", 70%, 130%);
+      border-radius: 5px;
+    }
   }
 
   &__commercial-container {
@@ -72,5 +117,19 @@
     position: absolute;
     width: 25%;
     height: 40%;
+    cursor: pointer;
+
+    @media screen and (max-width: $base-width320) {
+      position: absolute;
+      width: 90%;
+      height: 15%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 360px;
+
+    }
+
   }
 }

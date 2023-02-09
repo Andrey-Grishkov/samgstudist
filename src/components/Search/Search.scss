@@ -1,0 +1,40 @@
+@import "../vars";
+$base-width320: 320px;
+
+.search-form {
+  margin-right: 5%;
+  width: 45%;
+  height: 50%;
+  @include flex(row, flex-start, stretch);
+  position: relative;
+
+  @media screen and (max-width: $base-width320) {
+    margin-top: 80px;
+    margin-right: 0;
+    width: 85%;
+    height: 7%;
+    @include flex(row, flex-end, center);
+  }
+
+  &__button {
+    background: url("../../images/search__img.svg") 0/ 100% no-repeat;
+    width: 12.5%;
+    height: 100%;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  &__name {
+    background: none;
+    color: black;
+    @include font('Poppins', 21px, 32px);
+    width: 100%;
+    height: 80%;
+    margin-top: 1%;
+    border-radius: 100px;
+    border-left: none;
+    padding-left: 20%;
+  }
+}

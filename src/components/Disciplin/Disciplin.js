@@ -6,9 +6,9 @@ export const Disciplin = ({ disciplin, setDisciplin }) => {
       // onClick={() => {
       //   setDisciplin(disciplin);
       // }}
-      className="disciplin__table"
+      className="disciplin__cell"
     >
-      <span>{disciplin.subject_title}</span>
+      {disciplin.subject_title}
     </p>
   );
 };
