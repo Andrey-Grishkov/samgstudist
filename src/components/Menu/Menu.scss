@@ -21,10 +21,11 @@ $base-width320: 320px;
   height: 85%;
 
   @media screen and (max-width: $base-width320) {
-    width: 90%;
-    height: 85%;
+    width: 80%;
+    height: 40%;
     @include flex(row, space-between, center);
     flex-wrap: wrap;
+    margin-bottom: 20px;
 
   }
 
@@ -36,8 +37,6 @@ $base-width320: 320px;
     @media screen and (max-width: $base-width320) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-
-
       //@include flex(row, space-between, center);
       //flex-wrap: wrap;
     }

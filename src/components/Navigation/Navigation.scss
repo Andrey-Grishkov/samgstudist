@@ -44,6 +44,7 @@ $base-width320: 320px;
     cursor: pointer;
     border: none;
     background: none;
+    color: black;
 
     @media screen and (max-width: 320px) {
         right: 14px;
@@ -63,12 +64,12 @@ $base-width320: 320px;
     min-height: 50px;
     margin: 0;
     padding: 0;
-    @include flex(row, space-between, center);
+    @include flex(column, space-between, center);
     list-style-type: none;
   }
 
   &__link-container {
-    margin: 24px auto 0 10px;
+    margin: 12px 0 0 0;
     text-align: center;
     cursor: pointer;
     padding: 0;
@@ -78,12 +79,12 @@ $base-width320: 320px;
     border-bottom: none;
 
     &:first-of-type {
-      margin: 24px auto 0 0;
+      margin: 100px 0 0 0;
       //padding-top: 159px;
     }
 
     &:hover {
-      border-bottom: #FFFFFF 2px solid;
+      border-bottom: black 2px solid;
     }
 
     @media screen and (max-width: 540px) {
@@ -94,9 +95,10 @@ $base-width320: 320px;
   &__link {
     @include font("Poppins", 18px, 22px);
     font-weight: 500;
-    color: #FFFFFF;
+    color: black;
     text-decoration: none;
     border-bottom: none;
+    text-align: center;
   }
 
   &__button-container {
@@ -106,6 +108,12 @@ $base-width320: 320px;
     @media screen and (max-width: 540px) {
         margin-bottom: 48px;
     }
+  }
+
+  &__menu-text {
+    margin-bottom: 0;
+    @include font("Poppins", 15px, 22px);
+    border-bottom: 1px black solid;
   }
 }
 

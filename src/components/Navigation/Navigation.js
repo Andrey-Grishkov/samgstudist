@@ -12,9 +12,7 @@ function Navigation({isOpen, onClick, inputRef, disciplins}) {
         <button className='navigation__close' type='button' onClick={onClick}>
           <img className='navigation__close-img' src={close} alt='закрыть'/>
         </button>
-        <Search
-          inputRef={inputRef}
-        />
+
         <ul className='navigation__links'>
           <li className="navigation__link-container">
             <Link className="navigation__link" to="/" onClick={onClick}>На главную</Link>
@@ -23,6 +21,10 @@ function Navigation({isOpen, onClick, inputRef, disciplins}) {
             <Link className="navigation__link" to='/about-project' onClick={onClick}>О проекте</Link>
           </li>
         </ul>
+        <Search
+          inputRef={inputRef}
+        />
+        <p className="navigation__menu-text">Дисциплины:</p>
         <Menu disciplins={disciplins} onClick={onClick}/>
       </div>
     </div>
