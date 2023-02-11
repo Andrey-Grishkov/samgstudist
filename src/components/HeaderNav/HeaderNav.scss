@@ -8,9 +8,18 @@ $base-width320: 320px;
   text-align: center;
   @include flex(row, space-around, center);
 
+  @media screen and (max-width: 620px) {
+    margin-right: 12px;
+    max-width: 28px;
+  }
+
   @media screen and (max-width: $base-width320) {
     margin-right: 12px;
-    max-width: 19px;
+    max-width: 28px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin: 0;
   }
 
   &__navigation {
@@ -19,9 +28,14 @@ $base-width320: 320px;
     box-sizing: border-box;
     height: 33px;
 
+    @media screen and (max-width: 1024px) {
+      margin: 0;
+    }
+
+
     @media screen and (max-width: $base-width320) {
       margin: 0;
-      width: 19px;
+      min-width: 19px;
     }
 
 
@@ -32,7 +46,7 @@ $base-width320: 320px;
       @include flex(row, flex-start, center);
       gap: 27px;
 
-      @media screen and (max-width: $base-width320) {
+      @media screen and (max-width: 620px) {
         display: none;
       }
     }
@@ -43,11 +57,28 @@ $base-width320: 320px;
     text-decoration: none;
     @include font('Poppins', 21px, 32px);
     color: black;
-    &:hover,
-    &:focus {
+    &:hover {
       padding-bottom: 10px;
       border-bottom: black 1px solid;
     }
+
+    @media screen and (max-width: 1024px) {
+      @include font('Poppins', 18px, 34px);
+      &:hover {
+        padding-bottom: 8px;
+        border-bottom: black 1px solid;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      @include font('Poppins', 16px, 36px);
+      &:hover {
+        padding-bottom: 5px;
+        border-bottom: black 1px solid;
+      }
+    }
+
+
     @media screen and (max-width: $base-width320) {
       display: none;
     }
@@ -56,7 +87,7 @@ $base-width320: 320px;
   &__menu-button {
     display: none;
     padding: 0;
-    margin: 6px 0 0 0;
+    margin: 6px 16px 0 0;
     min-height: 19px;
     min-width: 19px;
     border: none;
@@ -64,7 +95,7 @@ $base-width320: 320px;
     background: url(../../images/header-nav__menu-button.svg);
 
 
-    @media screen and (max-width: $base-width320) {
+    @media screen and (max-width: 620px) {
       display: block;
     }
   }

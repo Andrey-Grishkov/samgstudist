@@ -13,10 +13,18 @@ $base-width320: 320px;
                   rgba(219, 0, 255, 0.2436) 100%
   );
 
+  @media screen and (max-width: 620px) {
+    height: 10%;
+    @include flex(row, space-between, center);
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 15%;
+  }
+
   @media screen and (max-width: $base-width320) {
     max-width: 320px;
     height: 38px;
-    @include flex(row, space-between, center);
   }
 
   &__line {
