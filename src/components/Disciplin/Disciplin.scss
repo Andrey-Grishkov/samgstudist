@@ -1,27 +1,9 @@
 @import "../vars";
 $base-width320: 320px;
 
-%text {
-  color: #000000;
-  @include font("Proza_Libre", 21px, 29px);
-
-  @media screen and (max-width: 620px) {
-    @include font("Proza_Libre", 15px, 20px);
-  }
-
-  @media screen and (max-width: 480px) {
-    @include font("Proza_Libre", 12px, 19px);
-  }
-
-  @media screen and (max-width: 360px) {
-    @include font("Proza_Libre", 10px, 19px);
-  }
-}
-
 .disciplin__cell {
   margin: 0;
   padding-left: 10%;
-
   background-color: #eaf4f4;
   @include flex(row, flex-start, center);
   max-width: 100%;
@@ -29,16 +11,46 @@ $base-width320: 320px;
   box-shadow: inset 0 0 0 1px #2ed7d9;
   text-decoration: none;
 
+  @media screen and (max-width: 1080px) {
+    padding-left: 5%;
+  }
+
   @media screen and (max-width: 620px) {
+    padding-left: 10%;
     max-width: 100%;
     height: 100%;
   }
-  @extend %text;
+
   cursor: pointer;
   &:hover,
   &:focus {
     box-shadow: inset 0 0 0 5px #2e49d9;
   }
 
-    //margin-left: 10%;
+  color: #000000;
+  @include font("Proza_Libre", 21px, 29px);
+
+  @media screen and (max-width: 1280px) {
+    @include font("Proza_Libre", 18px, 25px);
+  }
+
+  @media screen and (max-width: 1080px) {
+    @include font("Proza_Libre", 16px, 22px);
+  }
+
+  @media screen and (max-width: 768px) {
+    @include font("Proza_Libre", 13px, 19px);
+  }
+
+  @media screen and (max-width: 620px) {
+    @include font("Proza_Libre", 16px, 20px);
+  }
+
+  @media screen and (max-width: 480px) {
+    @include font("Proza_Libre", 12px, 19px);
+  }
+
+  @media screen and (max-width: 380px) {
+    @include font("Proza_Libre", 10px, 19px);
+  }
 }

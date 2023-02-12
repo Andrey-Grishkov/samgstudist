@@ -7,11 +7,17 @@ $base-width320: 320px;
   height: 86%;
   @include flex(row, flex-start, flex-start);
 
+  @media screen and (max-width: 620px) {
+    height: 90%;
+  }
+
   @media screen and (max-width: $base-width320) {
     max-width: 320px;
-    min-height: 448px;
-    background-position: bottom;
+    height: 100%;
+    //min-height: 448px;
+    //background-position: bottom;
     background-size: 320px;
+    background: url("../../images/main__image-wave.svg") center/ cover no-repeat;
   }
 }
 

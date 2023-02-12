@@ -53,16 +53,21 @@ $base-width320: 320px;
       border: none;
     }
 
-    @media screen and (max-width: 1024px) {
-      margin-top: 2%;
+    @media screen and (max-width: 1280px) {
+      margin-top: 2.5%;
     }
 
     @media screen and (max-width: 1024px) {
-      margin-top: 1.5%;
+      margin-top: 10px;
     }
 
+    //@media screen and (max-width: 860px) {
+    //  margin-top: 5%;
+    //}
+    //
     @media screen and (max-width: 620px) {
-      margin-top: - 1%;
+      margin-top: 0;
+      height: 7vw;
     }
 
     @media screen and (max-width: 320px) {

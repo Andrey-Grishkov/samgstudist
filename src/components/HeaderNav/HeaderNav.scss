@@ -87,17 +87,29 @@ $base-width320: 320px;
   &__menu-button {
     display: none;
     padding: 0;
-    margin: 6px 16px 0 0;
-    min-height: 19px;
-    min-width: 19px;
+    //margin: 6px 16px 0 0;
     border: none;
     cursor: pointer;
-    background: url(../../images/header-nav__menu-button.svg);
+    background: url(../../images/header-nav__menu-button.svg) 0 0/cover no-repeat;
 
 
     @media screen and (max-width: 620px) {
       display: block;
+      margin-right: 50px;
+      min-height: 35px;
+      min-width: 35px;
     }
-  }
 
+    @media screen and (max-width: 540px) {
+      min-height: 35px;
+      min-width: 35px;
+    }
+
+    @media screen and (max-width: 320px) {
+      min-height: 19px;
+      min-width: 19px;
+    }
+
+
+  }
 }

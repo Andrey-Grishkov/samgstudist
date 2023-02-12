@@ -20,6 +20,10 @@ $base-width320: 320px;
   margin: 3% 0 0 3%;
   height: 85%;
 
+  @media screen and (max-width: 860px) {
+    width: 75%;
+  }
+
   @media screen and (max-width: 620px) {
     width: 80%;
     height: 40%;

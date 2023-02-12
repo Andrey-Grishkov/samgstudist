@@ -9,6 +9,16 @@ $base-width320: 320px;
   left: 29%;
   border-top: #7a7a7a 1px solid;
 
+  @media screen and (max-width: 620px) {
+    width: 90%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 94%;
+  }
+
   @media screen and (max-width: $base-width320) {
     width: 90%;
     height: 5%;
@@ -16,16 +26,20 @@ $base-width320: 320px;
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 455px;
-
+    top: 85%;
   }
 }
 
 .footer-text {
   @include font("Proza_Libre", 14px, 1.3);
-  margin-top: 1.82vh;
+  margin-top: 1.2vh;
   margin-bottom: 0;
   color: #7a7a7a;
+
+  @media screen and (max-width: 768px) {
+    margin-top: .9vh;
+    @include font("Proza_Libre", 10px, .9);
+  }
 
   @media screen and (max-width: $base-width320) {
     margin-top: .9vh;

@@ -21,8 +21,8 @@ function HeaderNav({inputRef, onClick, windowSmallSize}) {
             </Link>
           </li>
         </ul>
-        <button className='header-nav__menu-button' type='button' onClick={onClick}></button>
       </nav>
+      <button className='header-nav__menu-button' type='button' onClick={onClick}></button>
       {!windowSmallSize ?
       <Search
         inputRef={inputRef}
