@@ -13,21 +13,21 @@ export const WorkPreview = ({ numberPage }) => {
     const paragraphTexts = results.paragraph_text
       .map(({ paragraph_text: paragraphText }) => paragraphText)
       .join(" ")
-      .split(/[.;]/); //надо подумать
+      .split(" ");
     const brokenText = [""];
     let counter = 0;
     for (let i = 0; i < paragraphTexts.length; i++) {
-      if (brokenText[counter].length < 1000) {
-        brokenText[counter] += `${paragraphTexts[i]}.`;
+      if (brokenText[counter].length < 1800) {
+        brokenText[counter] += `${paragraphTexts[i]} `;
       } else {
+        brokenText[counter] += "...";
         counter++;
-        brokenText[counter] = `${paragraphTexts[i]}.`;
+        brokenText[counter] = `${paragraphTexts[i]} `;
       }
     }
     numberPageLimit[0] = brokenText.length - 1;
     setText(brokenText);
   }, [id, workId, setText]);
-
   useEffect(() => {
     fetchData();
   }, [fetchData]);
