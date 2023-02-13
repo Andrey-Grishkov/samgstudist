@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { numberPageLimit } from "../../utils/constants";
 import { fetchWork } from "../../utils/MainApi";
+import { setLimit } from "../../store/namberPageSlice";
 
 export const WorkPreview = () => {
+  const dispatch = useDispatch();
   const numberPage = useSelector((state) => state.namberPage.count);
   const { id, workId } = useParams();
 
@@ -27,9 +28,10 @@ export const WorkPreview = () => {
         brokenText[counter] = `${paragraphTexts[i]} `;
       }
     }
-    numberPageLimit[0] = brokenText.length - 1;
+    dispatch(setLimit(brokenText.length - 1));
+
     setText(brokenText);
-  }, [id, workId, setText]);
+  }, [id, workId, setText, dispatch]);
   useEffect(() => {
     fetchData();
   }, [fetchData]);

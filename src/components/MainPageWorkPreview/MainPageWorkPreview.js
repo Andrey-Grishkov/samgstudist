@@ -4,7 +4,6 @@ import { fetchListOfWorks } from "../../utils/MainApi";
 import { Link, Route, Routes, useParams } from "react-router-dom";
 import { replaceSpace } from "../../utils/functions";
 import { WorkPreview } from "../WorkPreview/WorkPreview";
-import { numberPageLimit } from "../../utils/constants";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, reset } from "../../store/namberPageSlice";
 const MainPageWorkPreview = ({ setTriangle }) => {
@@ -20,7 +19,6 @@ const MainPageWorkPreview = ({ setTriangle }) => {
 
   useEffect(() => {
     setTriangle(true);
-    numberPageLimit[0] = 0;
     dispatch(reset());
     fetchData();
   }, [setTriangle, fetchData, dispatch]);
