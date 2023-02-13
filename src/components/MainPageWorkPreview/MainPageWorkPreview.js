@@ -5,10 +5,12 @@ import { Link, Route, Routes, useParams } from "react-router-dom";
 import { replaceSpace } from "../../utils/functions";
 import { WorkPreview } from "../WorkPreview/WorkPreview";
 import { numberPageLimit } from "../../utils/constants";
-
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement, reset } from "../../store/namberPageSlice";
 const MainPageWorkPreview = ({ setTriangle }) => {
+  const numberPage = useSelector((state) => state.namberPage.count);
+  const dispatch = useDispatch();
   const { disciplin, id } = useParams();
-  const [numberPage, setNumberPage] = useState(0);
   const [works, setWorks] = useState([]);
   const fetchData = useCallback(async () => {
     const { results } = await fetchListOfWorks(id);
@@ -18,10 +20,10 @@ const MainPageWorkPreview = ({ setTriangle }) => {
 
   useEffect(() => {
     setTriangle(true);
-    setNumberPage(0);
     numberPageLimit[0] = 0;
+    dispatch(reset());
     fetchData();
-  }, [setTriangle, setNumberPage, fetchData]);
+  }, [setTriangle, fetchData, dispatch]);
 
   return (
     <div className="main-page-work">
@@ -44,17 +46,14 @@ const MainPageWorkPreview = ({ setTriangle }) => {
                   ))
               )}
             ></Route>
-            <Route
-              path={`/:work/:workId`}
-              element={<WorkPreview numberPage={numberPage} />}
-            ></Route>
+            <Route path={`/:work/:workId`} element={<WorkPreview />}></Route>
           </Routes>
         </div>
       </div>
       <div className="nav-container">
         <div className="nav-container__without-illustrations">
           <button
-            onClick={() => numberPage && setNumberPage(numberPage - 1)}
+            onClick={() => dispatch(decrement())}
             className="nav-container__without-illustrations__btn"
           >
             <p className="btn-text">← Предыдущая страница</p>
@@ -64,9 +63,9 @@ const MainPageWorkPreview = ({ setTriangle }) => {
           </div>
 
           <button
-            onClick={() =>
-              numberPageLimit[0] > numberPage && setNumberPage(numberPage + 1)
-            }
+            onClick={() => {
+              dispatch(increment());
+            }}
             className="nav-container__without-illustrations__btn"
           >
             <p className="btn-text">Следующая страница →</p>

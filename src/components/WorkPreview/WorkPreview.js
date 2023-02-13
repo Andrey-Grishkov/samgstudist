@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { numberPageLimit } from "../../utils/constants";
 import { fetchWork } from "../../utils/MainApi";
 
-export const WorkPreview = ({ numberPage }) => {
+export const WorkPreview = () => {
+  const numberPage = useSelector((state) => state.namberPage.count);
   const { id, workId } = useParams();
 
   const [text, setText] = useState("");
