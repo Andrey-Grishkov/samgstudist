@@ -6,7 +6,7 @@ import { setLimit } from "../../store/namberPageSlice";
 
 export const WorkPreview = () => {
   const dispatch = useDispatch();
-  const numberPage = useSelector((state) => state.namberPage.count);
+  const numberPage = useSelector((state) => state.namberPage.counter);
   const { id, workId } = useParams();
 
   const [text, setText] = useState("");

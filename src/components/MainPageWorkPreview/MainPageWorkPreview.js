@@ -7,7 +7,7 @@ import { WorkPreview } from "../WorkPreview/WorkPreview";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, reset } from "../../store/namberPageSlice";
 const MainPageWorkPreview = ({ setTriangle }) => {
-  const numberPage = useSelector((state) => state.namberPage.count);
+  const numberPage = useSelector((state) => state.namberPage.counter);
   const dispatch = useDispatch();
   const { disciplin, id } = useParams();
   const [works, setWorks] = useState([]);

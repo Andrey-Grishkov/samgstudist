@@ -4,19 +4,19 @@ const namberPageSlice = createSlice({
   name: "namberPage",
 
   initialState: {
-    count: 0,
+    counter: 0,
     limit: 0,
   },
   reducers: {
     increment(state) {
-      state.limit > state.count && state.count++;
+      state.limit > state.counter && state.counter++;
     },
     decrement(state) {
-      state.count && state.count--;
+      state.counter && state.counter--;
     },
     reset(state) {
       state.limit = 0;
-      state.count = 0;
+      state.counter = 0;
     },
     setLimit(state, action) {
       state.limit = action.payload;
