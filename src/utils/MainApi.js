@@ -11,12 +11,12 @@ export const fetchDisciplins = async (page = 0, limit = 8) =>
     params: { limit, offset: limit * page },
   });
 //запрос списка работ
-export const fetchListOfWorks = async (id, page = 0, limit = 8) =>
+export const fetchListOfWorks = async (id, page = 0, limit) =>
   getRequest(`${id}/material/`, {
     params: { limit, offset: limit * page },
   });
 //запрос работы
-export const fetchWork = async (listId, materialId, page = 0, limit = 8) =>
+export const fetchWork = async (listId, materialId, page = 0, limit) =>
   getRequest(`${listId}/material/${materialId}/`, {
     params: { limit, offset: limit * page },
   });
