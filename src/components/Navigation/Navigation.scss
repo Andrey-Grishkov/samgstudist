@@ -1,5 +1,4 @@
 @import "../vars";
-$base-width320: 320px;
 
 .navigation {
   @include flex(column, flex-end, center);
@@ -32,10 +31,6 @@ $base-width320: 320px;
     box-sizing: border-box;
     @include flex(column, flex-start, center);
 
-    @media screen and (max-width: 620px) {
-
-    }
-
   }
 
   &__close {
@@ -50,12 +45,13 @@ $base-width320: 320px;
     background: none;
     color: black;
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: $base-width320) {
       right: 14px;
       top: 44px;
       max-width: 22px;
       min-height: 22px;
     }
+
     &:hover {
       transition: 1s ease-in;
       opacity: .6;
@@ -65,7 +61,7 @@ $base-width320: 320px;
   &__close-img {
     max-width: 30px;
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: $base-width320) {
       max-width: 22px;
     }
   }
@@ -115,7 +111,7 @@ $base-width320: 320px;
     margin: 0 auto 92px auto;
     @include flex(column, flex-end, center);
 
-    @media screen and (max-width: 540px) {
+    @media screen and (max-width: $base-width540) {
         margin-bottom: 48px;
     }
   }
@@ -125,7 +121,7 @@ $base-width320: 320px;
     @include font("Poppins", 24px, 22px);
     border-bottom: 1px black solid;
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: $base-width320) {
       @include font("Poppins", 15px, 22px);
     }
   }

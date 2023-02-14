@@ -1,5 +1,4 @@
 @import "../vars";
-$base-width320: 320px;
 
 .header-nav {
   margin-left: 5%;
@@ -8,7 +7,11 @@ $base-width320: 320px;
   text-align: center;
   @include flex(row, space-around, center);
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: $base-width1024) {
+    margin: 0;
+  }
+
+  @media screen and (max-width: $base-width620) {
     margin-right: 12px;
     max-width: 28px;
   }
@@ -18,26 +21,20 @@ $base-width320: 320px;
     max-width: 28px;
   }
 
-  @media screen and (max-width: 1024px) {
-    margin: 0;
-  }
-
   &__navigation {
     margin: 47px auto 40px 74px;
     padding: 0;
     box-sizing: border-box;
     height: 33px;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $base-width1024) {
       margin: 0;
     }
-
 
     @media screen and (max-width: $base-width320) {
       margin: 0;
       min-width: 19px;
     }
-
 
     &_list {
       margin: 0;
@@ -46,7 +43,7 @@ $base-width320: 320px;
       @include flex(row, flex-start, center);
       gap: 27px;
 
-      @media screen and (max-width: 620px) {
+      @media screen and (max-width: $base-width620) {
         display: none;
       }
     }
@@ -62,7 +59,7 @@ $base-width320: 320px;
       border-bottom: black 1px solid;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $base-width1024) {
       @include font('Poppins', 18px, 34px);
       &:hover {
         padding-bottom: 8px;
@@ -70,14 +67,13 @@ $base-width320: 320px;
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $base-width768) {
       @include font('Poppins', 16px, 36px);
       &:hover {
         padding-bottom: 5px;
         border-bottom: black 1px solid;
       }
     }
-
 
     @media screen and (max-width: $base-width320) {
       display: none;
@@ -87,29 +83,25 @@ $base-width320: 320px;
   &__menu-button {
     display: none;
     padding: 0;
-    //margin: 6px 16px 0 0;
     border: none;
     cursor: pointer;
     background: url(../../images/header-nav__menu-button.svg) 0 0/cover no-repeat;
 
-
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: $base-width620) {
       display: block;
       margin-right: 50px;
       min-height: 35px;
       min-width: 35px;
     }
 
-    @media screen and (max-width: 540px) {
+    @media screen and (max-width: $base-width540) {
       min-height: 35px;
       min-width: 35px;
     }
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: $base-width320) {
       min-height: 19px;
       min-width: 19px;
     }
-
-
   }
 }

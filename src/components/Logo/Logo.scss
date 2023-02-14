@@ -1,20 +1,20 @@
-$base-width320: 320px;
+@import "../vars";
 
 .logo {
   justify-items: center;
   width: 37%;
   height: 100%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $base-width768) {
     width: 20%;
     height: 100%;
   }
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: $base-width620) {
     width: 90%;
   }
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: $base-width540) {
     width: 90%;
   }
 
@@ -30,14 +30,13 @@ $base-width320: 320px;
     height: 100%;
     fill: black;
 
-    @media screen and (max-width: 540px) {
+    @media screen and (max-width: $base-width540) {
       width: 90%;
     }
 
     &:hover {
       fill: blueviolet;
       transform: scale(1.05);
-      //box-shadow: 10px 5px 5px red;
     }
   }
 }

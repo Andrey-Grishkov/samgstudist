@@ -1,5 +1,4 @@
 @import "../vars";
-$base-width320: 320px;
 
 .header {
   margin: 0;
@@ -13,12 +12,12 @@ $base-width320: 320px;
                   rgba(219, 0, 255, 0.2436) 100%
   );
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: $base-width620) {
     height: 10%;
     @include flex(row, space-between, center);
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $base-width486) {
     height: 10%;
   }
 
@@ -39,7 +38,7 @@ $base-width320: 320px;
     margin: 0;
     @include font("Poppins", 24px, 19px);
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: $base-width1280) {
       @include font("Poppins", 22px, 19px);
     }
   }

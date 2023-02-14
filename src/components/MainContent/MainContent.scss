@@ -3,7 +3,6 @@
   margin: 3% 0 0 0;
   padding: 0;
 }
-$base-width320: 320px;
 
 .main-content {
   background: url("../../images/main__image-women.svg") -2% 450px/550px no-repeat;
@@ -12,35 +11,35 @@ $base-width320: 320px;
   height: 93%;
   font-family: Proza_Libre;
 
-  @media screen and (max-width: 1350px) {
+  @media screen and (max-width: $base-width1350) {
     background: url("../../images/main__image-women.svg") -1% 524px/450px no-repeat;
   }
 
-  @media screen and (max-width: 1152px) {
+  @media screen and (max-width: $base-width1152) {
     background: url("../../images/main__image-women.svg") 50% 87px/550px no-repeat;
   }
 
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: $base-width860) {
     margin-left: 3%;
     min-width: 70%;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $base-width768) {
     max-width: 60%;
   }
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: $base-width620) {
     min-width: 100%;
     min-height: 100%;
     margin: 0;
     background: url("../../images/main__image-women.svg") 40% 283px/445px no-repeat;
   }
 
-  @media screen and (max-width: 486px) {
+  @media screen and (max-width: $base-width486) {
     background: url("../../images/main__image-women.svg") 40% 302px/390px no-repeat;
   }
 
-  @media screen and (max-width: 384px) {
+  @media screen and (max-width: $base-width384) {
     background: url("../../images/main__image-women.svg") 40% 347px/330px no-repeat;
   }
 
@@ -52,7 +51,7 @@ $base-width320: 320px;
     @include flex(column, space-between, flex-start);
     height: 38%;
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: $base-width620) {
       @include flex(column, space-between, center);
     }
   }
@@ -62,25 +61,25 @@ $base-width320: 320px;
     padding: 0;
     @include font("Source Serif Pro", 220%, 80.52%);
 
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: $base-width1080) {
       @include font("Source Serif Pro", 180%, 80.52%);
     }
 
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: $base-width860) {
       @include font("Source Serif Pro", 160%, 80.52%);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $base-width768) {
       @include font("Source Serif Pro", 140%, 80.52%);
     }
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: $base-width620) {
       margin-top: 4%;
       @include font("Source Serif Pro", 180%, 80.52%);
       font-weight: 600;
     }
 
-    @media screen and (max-width: 486px) {
+    @media screen and (max-width: $base-width486) {
       @include font("Source Serif Pro", 140%, 80.52%);
       font-weight: 600;
     }
@@ -90,7 +89,6 @@ $base-width320: 320px;
       @include font("Source Serif Pro", 80%, 80.52%);
       font-weight: 600;
     }
-
   }
 
   &__greetings {
@@ -99,27 +97,23 @@ $base-width320: 320px;
     width: 100%;
     @include font("Proza_Libre", 163%, 115.52%);
 
-    //@media screen and (max-width: 1350px) {
-    //  @include font("Proza_Libre", 133%, 115.52%);
-    //}
-
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: $base-width860) {
       @include font("Proza_Libre", 125%, 115.52%);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $base-width768) {
       max-width: 95%;
       @include font("Proza_Libre", 110%, 115.52%);
     }
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: $base-width620) {
       max-width: 100%;
       margin-top: 3%;
       @include font("Proza_Libre", 140%, 115.52%);
       text-align: center;
     }
 
-    @media screen and (max-width: 486px) {
+    @media screen and (max-width: $base-width486) {
       @include font("Proza_Libre", 110%, 115.52%);
     }
 
@@ -134,21 +128,21 @@ $base-width320: 320px;
     @extend %margin-padding;
     @include font("Proza_Libre", 150%, 137.5%);
 
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: $base-width860) {
       margin-top: 1.5%;
       @include font("Proza_Libre", 140%, 137.5%);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $base-width768) {
       @include font("Proza_Libre", 120%, 120%);
     }
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: $base-width620) {
       @include font("Proza_Libre", 160%, 120%);
       font-weight: 600;
     }
 
-    @media screen and (max-width: 486px) {
+    @media screen and (max-width: $base-width486) {
       @include font("Proza_Libre", 130%, 120%);
       font-weight: 600;
     }
@@ -164,8 +158,9 @@ $base-width320: 320px;
   &__quotes-container {
     margin-top: 1%;
     height: 100%;
+    width: 100%;
 
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: $base-width860) {
        width: 90%;
     }
   }
@@ -173,55 +168,26 @@ $base-width320: 320px;
   &__quotes {
     padding: 0;
     height: 100%;
+    min-width: 100%;
     @include flex(row, space-between, flex-start);
 
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: $base-width860) {
       margin-top: 1.5%;
-    }
-
-    @media screen and (max-width: 860px) {
       @include flex(column, space-between, center);
-      height: 90%;
+      min-height: 30vw
     }
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: $base-width620) {
       margin-top: 2.5%;
       @include flex(column, space-between, center);
+      min-height: 350px;
       height: 100%;
     }
 
     @media screen and (max-width: $base-width320) {
       @include flex(column, space-between, center);
+      min-height: 360px;
       height: 120%;
-    }
-  }
-
-  &__quot {
-    text-align: center;
-    width: 25%;
-    height: 25%;
-    // padding-left: 1.6%;
-    border: 3px solid #2ed7d9;
-    border-radius: 10px;
-    // list-style-type: none;
-    @include font("Proza_Libre", 132%, 130%);
-    text-decoration: none;
-    color: black;
-    // -webkit-line-clamp: 2;
-    // display: -webkit-box;
-    // -webkit-box-orient: vertical;
-    overflow: hidden;
-
-    @media screen and (max-width: 860px) {
-      @include font("Proza_Libre", 140%, 150%);
-      width: 85%;
-    }
-
-    @media screen and (max-width: $base-width320) {
-      width: 85%;
-      height: 28%;
-      @include font("Proza_Libre", 70%, 130%);
-      border-radius: 5px;
     }
   }
 
@@ -237,14 +203,7 @@ $base-width320: 320px;
     height: 420px;
     cursor: pointer;
 
-    //@media screen and (max-width: 1280px) {
-    //  bottom: 8%;
-    //  width: 23%;
-    //  height: 37%;
-    //}
-
-
-    @media screen and (max-width: 1152px) {
+    @media screen and (max-width: $base-width1152) {
       position: absolute;
       width: 65%;
       height: 32%;
@@ -255,7 +214,7 @@ $base-width320: 320px;
       top: 60%;
     }
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: $base-width620) {
       position: absolute;
       width: 90%;
       height: 25%;

@@ -1,5 +1,4 @@
 @import "../vars";
-$base-width320: 320px;
 
 .footer {
   width: 65%;
@@ -9,7 +8,7 @@ $base-width320: 320px;
   left: 29%;
   border-top: #7a7a7a 1px solid;
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: $base-width620) {
     width: 90%;
     height: 5%;
     margin-left: auto;
@@ -36,7 +35,7 @@ $base-width320: 320px;
   margin-bottom: 0;
   color: #7a7a7a;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $base-width768) {
     margin-top: .9vh;
     @include font("Proza_Libre", 10px, .9);
   }
