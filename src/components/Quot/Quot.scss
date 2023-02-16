@@ -1,0 +1,39 @@
+@import "../vars";
+%margin-padding {
+  margin: 3% 0 0 0;
+  padding: 0;
+}
+
+.quot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+  min-height: 80%;
+  // padding-left: 1.6%;
+  border: 3px solid #2ed7d9;
+  border-radius: 10px;
+  // list-style-type: none;
+  @include font("Proza_Libre", 132%, 130%);
+  text-decoration: none;
+  color: black;
+  // -webkit-line-clamp: 2;
+  // display: -webkit-box;
+  // -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @media screen and (max-width: $base-width860) {
+    @include font("Proza_Libre", 140%, 150%);
+    width: 85%;
+    min-height: 30%;
+  }
+
+  @media screen and (max-width: $base-width320) {
+    width: 85%;
+    min-height: 28%;
+    //height: 28%;
+    @include font("Proza_Libre", 90%, 130%);
+    border-radius: 5px;
+  }
+}

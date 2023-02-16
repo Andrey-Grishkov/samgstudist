@@ -2,6 +2,7 @@ import "./MainContent.scss";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchWork } from "../../utils/MainApi";
+import {Quot} from "../Quot/Quot";
 
 export const MainContent = ({ setTriangle }) => {
   const [workPreview, setWorkPreview] = useState();
@@ -15,6 +16,7 @@ export const MainContent = ({ setTriangle }) => {
     setTriangle(false);
     fetchData();
   }, []);
+
   return (
     <div className="main-content">
       <div className="main-content__container">
@@ -29,13 +31,18 @@ export const MainContent = ({ setTriangle }) => {
             {workPreview && (
               <>
                 {[...Array(3)].map((_, i) => (
-                  <Link
-                    to={`MainPageWorkPreview/Гуманитарные/25/Гум/14`}
-                    className="main-content__quot"
-                    key={`link${i}`}
-                  >
-                    {workPreview[i].paragraph_text}
-                  </Link>
+                  <Quot text={workPreview[i].paragraph_text}
+                        key={`link${i}`}
+                  />
+
+
+                  // <Link
+                  //   to={`MainPageWorkPreview/Гуманитарные/25/Гум/14`}
+                  //   className="main-content__quot"
+                  //   key={`link${i}`}
+                  // >
+                  //   {workPreview[i].paragraph_text}
+                  // </Link>
                 ))}
               </>
             )}

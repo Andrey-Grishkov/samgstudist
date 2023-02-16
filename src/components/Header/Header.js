@@ -1,58 +1,51 @@
 import "./Header.scss"
-import { ReactComponent as Logo } from "../../images/header__logo.svg"
-import { ReactComponent as searchImg } from "../../images/search__img.svg"
+import Navigation from "../Navigation/Navigation";
+//import { ReactComponent as Logo } from "../../images/header__logo.svg"
 import { useLocation, Link } from "react-router-dom"
 
-const Header = ({ inputRef, setFullScreen }) => {
+import HeaderNav from "../HeaderNav/HeaderNav";
+import Logo from "../Logo/Logo";
+import {useState} from "react";
+
+const Header = ({ inputRef, setFullScreen, disciplins }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleClickOpen () {
+    setIsOpen(true)
+  }
+
+  function handleClickClose () {
+    setIsOpen(false)
+  }
+
   const location = useLocation();
   let about_team;
   location.pathname === '/about-team'
     ? (about_team = true)
     : (about_team = false);
 
+  // const [windowSmallSize, setSmallWindowSize] = useState(window.innerWidth < 320);
+  //
+  // window.addEventListener('resize', () => {
+  //   if (window.innerWidth < 320) {
+  //     setSmallWindowSize(true);
+  //   } else {
+  //     setSmallWindowSize(false);
+  //   }});
+
   return (
     <header className={`header ${about_team ? 'header__team' : ''}`}>
-      <Link className='header__logo-link' to='/'>
-        <Logo
-          onClick={() => {
-            setFullScreen((switchScreen) => !switchScreen);
-          }}
-          className='header__logo-container'
-        ></Logo>
-      </Link>
+      <Logo flag={true}/>
       <div className='header__line'></div>
       {about_team ? (
         <h1 className='header__title'>О команде</h1>
       ) : (
-        <div className='header__container'>
-          <nav className='header__navigation'>
-            <ul className='header__navigation_list'>
-              <li className='header__link-container'>
-                <Link className='header__link' to='/'>
-                  На главную
-                </Link>
-              </li>
-              <li className='header__link-container'>
-                <Link className='header__link' to='/about-project'>
-                  О проекте
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          <form className='search-form'>
-            <button className='search-form__button' type='submit'></button>
-            <input
-              className='search-form__name'
-              placeholder='Поиск по сайту'
-              type='text'
-              id='search-form'
-              name='search-form'
-              required
-              ref={inputRef}
-            ></input>
-          </form>
-        </div>
+       <HeaderNav
+         inputRef={inputRef}
+         onClick={handleClickOpen}
+       />
       )}
+    <Navigation isOpen={isOpen} onClick={handleClickClose} inputRef={inputRef} disciplins={disciplins}/>
     </header>
   );
 };
