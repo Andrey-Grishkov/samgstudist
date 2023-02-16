@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import { ReactComponent as searchImg } from "../../images/search__img.svg"
 import Search from "../Search/Search";
 
-function HeaderNav({inputRef, onClick, windowSmallSize}) {
+function HeaderNav({inputRef, onClick}) {
   return (
 
     <div className='header-nav'>
@@ -23,10 +23,10 @@ function HeaderNav({inputRef, onClick, windowSmallSize}) {
         </ul>
       </nav>
       <button className='header-nav__menu-button' type='button' onClick={onClick}></button>
-      {!windowSmallSize ?
       <Search
         inputRef={inputRef}
-      /> : <></>}
+        flag={true}
+      />
     </div>
   );
 }

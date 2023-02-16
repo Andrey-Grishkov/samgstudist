@@ -30,6 +30,10 @@
     margin: 0.7% 0 0 0;
     height: 70%;
     border-right: 1px black solid;
+
+    @media screen and (max-width: $base-width620) {
+      display: none;
+    }
   }
 
   &__title {

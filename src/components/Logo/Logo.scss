@@ -18,7 +18,6 @@
     width: 90%;
   }
 
-
   @media screen and (max-width: $base-width320) {
     margin-left: 53px;
     width: 164px;
@@ -26,18 +25,39 @@
   }
 
   &__img {
+    margin-top: -10px;
     width: 100%;
     height: 100%;
     fill: black;
-
-    @media screen and (max-width: $base-width540) {
-      width: 90%;
-    }
 
     &:hover {
       fill: blueviolet;
       transform: scale(1.05);
     }
+
+    &_big-sized {
+      @media screen and (max-width: $base-width620) {
+        display: none;
+      }
+    }
+
+    &_small-sized {
+      margin-top: 5px;
+      width: 95%;
+
+      @media screen and (min-width: $base-width620) {
+        display: none;
+      }
+
+      @media screen and (max-width: $base-width540) {
+        width: 90%;
+      }
+
+      @media screen and (max-width: $base-width320) {
+        width: 100%;
+        margin-top: 2px;
+      }
+  }
   }
 }
 

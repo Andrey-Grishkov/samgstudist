@@ -22,27 +22,17 @@ function App() {
     fetchData();
   }, []);
 
-  const [windowSmallSize, setSmallWindowSize] = useState(window.innerWidth < 620);
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth < 620) {
-      setSmallWindowSize(true);
-    } else {
-      setSmallWindowSize(false);
-    }});
-
   return (
     <div className={`page ${fullScreen ? "page_fullScreened" : ""}`}>
       <Header
         setFullScreen={setFullScreen}
         inputRef={inputRef}
         disciplins={disciplins}
-        windowSmallSize={windowSmallSize}/>
+        />
       <Routes>
         <Route path="/*" element={
           <Main
             disciplins={disciplins}
-            windowSmallSize={windowSmallSize}
           />}></Route>
         <Route
           path="/about-project"

@@ -7,7 +7,7 @@ import HeaderNav from "../HeaderNav/HeaderNav";
 import Logo from "../Logo/Logo";
 import {useState} from "react";
 
-const Header = ({ inputRef, setFullScreen, disciplins, windowSmallSize }) => {
+const Header = ({ inputRef, setFullScreen, disciplins }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClickOpen () {
@@ -35,15 +35,14 @@ const Header = ({ inputRef, setFullScreen, disciplins, windowSmallSize }) => {
 
   return (
     <header className={`header ${about_team ? 'header__team' : ''}`}>
-      <Logo setFullScreen={setFullScreen} windowSmallSize={windowSmallSize}/>
-      {!windowSmallSize ? <div className='header__line'></div> : <></>}
+      <Logo flag={true}/>
+      <div className='header__line'></div>
       {about_team ? (
         <h1 className='header__title'>О команде</h1>
       ) : (
        <HeaderNav
          inputRef={inputRef}
          onClick={handleClickOpen}
-         windowSmallSize={windowSmallSize}
        />
       )}
     <Navigation isOpen={isOpen} onClick={handleClickClose} inputRef={inputRef} disciplins={disciplins}/>

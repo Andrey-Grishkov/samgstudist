@@ -2,9 +2,9 @@ import React from 'react';
 import './Search.scss'
 import { ReactComponent as searchImg } from "../../images/search__img.svg"
 
-function Search ({inputRef}) {
+function Search ({inputRef, flag}) {
   return (
-      <form className='search-form'>
+      <form className={`search-form ${flag ? 'search-form_hiden' : ''}`}>
         <button className='search-form__button' type='submit'></button>
         <input
           className='search-form__name'

@@ -6,7 +6,7 @@ import MainPageWorkPreview from "../MainPageWorkPreview/MainPageWorkPreview";
 import { Route, Routes } from "react-router-dom";
 import { fetchDisciplins } from "../../utils/MainApi";
 
-const Main = ({disciplins, windowSmallSize}) => {
+const Main = ({disciplins}) => {
   const [triangle, setTriangle] = useState(false);
   //const [disciplins, setDisciplins] = useState([]);
   // const fetchData = async () => {
@@ -17,10 +17,9 @@ const Main = ({disciplins, windowSmallSize}) => {
   //   fetchData();
   // }, []);
 
-
   return (
     <section className={`main ${triangle ? "triangle" : ""}`}>
-      {!windowSmallSize ? <Menu disciplins={disciplins} /> : <></>}
+      <Menu disciplins={disciplins} flag={true}/>
       <Routes>
         <Route
           path=""

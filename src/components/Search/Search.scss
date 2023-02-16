@@ -8,6 +8,12 @@
   position: relative;
   overflow: hidden;
 
+  &_hiden {
+    @media screen and (max-width: $base-width620) {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: $base-width620) {
     margin-top: 30px;
     margin-right: 0;
