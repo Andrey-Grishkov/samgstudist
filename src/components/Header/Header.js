@@ -1,6 +1,6 @@
+
 import "./Header.scss"
 import Navigation from "../Navigation/Navigation";
-//import { ReactComponent as Logo } from "../../images/header__logo.svg"
 import { useLocation, Link } from "react-router-dom"
 
 import HeaderNav from "../HeaderNav/HeaderNav";
@@ -20,7 +20,7 @@ const Header = ({ inputRef, setFullScreen, disciplins }) => {
 
   const location = useLocation();
   let about_team;
-  location.pathname === '/about-team'
+  location.pathname === "/about-team"
     ? (about_team = true)
     : (about_team = false);
 
@@ -37,8 +37,9 @@ const Header = ({ inputRef, setFullScreen, disciplins }) => {
     <header className={`header ${about_team ? 'header__team' : ''}`}>
       <Logo flag={true}/>
       <div className='header__line'></div>
+
       {about_team ? (
-        <h1 className='header__title'>О команде</h1>
+        <h1 className="header__title">О команде</h1>
       ) : (
        <HeaderNav
          inputRef={inputRef}

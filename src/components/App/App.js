@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
+import "./App.scss";
+
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
-import "./App.scss";
-import { Route, Routes, useLocation } from "react-router-dom";
 import AboutProject from "../AboutProject/AboutProject";
 import AboutTeam from "../AboutTeam/AboutTeam";
 import Footer from "../Footer/Footer";
 import { fetchDisciplins } from "../../utils/MainApi";
+
 
 function App() {
   const location = useLocation();

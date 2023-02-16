@@ -1,5 +1,5 @@
 import "./MainContent.scss";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchWork } from "../../utils/MainApi";
 import {Quot} from "../Quot/Quot";
@@ -7,15 +7,15 @@ import {Quot} from "../Quot/Quot";
 export const MainContent = ({ setTriangle }) => {
   const [workPreview, setWorkPreview] = useState();
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const results = await fetchWork(25, 14);
     setWorkPreview([...results.paragraph_text]);
-  };
+  }, [setWorkPreview]);
 
   useEffect(() => {
     setTriangle(false);
     fetchData();
-  }, []);
+  }, [setTriangle, fetchData]);
 
   return (
     <div className="main-content">

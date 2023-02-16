@@ -47,5 +47,6 @@ export const developers = [
   { name: "Валентина Асташкевич", role: "Design" },
   { name: "Александр", role: "Сustomer" },
 ];
+
 export const numberPageLimit = [0];
 

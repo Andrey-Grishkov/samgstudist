@@ -1,36 +1,40 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { numberPageLimit } from "../../utils/constants";
 import { fetchWork } from "../../utils/MainApi";
+import { setLimit } from "../../store/namberPageSlice";
 
-export const WorkPreview = ({ numberPage }) => {
+export const WorkPreview = () => {
+  const dispatch = useDispatch();
+  const numberPage = useSelector((state) => state.namberPage.counter);
   const { id, workId } = useParams();
 
   const [text, setText] = useState("");
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const results = await fetchWork(id, workId);
-    const text = results.paragraph_text
-      .map(({ paragraph_text }) => paragraph_text)
+    const paragraphTexts = results.paragraph_text
+      .map(({ paragraph_text: paragraphText }) => paragraphText)
       .join(" ")
-      .split(/[.;]/);
+      .split(" ");
     const brokenText = [""];
     let counter = 0;
-    for (let i = 0; i < text.length; i++) {
-      if (brokenText[counter].length < 1000) {
-        brokenText[counter] += `${text[i]}.`;
+    for (let i = 0; i < paragraphTexts.length; i++) {
+      if (brokenText[counter].length < 1800) {
+        brokenText[counter] += `${paragraphTexts[i]} `;
       } else {
+        brokenText[counter] += "...";
         counter++;
-        brokenText[counter] = `${text[i]}.`;
+        brokenText[counter] = `${paragraphTexts[i]} `;
       }
     }
-    numberPageLimit[0] = brokenText.length - 1;
-    setText(brokenText);
-  };
+    dispatch(setLimit(brokenText.length - 1));
 
+    setText(brokenText);
+  }, [id, workId, setText, dispatch]);
   useEffect(() => {
     fetchData();
-  }, [workId]);
+  }, [fetchData]);
 
   return <span>{text[numberPage]}</span>;
 };
