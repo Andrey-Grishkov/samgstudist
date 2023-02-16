@@ -5,8 +5,27 @@
   width: 100%;
   height: 86%;
   @include flex(row, flex-start, flex-start);
+
+  @media screen and (max-width: $base-width620) {
+    height: 90%;
+  }
+
+  @media screen and (max-width: $base-width320) {
+    max-width: 320px;
+    height: 100%;
+    //min-height: 448px;
+    //background-position: bottom;
+    background-size: 320px;
+    background: url("../../images/main__image-wave.svg") center/ cover no-repeat;
+  }
 }
+
 .triangle {
   background: url("../../images/main-page-work-preview__triangle.svg"),
     url("../../images/main__image-wave.svg") center/ cover no-repeat;
+
+  @media screen and (max-width: $base-width620) {
+    background: url("../../images/main-page-work-preview__triangle.svg") bottom left/ cover no-repeat,
+    url("../../images/main__image-wave.svg") center/ cover no-repeat;
+  }
 }

@@ -1,0 +1,138 @@
+@import "../vars";
+
+.navigation {
+  @include flex(column, flex-end, center);
+  @include font("Poppins", 24px, 19px);
+  background-color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 2;
+
+  &_is-opened {
+    top: -30px;
+    display: block;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 auto;
+    background: linear-gradient(
+                    270deg,
+                    rgba(0, 255, 148, 0.42) 0%,
+                    rgba(0, 102, 255, 0.42) 48.66%,
+                    rgba(219, 0, 255, 0.2436) 100%
+    );
+    position: relative;
+    box-sizing: border-box;
+    @include flex(column, flex-start, center);
+
+  }
+
+  &__close {
+    padding: 0;
+    position: absolute;
+    right: 22px;
+    top: 52px;
+    max-width: 30px;
+    min-height: 30px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: black;
+
+    @media screen and (max-width: $base-width320) {
+      right: 14px;
+      top: 44px;
+      max-width: 22px;
+      min-height: 22px;
+    }
+
+    &:hover {
+      transition: 1s ease-in;
+      opacity: .6;
+    }
+  }
+
+  &__close-img {
+    max-width: 30px;
+
+    @media screen and (max-width: $base-width320) {
+      max-width: 22px;
+    }
+  }
+
+  &__logo {
+    margin-top: 70px;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  &__links {
+    min-height: 50px;
+    margin: 0;
+    padding: 0;
+    @include flex(column, space-between, center);
+    list-style-type: none;
+  }
+
+  &__link-container {
+    margin: 12px 0 0 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    max-width: max-content;
+    text-decoration: none;
+    border-bottom: none;
+
+    &:hover {
+      border-bottom: black 2px solid;
+    }
+  }
+
+  &__link {
+    @include font("Poppins", 24px, 22px);
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    border-bottom: none;
+    text-align: center;
+
+    @media screen and (max-width: $base-width320) {
+      @include font("Poppins", 18px, 22px);
+    }
+  }
+
+  &__button-container {
+    margin: 0 auto 92px auto;
+    @include flex(column, flex-end, center);
+
+    @media screen and (max-width: $base-width540) {
+        margin-bottom: 48px;
+    }
+  }
+
+  &__menu-text {
+    margin-bottom: 0;
+    @include font("Poppins", 24px, 22px);
+    border-bottom: 1px black solid;
+
+    @media screen and (max-width: $base-width320) {
+      @include font("Poppins", 15px, 22px);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

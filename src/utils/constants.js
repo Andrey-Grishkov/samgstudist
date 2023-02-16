@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 export const theme = [
   "Гуманитарные",
   "Информационно-технологические",
@@ -29,7 +31,7 @@ export const developers = [
   { name: "Сергей Майоров", role: "Project manager" },
   { name: "Наталья Маслова", role: "Project manager" },
   { name: "Андрей Торгованов", role: "Project manager" },
-  { name: "Андрей Гришков", role: "Frontend" },
+  { name: "Андрей Гришков", role: "Frontend (TECH LEAD)" },
   { name: "Николай Фоменко", role: "Frontend" },
   { name: "Александр Гойхфис", role: "Frontend" },
   { name: "Дмитрий Федоров", role: "Backend (TECH LEAD)" },
@@ -38,10 +40,13 @@ export const developers = [
   { name: "Владимир Максимов", role: "Backend" },
   { name: "Виталий Асташкевич", role: "Backend" },
   { name: "Максим Цымлов", role: "Backend" },
-  { name: "Катерина Урусова", role: "QA Engineer" },
+  { name: "Катерина Урусова", role: "QA Engineer (TECH LEAD)" },
   { name: "Борис Суханов", role: "QA Engineer" },
   { name: "Никита Турук", role: "QA Engineer" },
   { name: "Наталья Верясова", role: "QA Engineer" },
   { name: "Валентина Асташкевич", role: "Design" },
   { name: "Александр", role: "Сustomer" },
 ];
+
+export const numberPageLimit = [0];
+
