@@ -6,8 +6,8 @@ const Footer = () => {
   const teamPage = '/about-project';
   return (
     <section className={`footer ${ location.pathname === teamPage ? 'footer__about-team' : ''}`}>
-      <p className='footer-text'>Все материалы представленные на сайте исключительно с целью ознакомления читателями и
-        не преследуют коммерческих целей или нарушение авторских прав</p>
+      <p className='footer-text'>Все материалы, представленные на сайте, носят исключительно информационный характер.
+        Не преследуют коммерческие цели и нарушение авторских прав.</p>
     </section>
   );
 }

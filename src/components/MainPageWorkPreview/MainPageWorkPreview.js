@@ -38,8 +38,9 @@ const MainPageWorkPreview = ({ setTriangle }) => {
                     <Link
                       to={`${replaceSpace(work.material_title)}/${work.id}`}
                       key={`work${i}`}
+                      className='main-page-work__content__link'
                     >
-                      <div>{work.material_title}</div>
+                      {work.material_title}
                     </Link>
                   ))
               )}

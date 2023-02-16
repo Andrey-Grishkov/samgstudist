@@ -22,10 +22,10 @@ export const MainContent = ({ setTriangle }) => {
       <div className="main-content__container">
         <h2 className="main-content__title">Наша работа - Ваша работа!</h2>
         <h3 className="main-content__greetings">
-          Добро пожаловать на наш сайт. Здесь вы найдете примеры выполненных
-          студенческих работ, которые помогут вам в выполнении собственных работ
+          Добро пожаловать на наш сайт! Здесь вы найдете примеры выполненных студенческих работ,
+          которые помогут вам в реализации собственных проектов.
         </h3>
-        <h3 className="main-content__quotes-title">Популярные цитаты</h3>
+        <h3 className="main-content__quotes-title">Популярные работы</h3>
         <nav className="main-content__quotes-container">
           <ul className="main-content__quotes">
             {workPreview && (

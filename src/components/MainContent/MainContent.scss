@@ -59,34 +59,34 @@
   &__title {
     margin: 3% 0 0 0;
     padding: 0;
-    @include font("Source Serif Pro", 220%, 80.52%);
+    @include font("Popins", 220%, 80.52%);
 
     @media screen and (max-width: $base-width1080) {
-      @include font("Source Serif Pro", 180%, 80.52%);
+      @include font("Popins", 180%, 80.52%);
     }
 
     @media screen and (max-width: $base-width860) {
-      @include font("Source Serif Pro", 160%, 80.52%);
+      @include font("Popins", 160%, 80.52%);
     }
 
     @media screen and (max-width: $base-width768) {
-      @include font("Source Serif Pro", 140%, 80.52%);
+      @include font("Popins", 140%, 80.52%);
     }
 
     @media screen and (max-width: $base-width620) {
       margin-top: 4%;
-      @include font("Source Serif Pro", 180%, 80.52%);
+      @include font("Popins", 180%, 80.52%);
       font-weight: 600;
     }
 
     @media screen and (max-width: $base-width486) {
-      @include font("Source Serif Pro", 140%, 80.52%);
+      @include font("Popins", 140%, 80.52%);
       font-weight: 600;
     }
 
     @media screen and (max-width: $base-width320) {
       margin-top: 20px;
-      @include font("Source Serif Pro", 80%, 80.52%);
+      @include font("Popins", 80%, 80.52%);
       font-weight: 600;
     }
   }

@@ -16,11 +16,10 @@ const AboutProject = ({ inputFocus }) => {
                 Вдохновившись примерами работ, представленных на сайте,
                 вы сможете сделать свою работу еще лучше
               </span>
-              <Link to='/works-list' className='project__link project__link_vector'>
+              <Link to='/' className='project__link project__link_vector'>
                 <img src={Vector} alt='стрелка' className='project__img' />
                 <div className='project__circle vector'></div>
               </Link>
-            
           </li>
           <li className='project__el' >
             <span className='project__text'>

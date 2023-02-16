@@ -97,6 +97,16 @@
         height: 100%;
       }
     }
+
+    &__link {
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        color: #2e49d9;
+        text-decoration: underline;
+      }
+    }
   }
   .nav-container {
     margin: auto;
