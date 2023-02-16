@@ -1,21 +1,20 @@
-
-import "./Header.scss"
+import "./Header.scss";
 import Navigation from "../Navigation/Navigation";
-import { useLocation, Link } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 
 import HeaderNav from "../HeaderNav/HeaderNav";
 import Logo from "../Logo/Logo";
-import {useState} from "react";
+import { useState } from "react";
 
 const Header = ({ inputRef, setFullScreen, disciplins }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  function handleClickOpen () {
-    setIsOpen(true)
+  function handleClickOpen() {
+    setIsOpen(true);
   }
 
-  function handleClickClose () {
-    setIsOpen(false)
+  function handleClickClose() {
+    setIsOpen(false);
   }
 
   const location = useLocation();
@@ -34,19 +33,21 @@ const Header = ({ inputRef, setFullScreen, disciplins }) => {
   //   }});
 
   return (
-    <header className={`header ${about_team ? 'header__team' : ''}`}>
-      <Logo flag={true}/>
-      <div className='header__line'></div>
+    <header className={`header ${about_team ? "header__team" : ""}`}>
+      <Logo flag={true} />
+      <div className="header__line"></div>
 
       {about_team ? (
         <h1 className="header__title">О команде</h1>
       ) : (
-       <HeaderNav
-         inputRef={inputRef}
-         onClick={handleClickOpen}
-       />
+        <HeaderNav inputRef={inputRef} onClick={handleClickOpen} />
       )}
-    <Navigation isOpen={isOpen} onClick={handleClickClose} inputRef={inputRef} disciplins={disciplins}/>
+      <Navigation
+        isOpen={isOpen}
+        onClick={handleClickClose}
+        inputRef={inputRef}
+        disciplins={disciplins}
+      />
     </header>
   );
 };

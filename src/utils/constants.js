@@ -1,5 +1,3 @@
-import {useState} from "react";
-
 export const theme = [
   "Гуманитарные",
   "Информационно-технологические",
@@ -47,6 +45,3 @@ export const developers = [
   { name: "Валентина Асташкевич", role: "Design" },
   { name: "Александр", role: "Сustomer" },
 ];
-
-export const numberPageLimit = [0];
-
