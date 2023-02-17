@@ -16,7 +16,8 @@
   }
 
   @media screen and (max-width: $base-width1152) {
-    background: url("../../images/main__image-women.svg") 50% 87px/550px no-repeat;
+    background: url("../../images/main__image-women.svg") 50% 87px/550px
+      no-repeat;
   }
 
   @media screen and (max-width: $base-width860) {
@@ -32,15 +33,18 @@
     min-width: 100%;
     min-height: 100%;
     margin: 0;
-    background: url("../../images/main__image-women.svg") 40% 283px/445px no-repeat;
+    background: url("../../images/main__image-women.svg") 40% 283px/445px
+      no-repeat;
   }
 
   @media screen and (max-width: $base-width486) {
-    background: url("../../images/main__image-women.svg") 40% 302px/390px no-repeat;
+    background: url("../../images/main__image-women.svg") 40% 302px/390px
+      no-repeat;
   }
 
   @media screen and (max-width: $base-width384) {
-    background: url("../../images/main__image-women.svg") 40% 347px/330px no-repeat;
+    background: url("../../images/main__image-women.svg") 40% 347px/330px
+      no-repeat;
   }
 
   @media screen and (max-width: $base-width320) {
@@ -161,7 +165,7 @@
     width: 100%;
 
     @media screen and (max-width: $base-width860) {
-       width: 90%;
+      width: 90%;
     }
   }
 
@@ -174,7 +178,7 @@
     @media screen and (max-width: $base-width860) {
       margin-top: 1.5%;
       @include flex(column, space-between, center);
-      min-height: 30vw
+      min-height: 30vw;
     }
 
     @media screen and (max-width: $base-width620) {

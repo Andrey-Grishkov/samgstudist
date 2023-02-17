@@ -25,7 +25,8 @@
     url("../../images/main__image-wave.svg") center/ cover no-repeat;
 
   @media screen and (max-width: $base-width620) {
-    background: url("../../images/main-page-work-preview__triangle.svg") bottom left/ cover no-repeat,
-    url("../../images/main__image-wave.svg") center/ cover no-repeat;
+    background: url("../../images/main-page-work-preview__triangle.svg") bottom
+        left/ cover no-repeat,
+      url("../../images/main__image-wave.svg") center/ cover no-repeat;
   }
 }

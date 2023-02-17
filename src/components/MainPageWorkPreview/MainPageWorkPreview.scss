@@ -79,6 +79,8 @@
     }
 
     &__preview {
+      display: flex;
+      flex-direction: column;
       background-color: #fff;
       margin: 0;
       width: 95%;
@@ -118,7 +120,6 @@
       height: 15%;
       @include flex(column, flex-start, center);
     }
-
 
     @media screen and (max-width: $base-width320) {
       margin-top: 20px;
@@ -216,7 +217,6 @@
         }
       }
     }
-
 
     &__illustrations {
       margin-left: 2%;

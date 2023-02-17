@@ -5,7 +5,7 @@ const namberPageSlice = createSlice({
 
   initialState: {
     counter: 0,
-    limit: 0,
+    limit: -1,
   },
   reducers: {
     increment(state) {
@@ -15,7 +15,7 @@ const namberPageSlice = createSlice({
       state.counter && state.counter--;
     },
     reset(state) {
-      state.limit = 0;
+      state.limit = -1;
       state.counter = 0;
     },
     setLimit(state, action) {

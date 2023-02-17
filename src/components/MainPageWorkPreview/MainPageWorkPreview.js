@@ -5,8 +5,20 @@ import { Link, Route, Routes, useParams } from "react-router-dom";
 import { replaceSpace } from "../../utils/functions";
 import { WorkPreview } from "../WorkPreview/WorkPreview";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, reset } from "../../store/namberPageSlice";
+import { increment, decrement } from "../../store/namberPageSlice";
+import {
+  setImagesView,
+  imagesDecrement,
+  imagesIncrement,
+} from "../../store/ illustrationSlice";
 const MainPageWorkPreview = ({ setTriangle }) => {
+  const imagesView = useSelector((state) => state.illustration.imagesView);
+  const imagesCaunter = useSelector(
+    (state) => state.illustration.imagesCaunter
+  );
+  const imagesLimit = useSelector((state) => state.illustration.imagaesLimit);
+  const numberPageLimit = useSelector((state) => state.namberPage.limit);
+
   const numberPage = useSelector((state) => state.namberPage.counter);
   const dispatch = useDispatch();
   const { disciplin, id } = useParams();
@@ -19,14 +31,12 @@ const MainPageWorkPreview = ({ setTriangle }) => {
 
   useEffect(() => {
     setTriangle(true);
-    dispatch(reset());
     fetchData();
-  }, [setTriangle, fetchData, dispatch]);
-
+  }, [setTriangle, fetchData]);
   return (
     <div className="main-page-work">
       <div className="main-page-work__content">
-        <div className="main-page-work__content__commercial"></div>
+        {/* <div className="main-page-work__content__commercial"></div> */}
         <h3 className="main-page-work__content__title">{disciplin}</h3>
         <div className="main-page-work__content__preview">
           <Routes>
@@ -52,7 +62,9 @@ const MainPageWorkPreview = ({ setTriangle }) => {
       <div className="nav-container">
         <div className="nav-container__without-illustrations">
           <button
-            onClick={() => dispatch(decrement())}
+            onClick={() =>
+              dispatch(imagesView ? imagesDecrement() : decrement())
+            }
             className="nav-container__without-illustrations__btn"
           >
             <p className="btn-text">
@@ -60,12 +72,12 @@ const MainPageWorkPreview = ({ setTriangle }) => {
             </p>
           </button>
           <div className="nav-container__without-illustrations__page-number">
-            {numberPage + 1}
+            {imagesView ? imagesCaunter + 1 : numberPage + 1}
           </div>
 
           <button
             onClick={() => {
-              dispatch(increment());
+              dispatch(imagesView ? imagesIncrement() : increment());
             }}
             className="nav-container__without-illustrations__btn"
           >
@@ -74,7 +86,14 @@ const MainPageWorkPreview = ({ setTriangle }) => {
             </p>
           </button>
         </div>
-        <button className="nav-container__illustrations">Иллюстрации</button>
+        {![imagesLimit, numberPageLimit].includes(-1) && (
+          <button
+            onClick={() => dispatch(setImagesView())}
+            className="nav-container__illustrations"
+          >
+            {imagesView ? `Вернуться к работе` : `Иллюстрации`}
+          </button>
+        )}
       </div>
     </div>
   );

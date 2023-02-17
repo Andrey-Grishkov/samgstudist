@@ -45,7 +45,7 @@ export const MainContent = ({ setTriangle }) => {
             )}
           </ul>
         </nav>
-        <div className="main-content__commercial-container"></div>
+        {/* <div className="main-content__commercial-container"></div> */}
       </div>
     </div>
   );
