@@ -1,0 +1,5 @@
+@import "../vars";
+
+.work-preview {
+  @include font("Poppins", 20px, 120%);
+}
