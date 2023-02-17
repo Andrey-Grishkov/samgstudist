@@ -1,15 +1,31 @@
+import "./WorkPreview.scss";
+
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchWork } from "../../utils/MainApi";
 import { setLimit } from "../../store/namberPageSlice";
-import "./WorkPreview.scss";
+
+import {
+  setImages,
+  setImagesLimit,
+  setImagesView,
+} from "../../store/ illustrationSlice";
+
 
 export const WorkPreview = () => {
   const dispatch = useDispatch();
   const numberPage = useSelector((state) => state.namberPage.counter);
   const { id, workId } = useParams();
-  const [text, setText] = useState("");
+
+  const images = useSelector((state) => state.illustration.images);
+  const imagesCaunter = useSelector(
+    (state) => state.illustration.imagesCaunter
+  );
+  const imagesView = useSelector((state) => state.illustration.imagesView);
+
+  const [text, setText] = useState([]);
+
 
 
   const [quantitySymbol, setQuantitySymbol] = useState(window.innerWidth < 721 ? 200 :
@@ -41,13 +57,34 @@ export const WorkPreview = () => {
         brokenText[counter] = `${paragraphTexts[i]} `;
       }
     }
-    dispatch(setLimit(brokenText.length - 1));
-
+    const imagesMap = results.image.map(({ image }) => image);
+    dispatch(setImages(imagesMap));
+    dispatch(setImagesLimit(imagesMap.length - 1));
     setText(brokenText);
-  }, [id, workId, setText, dispatch]);
+    if (brokenText[0] !== " ") {
+      dispatch(setLimit(brokenText.length - 1));
+      return;
+    }
+
+    dispatch(setImagesView(true));
+  }, [id, workId, dispatch]);
   useEffect(() => {
     fetchData();
   }, [fetchData]);
 
-  return <span className='work-preview'>{text[numberPage]}</span>;
+  return (
+    <>
+      {imagesView ? (
+        <div
+          className="illustration"
+          style={{
+            background: `url(${images[imagesCaunter]}) center/contain no-repeat`,
+          }}
+        ></div>
+      ) : (
+        <span>{text[numberPage]}</span>
+      )}
+    </>
+  );
+
 };

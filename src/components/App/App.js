@@ -9,7 +9,6 @@ import AboutTeam from "../AboutTeam/AboutTeam";
 import Footer from "../Footer/Footer";
 import { fetchDisciplins } from "../../utils/MainApi";
 
-
 function App() {
   const location = useLocation();
   const [fullScreen, setFullScreen] = useState(false);
@@ -30,23 +29,21 @@ function App() {
         setFullScreen={setFullScreen}
         inputRef={inputRef}
         disciplins={disciplins}
-        />
+      />
       <Routes>
-        <Route path="/*" element={
-          <Main
-            disciplins={disciplins}
-          />}></Route>
+        <Route path="/*" element={<Main disciplins={disciplins} />}></Route>
         <Route
           path="/about-project"
-          element={<AboutProject
-            inputFocus={inputFocus} />}
+          element={<AboutProject inputFocus={inputFocus} />}
         ></Route>
-        <Route path="/about-team"
-               element={<AboutTeam />}></Route>
+        <Route path="/about-team" element={<AboutTeam />}></Route>
       </Routes>
       {location.pathname !== "/about-team" && <Footer />}
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3213639437561510"
-              crossOrigin="anonymous"></script>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3213639437561510"
+        crossOrigin="anonymous"
+      ></script>
     </div>
   );
 }

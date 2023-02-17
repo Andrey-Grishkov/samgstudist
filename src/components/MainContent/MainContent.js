@@ -1,8 +1,7 @@
 import "./MainContent.scss";
 import { useCallback, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { fetchWork } from "../../utils/MainApi";
-import {Quot} from "../Quot/Quot";
+import { Quot } from "../Quot/Quot";
 
 export const MainContent = ({ setTriangle }) => {
   const [workPreview, setWorkPreview] = useState();
@@ -22,8 +21,9 @@ export const MainContent = ({ setTriangle }) => {
       <div className="main-content__container">
         <h2 className="main-content__title">Наша работа - Ваша работа!</h2>
         <h3 className="main-content__greetings">
-          Добро пожаловать на наш сайт! Здесь вы найдете примеры выполненных студенческих работ,
-          которые помогут вам в реализации собственных проектов.
+          Добро пожаловать на наш сайт! Здесь вы найдете примеры выполненных
+          студенческих работ, которые помогут вам в реализации собственных
+          проектов.
         </h3>
         <h3 className="main-content__quotes-title">Популярные работы</h3>
         <nav className="main-content__quotes-container">
@@ -31,10 +31,7 @@ export const MainContent = ({ setTriangle }) => {
             {workPreview && (
               <>
                 {[...Array(3)].map((_, i) => (
-                  <Quot text={workPreview[i].paragraph_text}
-                        key={`link${i}`}
-                  />
-
+                  <Quot text={workPreview[i].paragraph_text} key={`link${i}`} />
 
                   // <Link
                   //   to={`MainPageWorkPreview/Гуманитарные/25/Гум/14`}
@@ -48,7 +45,7 @@ export const MainContent = ({ setTriangle }) => {
             )}
           </ul>
         </nav>
-        <div className="main-content__commercial-container"></div>
+        {/* <div className="main-content__commercial-container"></div> */}
       </div>
     </div>
   );

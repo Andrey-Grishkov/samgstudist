@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Main.scss";
 import Menu from "../Menu/Menu";
 import { MainContent } from "../MainContent/MainContent";
 import MainPageWorkPreview from "../MainPageWorkPreview/MainPageWorkPreview";
 import { Route, Routes } from "react-router-dom";
-import { fetchDisciplins } from "../../utils/MainApi";
+// import { fetchDisciplins } from "../../utils/MainApi";
 
-const Main = ({disciplins}) => {
+const Main = ({ disciplins }) => {
   const [triangle, setTriangle] = useState(false);
   //const [disciplins, setDisciplins] = useState([]);
   // const fetchData = async () => {
@@ -19,7 +19,7 @@ const Main = ({disciplins}) => {
 
   return (
     <section className={`main ${triangle ? "triangle" : ""}`}>
-      <Menu disciplins={disciplins} flag={true}/>
+      <Menu disciplins={disciplins} flag={true} />
       <Routes>
         <Route
           path=""
