@@ -48,8 +48,8 @@
     //border: black 1px solid;
     @include font('Poppins', 21px, 32px);
     width: 100%;
-    height: 65%;
-    margin-top: 2.5%;
+    height: 54%;
+    margin-top: 17px;
     border-radius: 100px;
     //border-left: none;
     padding-left: 20%;
@@ -59,16 +59,45 @@
     }
 
     @media screen and (max-width: $base-width1280) {
-      margin-top: 2.5%;
+      margin-top: 18px;
+      height: 48%;
     }
 
-    @media screen and (max-width: $base-width1024) {
-      margin-top: 10px;
+    @media screen and (max-width: $base-width1152) {
+      margin-top: 19px;
+      height: 45%;
+    }
+
+    @media screen and (max-width: $base-width1080) {
+      margin-top: 20px;
+      height: 42%;
+    }
+
+    @media screen and (max-width: $base-width960) {
+      margin-top: 22px;
+      height: 36%;
+    }
+
+    @media screen and (max-width: $base-width860) {
+      margin-top: 25px;
+      height: 30%;
     }
 
     @media screen and (max-width: $base-width620) {
       margin-top: 0;
-      height: 7vw;
+      height: 46%;
+    }
+
+    @media screen and (max-width: $base-width540) {
+      height: 40%;
+    }
+
+    @media screen and (max-width: $base-width486) {
+      height: 34%;
+    }
+
+    @media screen and (max-width: $base-width384) {
+      height: 28%;
     }
 
     @media screen and (max-width: $base-width320) {
