@@ -59,13 +59,18 @@
 
     &__title {
       margin: 3% 0 0 0;
-      @include font("Poppins", 21px, 115%);
+      @include font("Poppins", 22px, 120%);
       border: #2ed7d9 3px solid;
       width: 95%;
       height: 5%;
       text-align: center;
       padding-top: 1%;
       padding-bottom: 1%;
+      @include flex(column, center, center);
+
+      @media screen and (max-width: $base-width1024) {
+        @include font("Poppins", 18px, 115%);
+      }
 
       @media screen and (max-width: $base-width620) {
         width: 100%;
@@ -88,6 +93,7 @@
       border-bottom: #2ed7d9 3px solid;
       border-left: #2ed7d9 3px solid;
       border-right: #2ed7d9 3px solid;
+      @include flex(column, flex-start, flex-start);
 
       @media screen and (max-width: $base-width620) {
         width: 100%;
@@ -101,8 +107,18 @@
     }
 
     &__link {
+      margin: 1% 1%;
       color: black;
       text-decoration: none;
+      @include font("Poppins", 20px, 120%);
+
+      @media screen and (max-width: $base-width1024) {
+        @include font("Poppins", 16px, 115%);
+      }
+
+      @media screen and (max-width: $base-width1024) {
+        @include font("Poppins", 14px, 115%);
+      }
 
       &:hover {
         color: #2e49d9;

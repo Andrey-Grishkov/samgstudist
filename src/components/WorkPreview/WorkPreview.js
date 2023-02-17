@@ -5,16 +5,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchWork } from "../../utils/MainApi";
 import { setLimit } from "../../store/namberPageSlice";
+
 import {
   setImages,
   setImagesLimit,
   setImagesView,
 } from "../../store/ illustrationSlice";
 
+
 export const WorkPreview = () => {
   const dispatch = useDispatch();
   const numberPage = useSelector((state) => state.namberPage.counter);
   const { id, workId } = useParams();
+
   const images = useSelector((state) => state.illustration.images);
   const imagesCaunter = useSelector(
     (state) => state.illustration.imagesCaunter
@@ -22,6 +25,20 @@ export const WorkPreview = () => {
   const imagesView = useSelector((state) => state.illustration.imagesView);
 
   const [text, setText] = useState([]);
+
+
+
+  const [quantitySymbol, setQuantitySymbol] = useState(window.innerWidth < 721 ? 200 :
+    (window.innerWidth < 1109 ? 1200 : 1300));
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 721) {
+      setQuantitySymbol(200);
+    } else if (window.innerWidth < 1109) {
+      setQuantitySymbol(1200);
+    } else {
+      setQuantitySymbol(1300);
+    }});
 
   const fetchData = useCallback(async () => {
     const results = await fetchWork(id, workId);
@@ -32,7 +49,7 @@ export const WorkPreview = () => {
     const brokenText = [""];
     let counter = 0;
     for (let i = 0; i < paragraphTexts.length; i++) {
-      if (brokenText[counter].length < 1800) {
+      if (brokenText[counter].length < quantitySymbol) {
         brokenText[counter] += `${paragraphTexts[i]} `;
       } else {
         brokenText[counter] += "...";
@@ -69,4 +86,5 @@ export const WorkPreview = () => {
       )}
     </>
   );
+
 };
