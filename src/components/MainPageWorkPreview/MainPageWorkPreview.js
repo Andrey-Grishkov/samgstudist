@@ -1,17 +1,21 @@
 import React, { useCallback, useEffect, useState } from "react";
+import {connect} from 'react-redux'
 import "./MainPageWorkPreview.scss";
 import { fetchListOfWorks } from "../../utils/MainApi";
 import { Link, Route, Routes, useParams } from "react-router-dom";
 import { replaceSpace } from "../../utils/functions";
 import { WorkPreview } from "../WorkPreview/WorkPreview";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../../store/namberPageSlice";
+import {DISCIPLIN_TITLE, SUBJECT_TITLE} from "../../store/types";
+import {increment, decrement, reset} from "../../store/namberPageSlice";
 import {
   setImagesView,
   imagesDecrement,
-  imagesIncrement,
+  imagesIncrement, setImages, imagesReset,
 } from "../../store/ illustrationSlice";
-const MainPageWorkPreview = ({ setTriangle }) => {
+import {setDisciplinTitle} from "../../store/actions";
+
+const MainPageWorkPreview = ({ setTriangle, title }) => {
   const imagesView = useSelector((state) => state.illustration.imagesView);
   const imagesCaunter = useSelector(
     (state) => state.illustration.imagesCaunter
@@ -25,19 +29,20 @@ const MainPageWorkPreview = ({ setTriangle }) => {
   const [works, setWorks] = useState([]);
   const fetchData = useCallback(async () => {
     const { results } = await fetchListOfWorks(id);
-
     setWorks([...results]);
+
   }, [id, setWorks]);
 
   useEffect(() => {
     setTriangle(true);
     fetchData();
   }, [setTriangle, fetchData]);
+
   return (
     <div className="main-page-work">
       <div className="main-page-work__content">
         {/* <div className="main-page-work__content__commercial"></div> */}
-        <h3 className="main-page-work__content__title">{disciplin}</h3>
+        <h3 className="main-page-work__content__title">{title}</h3>
         <div className="main-page-work__content__preview">
           <Routes>
             <Route
@@ -49,6 +54,9 @@ const MainPageWorkPreview = ({ setTriangle }) => {
                       to={`${replaceSpace(work.material_title)}/${work.id}`}
                       key={`work${i}`}
                       className="main-page-work__content__link"
+                      onClick={() => {
+                        dispatch(setDisciplinTitle(work.props.children));
+                      }}
                     >
                       {work.material_title}
                     </Link>
@@ -99,4 +107,11 @@ const MainPageWorkPreview = ({ setTriangle }) => {
   );
 };
 
-export default MainPageWorkPreview;
+const mapStateToProps = state => {
+  return {
+    title: state.title.title
+  }
+}
+
+export default connect(mapStateToProps, null)(MainPageWorkPreview)
+//export default MainPageWorkPreview;
