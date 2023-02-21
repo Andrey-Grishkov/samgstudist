@@ -6,16 +6,15 @@ import { Link, Route, Routes, useParams } from "react-router-dom";
 import { replaceSpace } from "../../utils/functions";
 import { WorkPreview } from "../WorkPreview/WorkPreview";
 import { useSelector, useDispatch } from "react-redux";
-import {DISCIPLIN_TITLE, SUBJECT_TITLE} from "../../store/types";
 import {increment, decrement, reset} from "../../store/namberPageSlice";
 import {
   setImagesView,
   imagesDecrement,
   imagesIncrement, setImages, imagesReset,
 } from "../../store/ illustrationSlice";
-import {setDisciplinTitle} from "../../store/actions";
+import {setSubjectTitle} from "../../store/actions";
 
-const MainPageWorkPreview = ({ setTriangle, title }) => {
+const MainPageWorkPreview = ({ setTriangle, title, flag }) => {
   const imagesView = useSelector((state) => state.illustration.imagesView);
   const imagesCaunter = useSelector(
     (state) => state.illustration.imagesCaunter
@@ -25,7 +24,11 @@ const MainPageWorkPreview = ({ setTriangle, title }) => {
 
   const numberPage = useSelector((state) => state.namberPage.counter);
   const dispatch = useDispatch();
-  const { disciplin, id } = useParams();
+
+  const {disciplin, id} = useParams();
+
+  console.log(title, flag, disciplin, id, "707")
+
   const [works, setWorks] = useState([]);
   const fetchData = useCallback(async () => {
     const { results } = await fetchListOfWorks(id);
@@ -55,7 +58,7 @@ const MainPageWorkPreview = ({ setTriangle, title }) => {
                       key={`work${i}`}
                       className="main-page-work__content__link"
                       onClick={() => {
-                        dispatch(setDisciplinTitle(work.props.children));
+                        dispatch(setSubjectTitle(work.props.children));
                       }}
                     >
                       {work.material_title}
@@ -109,7 +112,8 @@ const MainPageWorkPreview = ({ setTriangle, title }) => {
 
 const mapStateToProps = state => {
   return {
-    title: state.title.title
+    title: state.title.title,
+    flag: state.title.flag
   }
 }
 

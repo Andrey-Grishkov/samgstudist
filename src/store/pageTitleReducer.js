@@ -1,4 +1,4 @@
-import {DISCIPLIN_TITLE} from "./types";
+import {DISCIPLIN_TITLE, SUBJECT_TITLE} from "./types";
 
 const initialState = {
   title: []
@@ -6,7 +6,8 @@ const initialState = {
 
 export const pageTitleReducer = (state = initialState, action) => {
   switch (action.type) {
-    case DISCIPLIN_TITLE: {return {title: [action.payload]};}
+    case DISCIPLIN_TITLE: {return {title: [action.payload], flag:action.type};}
+    case SUBJECT_TITLE: {return {title: [action.payload], flag:action.type};}
     default:
       return state
     }
