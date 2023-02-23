@@ -3,13 +3,24 @@ import { imagesReset } from "../../store/ illustrationSlice";
 import { reset } from "../../store/namberPageSlice";
 import "./Disciplin.scss";
 import {setDisciplinTitle} from "../../store/actions";
+import {Link} from "react-router-dom";
+import {replaceSpace} from "../../utils/functions";
 
 export const Disciplin = ({ disciplin }) => {
   const dispatch = useDispatch();
 
   return (
+
+    <Link
+      to={`MainPageWorkPreview/${replaceSpace(disciplin.subject_title)}/${
+        disciplin.id
+      }`}
+      className="disciplin"
+      key={`Link-${disciplin.id}`}
+    >
+      <img className='disciplin__img' src={disciplin.img} alt='disciplin image'/>
     <p
-      className="disciplin__cell"
+      className="disciplin__text"
       onClick={() => {
         dispatch(reset());
         dispatch(imagesReset());
@@ -18,5 +29,6 @@ export const Disciplin = ({ disciplin }) => {
     >
       {disciplin.subject_title}
     </p>
+    </Link>
   );
 };

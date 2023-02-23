@@ -18,8 +18,6 @@ export const WorkPreview = () => {
   const numberPage = useSelector((state) => state.namberPage.counter);
   const { id, workId } = useParams();
 
-  console.log(id, workId, "useIn WorkPreview")
-
   const images = useSelector((state) => state.illustration.images);
   const imagesCaunter = useSelector(
     (state) => state.illustration.imagesCaunter

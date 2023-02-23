@@ -27,8 +27,6 @@ const MainPageWorkPreview = ({ setTriangle, title, flag }) => {
 
   const {disciplin, id} = useParams();
 
-  console.log(title, flag, disciplin, id, "707")
-
   const [works, setWorks] = useState([]);
   const fetchData = useCallback(async () => {
     const { results } = await fetchListOfWorks(id);
