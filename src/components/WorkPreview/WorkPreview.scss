@@ -1,11 +1,9 @@
-
 @import "../vars";
 
 .illustration {
   width: 100%;
   min-height: 100%;
 }
-
 
 .work-preview {
   @include font("Poppins", 20px, 120%);

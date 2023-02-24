@@ -5,24 +5,24 @@
 }
 
 .main-content {
-  background: url("../../images/main__image-women.svg") center 450px/550px no-repeat;
+  background: url("../../images/main__image-women.svg") 2% 117%/550px no-repeat;
   margin-left: 5%;
   width: 65%;
   height: 93%;
   font-family: Proza_Libre;
 
   @media screen and (max-width: $base-width1350) {
-    background: url("../../images/main__image-women.svg") center 524px/450px no-repeat;
+    background: url("../../images/main__image-women.svg") 2% 112%/450px no-repeat;
   }
 
   @media screen and (max-width: $base-width1152) {
-    background: url("../../images/main__image-women.svg") center 450px/550px
-      no-repeat;
+    background: url("../../images/main__image-women.svg") 0 110%/400px no-repeat;
   }
 
   @media screen and (max-width: $base-width860) {
     margin-left: 3%;
     min-width: 65%;
+    background: url("../../images/main__image-women.svg") 30% 110%/400px no-repeat;
   }
 
   @media screen and (max-width: $base-width768) {
@@ -33,22 +33,22 @@
     min-width: 100%;
     min-height: 100%;
     margin: 0;
-    background: url("../../images/main__image-women.svg") 40% 283px/445px
+    background: url("../../images/main__image-women.svg") 50% 98%/445px
       no-repeat;
   }
 
   @media screen and (max-width: $base-width486) {
-    background: url("../../images/main__image-women.svg") 40% 302px/390px
+    background: url("../../images/main__image-women.svg") 50% 97%/390px
       no-repeat;
   }
 
   @media screen and (max-width: $base-width384) {
-    background: url("../../images/main__image-women.svg") 40% 347px/330px
+    background: url("../../images/main__image-women.svg") 50% 96%/330px
       no-repeat;
   }
 
   @media screen and (max-width: $base-width320) {
-    background: url("../../images/main__image-women.svg") 20% 63%/70% no-repeat;
+    background: url("../../images/main__image-women.svg") 50% 84%/70% no-repeat;
   }
 
   &__container {
@@ -176,22 +176,41 @@
     @include flex(row, space-between, flex-start);
 
     @media screen and (max-width: $base-width860) {
-      margin-top: 1.5%;
+      margin-top: 3%;
       @include flex(column, space-between, center);
-      min-height: 30vw;
+      gap: 10%;
+      min-height: 30vh;
     }
 
     @media screen and (max-width: $base-width620) {
       margin-top: 2.5%;
       @include flex(column, space-between, center);
       min-height: 350px;
-      height: 100%;
     }
 
     @media screen and (max-width: $base-width320) {
       @include flex(column, space-between, center);
-      min-height: 360px;
-      height: 120%;
+      min-height: 16vh;
+    }
+  }
+
+  &__gif {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin-top: 30px;
+    margin-left: 65%;
+    background: none;
+
+    @media screen and (max-width: $base-width1152) {
+      margin-top: 50px;
+      width: 250px;
+      height: 250px;
+      margin-left: 60%;
+    }
+
+    @media screen and (max-width: $base-width860) {
+      display: none;
     }
   }
 

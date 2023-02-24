@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { fetchWork } from "../../utils/MainApi";
 import { Quot } from "../Quot/Quot";
 import {mainQuotes} from '../../utils/constants'
+import logoGif from '../../images/nav__logo.svg'
 
 export const MainContent = ({ setTriangle }) => {
   const [workPreview, setWorkPreview] = useState();
@@ -16,9 +17,6 @@ export const MainContent = ({ setTriangle }) => {
     setTriangle(false);
     fetchData();
   }, [setTriangle, fetchData]);
-
-
-  console.log(mainQuotes, 'mainQuotes')
 
   return (
     <div className="main-content">
@@ -61,7 +59,8 @@ export const MainContent = ({ setTriangle }) => {
             )}
           </ul>
         </nav>
-        {/* <div className="main-content__commercial-container"></div> */}
+        <img className="main-content__gif" src={logoGif}/>
+         {/*<div className="main-content__commercial-container"></div>*/}
       </div>
     </div>
   );

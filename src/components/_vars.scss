@@ -27,3 +27,58 @@ $base-width540: 540px;
 $base-width486: 486px;
 $base-width384: 384px;
 $base-width320: 320px;
+
+:root {
+    --quantityQuotText: 120;
+    --quantityQuotTitle: 50;
+
+    @media screen and (max-width: $base-width1280) {
+        --quantityQuotText: 90;
+        --quantityQuotTitle: 50;
+    }
+
+    @media screen and (max-width: $base-width1152) {
+        --quantityQuotText: 110;
+        --quantityQuotTitle: 50;
+    }
+
+    @media screen and (max-width: $base-width1024) {
+        --quantityQuotText: 90;
+        --quantityQuotTitle: 40;
+    }
+
+    @media screen and (max-width: $base-width960) {
+        --quantityQuotText: 120;
+        --quantityQuotTitle: 40;
+    }
+
+    @media screen and (max-width: $base-width860) {
+        --quantityQuotText: 50;
+        --quantityQuotTitle: 30;
+    }
+
+    @media screen and (max-width: $base-width768) {
+        --quantityQuotText: 50;
+        --quantityQuotTitle: 30;
+    }
+
+    @media screen and (max-width: $base-width620) {
+        --quantityQuotText: 120;
+        --quantityQuotTitle: 40;
+    }
+
+    @media screen and (max-width: $base-width540) {
+        --quantityQuotText: 100;
+        --quantityQuotTitle: 25;
+    }
+
+    @media screen and (max-width: $base-width384) {
+        --quantityQuotText: 70;
+        --quantityQuotTitle: 20;
+    }
+
+    @media screen and (max-width: $base-width320) {
+        --quantityQuotText: 80;
+        --quantityQuotTitle: 30;
+    }
+}

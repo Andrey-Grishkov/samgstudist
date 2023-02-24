@@ -6,9 +6,13 @@
   margin-top: 1.5%;
   height: 90%;
 
+  @media screen and (max-width: $base-width1280) {
+    margin-left: 2%;
+  }
+
   @media screen and (max-width: $base-width860) {
-    margin-left: 5%;
-    min-width: 70%;
+    margin-left: 0;
+    width: 100%;
   }
 
   @media screen and (max-width: $base-width620) {
@@ -25,6 +29,7 @@
   &__content {
     width: 80%;
     height: 82%;
+    @include flex(column, center, center);
 
     @media screen and (max-width: $base-width1280) {
       width: 100%;
@@ -37,31 +42,31 @@
       @include flex(column, flex-start, center);
     }
 
-    &__commercial {
-      background-image: url(../../images/commertial__image.jpg);
-      background-position: 5% 5%;
-      background-size: cover;
-      width: 95%;
-      height: 14%;
-      border: 1px solid #7a7a7a;
-      cursor: pointer;
-
-      @media screen and (max-width: $base-width620) {
-        width: 100%;
-      }
-
-      @media screen and (max-width: $base-width320) {
-        margin: 12px auto 0 auto;
-        width: 95%;
-        height: 15%;
-      }
-    }
+    //&__commercial {
+    //  background-image: url(../../images/commertial__image.jpg);
+    //  background-position: 5% 5%;
+    //  background-size: cover;
+    //  width: 95%;
+    //  height: 14%;
+    //  border: 1px solid #7a7a7a;
+    //  cursor: pointer;
+    //
+    //  @media screen and (max-width: $base-width620) {
+    //    width: 100%;
+    //  }
+    //
+    //  @media screen and (max-width: $base-width320) {
+    //    margin: 12px auto 0 auto;
+    //    width: 95%;
+    //    height: 15%;
+    //  }
+    //}
 
     &__title {
       margin: 3% 0 0 0;
       @include font("Poppins", 22px, 120%);
       border: #2ed7d9 3px solid;
-      width: 95%;
+      width: 100%;
       height: 5%;
       text-align: center;
       padding-top: 1%;
@@ -72,8 +77,12 @@
         @include font("Poppins", 18px, 115%);
       }
 
+      @media screen and (max-width: $base-width860) {
+        width: 88%;
+      }
+
       @media screen and (max-width: $base-width620) {
-        width: 100%;
+        width: 90%;
       }
 
       @media screen and (max-width: $base-width320) {
@@ -88,15 +97,19 @@
       flex-direction: column;
       background-color: #fff;
       margin: 0;
-      width: 95%;
-      height: 73%;
+      width: 100%;
+      height: 85%;
       border-bottom: #2ed7d9 3px solid;
       border-left: #2ed7d9 3px solid;
       border-right: #2ed7d9 3px solid;
       @include flex(column, flex-start, flex-start);
 
+      @media screen and (max-width: $base-width860) {
+        width: 88%;
+      }
+
       @media screen and (max-width: $base-width620) {
-        width: 100%;
+        width: 90%;
       }
 
       @media screen and (max-width: $base-width320) {
@@ -172,7 +185,8 @@
         border: 3px solid #2ed7d9;
         @include font("Podkova", 32px, 35px);
         background: white;
-        @include flex(row, center, flex-start);
+        @include flex(column, center, center);
+
 
         @media screen and (max-width: 860px) {
           margin: 0;
@@ -182,7 +196,7 @@
           @include font("Poppins", 15px, 130%);
           height: 50%;
           margin: 0;
-          @include flex(row, center, center);
+          @include flex(column, center, center);
         }
       }
       &__btn {
@@ -192,7 +206,7 @@
         border: 3px solid #0066ff;
         border-radius: 10px;
         background: white;
-        @include flex(row, flex-start, flex-start);
+        @include flex(row, center, center);
         cursor: pointer;
         &:hover {
           background-color: rgba(204, 230, 228, 0.42);

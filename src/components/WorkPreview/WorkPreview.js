@@ -17,6 +17,25 @@ export const WorkPreview = () => {
   const dispatch = useDispatch();
   const numberPage = useSelector((state) => state.namberPage.counter);
   const { id, workId } = useParams();
+  const root = document.querySelector(':root');
+  const rootStyles = getComputedStyle(root);
+  const [textLength, setTextLength] = useState(null);
+
+  function handleQuantitySymbolsChange () {
+    const quantityQuotText = rootStyles.getPropertyValue('--quantityQuotText');
+    setTextLength(quantityQuotText);
+  }
+
+  useEffect(() => {
+    handleQuantitySymbolsChange();
+
+    window.addEventListener('resize', handleQuantitySymbolsChange);
+    return () => {
+      window.removeEventListener('resize', handleQuantitySymbolsChange);
+    };
+  }, [window.innerWidth]);
+
+  console.log(textLength, 'textLength')
 
   const images = useSelector((state) => state.illustration.images);
   const imagesCaunter = useSelector(
@@ -26,17 +45,6 @@ export const WorkPreview = () => {
 
   const [text, setText] = useState([]);
 
-  // const [quantitySymbol, setQuantitySymbol] = useState(window.innerWidth < 721 ? 200 :
-  //   (window.innerWidth < 1109 ? 1200 : 1300));
-  //
-  // window.addEventListener('resize', () => {
-  //   if (window.innerWidth < 721) {
-  //     setQuantitySymbol(200);
-  //   } else if (window.innerWidth < 1109) {
-  //     setQuantitySymbol(1200);
-  //   } else {
-  //     setQuantitySymbol(1300);
-  //   }});
 
   const fetchData = useCallback(async () => {
     const results = await fetchWork(id, workId);
@@ -47,7 +55,7 @@ export const WorkPreview = () => {
     const brokenText = [""];
     let counter = 0;
     for (let i = 0; i < paragraphTexts.length; i++) {
-      if (brokenText[counter].length < 1500) {
+      if (brokenText[counter].length < textLength) {
         brokenText[counter] += `${paragraphTexts[i]} `;
       } else {
         brokenText[counter] += "...";
@@ -55,6 +63,7 @@ export const WorkPreview = () => {
         brokenText[counter] = `${paragraphTexts[i]} `;
       }
     }
+
     const imagesMap = results.image.map(({ image }) => image);
     dispatch(setImages(imagesMap));
     dispatch(setImagesLimit(imagesMap.length - 1));
@@ -66,7 +75,11 @@ export const WorkPreview = () => {
 
     dispatch(setImagesView(true));
   }, [id, workId, dispatch]);
+
+
+
   useEffect(() => {
+    handleQuantitySymbolsChange();
     fetchData();
   }, [fetchData]);
 

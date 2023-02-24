@@ -15,18 +15,27 @@
   color: black;
   position: relative;
 
+  @media screen and (max-width: $base-width1152) {
+    width: 30%;
+  }
+
+  @media screen and (max-width: $base-width960) {
+    @include font("Poppins", 16px, 124.02%);
+  }
 
   @media screen and (max-width: $base-width860) {
-    @include font("Proza_Libre", 140%, 150%);
+    @include font("Proza_Libre", 18px, 124.02%);
     width: 85%;
     min-height: 30%;
   }
 
+  @media screen and (max-width: $base-width768) {
+    @include font("Proza_Libre", 16px, 124.02%);
+  }
+
   @media screen and (max-width: $base-width320) {
     width: 85%;
-    min-height: 28%;
-    @include font("Proza_Libre", 90%, 130%);
-    border-radius: 5px;
+    @include font("Proza_Libre", 12px, 124.02%);
   }
 
   &__container {
@@ -36,6 +45,19 @@
     margin: -10px 0 0 10px;
     background-color: rgba(232,248,230, 0.6);
     position: absolute;
+
+    @media screen and (max-width: $base-width860) {
+      min-height: 9vh;
+    }
+
+    @media screen and (max-width: $base-width620) {
+      min-height: 10vh;
+    }
+
+    @media screen and (max-width: $base-width320) {
+      min-height: 9vh;
+    }
+
   }
 
   &__title {
