@@ -31,54 +31,69 @@ $base-width320: 320px;
 :root {
     --quantityQuotText: 120;
     --quantityQuotTitle: 50;
+    --quantityWorkPreviewText: 2000;
 
     @media screen and (max-width: $base-width1280) {
         --quantityQuotText: 90;
         --quantityQuotTitle: 50;
+        --quantityWorkPreviewText: 2400;
     }
 
     @media screen and (max-width: $base-width1152) {
         --quantityQuotText: 110;
         --quantityQuotTitle: 50;
+        --quantityWorkPreviewText: 2100;
     }
 
     @media screen and (max-width: $base-width1024) {
         --quantityQuotText: 90;
         --quantityQuotTitle: 40;
+        --quantityWorkPreviewText: 1800;
     }
 
     @media screen and (max-width: $base-width960) {
         --quantityQuotText: 120;
         --quantityQuotTitle: 40;
+        --quantityWorkPreviewText: 1700;
     }
 
     @media screen and (max-width: $base-width860) {
         --quantityQuotText: 50;
         --quantityQuotTitle: 30;
+        --quantityWorkPreviewText: 1100;
     }
 
     @media screen and (max-width: $base-width768) {
         --quantityQuotText: 50;
         --quantityQuotTitle: 30;
+        --quantityWorkPreviewText: 900;
     }
 
     @media screen and (max-width: $base-width620) {
         --quantityQuotText: 120;
         --quantityQuotTitle: 40;
+        --quantityWorkPreviewText: 1600;
     }
 
     @media screen and (max-width: $base-width540) {
         --quantityQuotText: 100;
         --quantityQuotTitle: 25;
+        --quantityWorkPreviewText: 1200;
+    }
+
+    @media screen and (max-width: $base-width486) {
+        --quantityWorkPreviewText: 1000;
     }
 
     @media screen and (max-width: $base-width384) {
         --quantityQuotText: 70;
         --quantityQuotTitle: 20;
+        --quantityWorkPreviewText: 800;
     }
 
     @media screen and (max-width: $base-width320) {
         --quantityQuotText: 80;
         --quantityQuotTitle: 30;
+        --quantityWorkPreviewText: 1300;
     }
 }

@@ -23,19 +23,10 @@ const Header = ({ inputRef, setFullScreen, disciplins }) => {
     ? (about_team = true)
     : (about_team = false);
 
-  // const [windowSmallSize, setSmallWindowSize] = useState(window.innerWidth < 320);
-  //
-  // window.addEventListener('resize', () => {
-  //   if (window.innerWidth < 320) {
-  //     setSmallWindowSize(true);
-  //   } else {
-  //     setSmallWindowSize(false);
-  //   }});
-
   return (
     <header className={`header ${about_team ? "header__team" : ""}`}>
       <Logo flag={true} />
-      <div className="header__line"></div>
+      {/*<div className="header__line"></div>*/}
 
       {about_team ? (
         <h1 className="header__title">О команде</h1>

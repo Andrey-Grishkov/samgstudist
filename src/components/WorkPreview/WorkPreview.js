@@ -22,8 +22,8 @@ export const WorkPreview = () => {
   const [textLength, setTextLength] = useState(null);
 
   function handleQuantitySymbolsChange () {
-    const quantityQuotText = rootStyles.getPropertyValue('--quantityQuotText');
-    setTextLength(quantityQuotText);
+    const quantityWorkPreviewText = rootStyles.getPropertyValue('--quantityWorkPreviewText');
+    setTextLength(quantityWorkPreviewText);
   }
 
   useEffect(() => {
@@ -35,8 +35,6 @@ export const WorkPreview = () => {
     };
   }, [window.innerWidth]);
 
-  console.log(textLength, 'textLength')
-
   const images = useSelector((state) => state.illustration.images);
   const imagesCaunter = useSelector(
     (state) => state.illustration.imagesCaunter
@@ -45,14 +43,10 @@ export const WorkPreview = () => {
 
   const [text, setText] = useState([]);
 
+  console.log(textLength, 'textLength')
 
-  const fetchData = useCallback(async () => {
-    const results = await fetchWork(id, workId);
-    const paragraphTexts = results.paragraph_text
-      .map(({ paragraph_text: paragraphText }) => paragraphText)
-      .join(" ")
-      .split(" ");
-    const brokenText = [""];
+  const handleCutText = (brokenText, paragraphTexts, textLength) => {
+
     let counter = 0;
     for (let i = 0; i < paragraphTexts.length; i++) {
       if (brokenText[counter].length < textLength) {
@@ -63,6 +57,19 @@ export const WorkPreview = () => {
         brokenText[counter] = `${paragraphTexts[i]} `;
       }
     }
+    return brokenText
+    }
+
+  const fetchData = useCallback(async () => {
+    const results = await fetchWork(id, workId);
+    const paragraphTexts = results.paragraph_text
+      .map(({ paragraph_text: paragraphText }) => paragraphText)
+      .join(" ")
+      .split(" ");
+
+    const brokenText = [""];
+
+    handleCutText(brokenText, paragraphTexts, textLength)
 
     const imagesMap = results.image.map(({ image }) => image);
     dispatch(setImages(imagesMap));
@@ -74,12 +81,10 @@ export const WorkPreview = () => {
     }
 
     dispatch(setImagesView(true));
-  }, [id, workId, dispatch]);
-
+  }, [textLength, id, workId, dispatch]);
 
 
   useEffect(() => {
-    handleQuantitySymbolsChange();
     fetchData();
   }, [fetchData]);
 
