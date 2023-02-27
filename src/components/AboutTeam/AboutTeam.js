@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import Cart from '../../images/about-team__cart.svg'
-import Peoples from '../../images/about-team__peoples.svg'
+import Team from '../../images/about-team__team.svg'
+import Logo from '../../images/about-team__logo.svg'
+import Title from '../../images/about-team__SAMGTUDIST.svg'
 import Arrow from '../../images/about-team__arrow.svg'
 import { developers } from '../../utils/constants'
 import './AboutTeam.scss'
@@ -10,6 +11,10 @@ const AboutTeam = () => {
 
   return (
     <section className='about-team'>
+      <div className='about-team__logo'>
+        <img className='about-team__img_logo' src={Logo} alt='лого' />
+        <img className='about-team__img_title' src={Title} alt='название' />
+      </div>
       <button className='about-team__button'>
         <Link className='about-team__link' to='/about-project'>
           <img className='about-team__arrow' src={Arrow} alt='стрелка' />
@@ -32,8 +37,8 @@ const AboutTeam = () => {
           }
         </ul>
       </div>
-      <img className='about-team__img_cart' src={Cart} alt='тележка' />
-      <img className='about-team__img_peoples' src={Peoples} alt='люди' />
+      <img className='about-team__img' src={Team} alt='команда' />
+      {/* <img className='about-team__img_peoples' src={Peoples} alt='люди' /> */}
     </section>
   );
 }
