@@ -19,6 +19,7 @@ const AboutProject = ({ inputFocus }) => {
               <Link to='/' className='project__link project__link_vector'>
                 <img src={Vector} alt='стрелка' className='project__img' />
                 <div className='project__circle vector'></div>
+                <div className='project__img_mini project__img_mini-vector'></div>
               </Link>
           </li>
           <li className='project__el' >
@@ -26,9 +27,10 @@ const AboutProject = ({ inputFocus }) => {
               Для более удобного использования вы можете
               воспользоваться поиском
             </span>
-            <div className='project__link'>
-              <img src={Glass} alt='лупа' className='project__img' onClick={inputFocus} />
+            <div className='project__link project__link_glass' onClick={inputFocus}>
+              <img src={Glass} alt='лупа' className='project__img project__img_glass' />
               <div className='project__circle glass'></div>
+              <div className='project__img_mini project__img_mini-glass'></div>
             </div>
           </li>
           <li className="project__el">
@@ -38,6 +40,7 @@ const AboutProject = ({ inputFocus }) => {
             <Link to='/about-team' className='project__link'>
               <img src={Group} alt='команда' className='project__img' />
               <div className='project__circle'></div>
+              <div className='project__img_mini project__img_mini-group'></div>
             </Link>
           </li>
         </ul>
