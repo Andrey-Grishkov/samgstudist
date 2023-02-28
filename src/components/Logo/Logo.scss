@@ -36,13 +36,17 @@
     }
 
     &_big-sized {
+      @media screen and (max-width: $base-width960) {
+        margin-left: 5%;
+      }
+
       @media screen and (max-width: $base-width620) {
         display: none;
       }
     }
 
     &_small-sized {
-      margin-top: 5px;
+      margin-top: 0;
       width: 95%;
 
       @media screen and (min-width: $base-width620) {

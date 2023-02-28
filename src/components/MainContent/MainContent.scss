@@ -5,24 +5,24 @@
 }
 
 .main-content {
-  background: url("../../images/main__image-women.svg") 2% 117%/550px no-repeat;
+  background: url("../../images/main__image-women.svg") 2% 37vh/550px no-repeat;
   margin-left: 5%;
   width: 65%;
-  height: 93%;
+  height: 100%;
   font-family: Proza_Libre;
 
   @media screen and (max-width: $base-width1350) {
-    background: url("../../images/main__image-women.svg") 2% 112%/450px no-repeat;
+    background: url("../../images/main__image-women.svg") 2% 45vh/450px no-repeat;
   }
 
   @media screen and (max-width: $base-width1152) {
-    background: url("../../images/main__image-women.svg") 0 110%/400px no-repeat;
+    background: url("../../images/main__image-women.svg") 0 49vh/400px no-repeat;
   }
 
   @media screen and (max-width: $base-width860) {
     margin-left: 3%;
     min-width: 65%;
-    background: url("../../images/main__image-women.svg") 30% 110%/400px no-repeat;
+    background: url("../../images/main__image-women.svg") 30% 49vh/400px no-repeat;
   }
 
   @media screen and (max-width: $base-width768) {
@@ -195,18 +195,16 @@
   }
 
   &__gif {
-    width: 300px;
-    height: 300px;
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
     object-fit: contain;
-    margin-top: 5%;
-    margin-left: 65%;
+    top: 65vh;
+    left: 80vw;
     background: none;
 
-    @media screen and (max-width: $base-width1152) {
-      margin-top: 7%;
-      width: 250px;
-      height: 250px;
-      margin-left: 60%;
+    @media screen and (max-width: $base-width1350) {
+      top: 70vh;
     }
 
     @media screen and (max-width: $base-width860) {

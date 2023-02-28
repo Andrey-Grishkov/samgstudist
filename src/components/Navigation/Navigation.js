@@ -4,7 +4,7 @@ import close from "../../images/navigation__close.svg";
 import Search from "../Search/Search";
 import Menu from "../Menu/Menu";
 import {Link} from "react-router-dom";
-import NavLogo from '../../images/nav__logo.svg'
+import NavLogo from '../../images/gif-samgtudist.gif'
 
 function Navigation({isOpen, onClick, inputRef, disciplins}) {
   return (

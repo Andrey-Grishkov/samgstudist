@@ -35,7 +35,6 @@ export const qutes = [
 ];
 
 export const developers = [
-  { name: "Инна Панина", role: "Project manager (LEAD)" },
   { name: "Сергей Майоров", role: "Project manager" },
   { name: "Наталья Маслова", role: "Project manager" },
   { name: "Андрей Торгованов", role: "Project manager" },
@@ -48,7 +47,7 @@ export const developers = [
   { name: "Владимир Максимов", role: "Backend" },
   { name: "Виталий Асташкевич", role: "Backend" },
   { name: "Максим Цымлов", role: "Backend" },
-  { name: "Катерина Урусова", role: "QA Engineer (TECH LEAD)" },
+  { name: "Катерина Урусова", role: "QA Engineer (Test Manager)" },
   { name: "Борис Суханов", role: "QA Engineer" },
   { name: "Никита Турук", role: "QA Engineer" },
   { name: "Наталья Верясова", role: "QA Engineer" },

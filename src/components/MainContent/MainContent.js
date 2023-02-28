@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { fetchWork } from "../../utils/MainApi";
 import { Quot } from "../Quot/Quot";
 import {mainQuotes} from '../../utils/constants'
-import logoGif from '../../images/nav__logo.svg'
+import logoGif from '../../images/gif-samgtudist.gif'
 
 export const MainContent = ({ setTriangle }) => {
   const [workPreview, setWorkPreview] = useState();

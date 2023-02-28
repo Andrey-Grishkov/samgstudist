@@ -19,6 +19,12 @@
 
   &__logo {
     display: none;
+    cursor: pointer;
+
+    &:hover {
+      fill: blueviolet;
+      transform: scale(1.05);
+    }
 
     @media screen and (max-width: $base-width768) {
       width: 100%;
@@ -231,16 +237,17 @@
     bottom: 0;
     left: 0;
 
+
     @media screen and (max-width: $base-width486) {
       width: 160%;
     }
 
-    &_logo {
-      width: 80px;
-    }
-
-    &_title {
-      width: 150px;
-    }
+    //&_logo {
+    //  width: 80px;
+    //}
+    //
+    //&_title {
+    //  width: 150px;
+    //}
   }
 }
