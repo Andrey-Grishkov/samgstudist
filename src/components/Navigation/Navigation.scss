@@ -115,16 +115,6 @@
         margin-bottom: 48px;
     }
   }
-
-  &__menu-text {
-    margin-bottom: 0;
-    @include font("Poppins", 24px, 22px);
-    border-bottom: 1px black solid;
-
-    @media screen and (max-width: $base-width320) {
-      @include font("Poppins", 15px, 22px);
-    }
-  }
 }
 
 

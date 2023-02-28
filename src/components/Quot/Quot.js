@@ -1,30 +1,32 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./Quot.scss";
-
 import { Link } from "react-router-dom";
+import {setDisciplinTitle} from "../../store/actions";
+import {useDispatch} from "react-redux";
 
-//import {textLength} from '../../utils/constants'
+export const Quot = ({ text, title, link }) => {
+  const root = document.querySelector(':root');
+  const rootStyles = getComputedStyle(root);
+  const [textLength, setTextLength] = useState(null);
+  const [titleLength, setTitleLength] = useState(null);
+  const dispatch = useDispatch();
 
-export const Quot = ({ text }) => {
-  const [textLength, setTextLength] = useState(30);
+  function handleQuantitySymbolsChange () {
+    const quantityQuotText = rootStyles.getPropertyValue('--quantityQuotText');
+    const quantityQuotTitle = rootStyles.getPropertyValue('--quantityQuotTitle');
+    setTextLength(quantityQuotText);
+    setTitleLength(quantityQuotTitle);
+  }
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth < 1280 && window.innerWidth > 860) {
-      setTextLength(25);
-    } else if (window.innerWidth < 860 && window.innerWidth > 320) {
-      setTextLength(40);
-    } else if (window.innerWidth < 320) {
-      setTextLength(100);
-    } else {
-      setTextLength(30);
-    }
-  });
+  useEffect(() => {
+    handleQuantitySymbolsChange();
+    window.addEventListener('resize', handleQuantitySymbolsChange);
+    return () => {
+      window.removeEventListener('resize', handleQuantitySymbolsChange);
+    };
+  }, [window.innerWidth]);
 
-  // console.log(textLength, "textLength");
-
-  //const textLength =30;
-
-  const handleCutText = (text) => {
+  const handleCutText = (text, textLength) => {
     let splitMass = text.split("");
     let cutMass = [];
     for (let i = 0; i < textLength; i++) {
@@ -36,8 +38,22 @@ export const Quot = ({ text }) => {
   };
 
   return (
-    <Link className="quot" to={`MainPageWorkPreview/Гуманитарные/25/Гум/14`}>
-      {handleCutText(text)}
+    <Link className="quot" to={`MainPageWorkPreview/${link}`
+    }>
+      <div className="quot__container"
+           onClick={() => {
+             dispatch(setDisciplinTitle(title));
+           }}
+      >
+        <p className="quot__text">
+        <span className="quot__title">
+          {`${handleCutText(title, titleLength)} -`}
+        </span>
+          <br></br>
+          {handleCutText(text, textLength)}
+        </p>
+      </div>
+
     </Link>
   );
 };

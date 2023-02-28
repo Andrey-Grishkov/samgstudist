@@ -25,7 +25,6 @@ function Navigation({isOpen, onClick, inputRef, disciplins}) {
         <Search
           inputRef={inputRef}
         />
-        <p className="navigation__menu-text">Дисциплины:</p>
         <Menu disciplins={disciplins} onClick={onClick}/>
       </div>
     </div>
