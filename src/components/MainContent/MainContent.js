@@ -2,6 +2,8 @@ import "./MainContent.scss";
 import { useCallback, useEffect, useState } from "react";
 import { fetchWork } from "../../utils/MainApi";
 import { Quot } from "../Quot/Quot";
+import {mainQuotes} from '../../utils/constants'
+import logoGif from '../../images/nav__logo.svg'
 
 export const MainContent = ({ setTriangle }) => {
   const [workPreview, setWorkPreview] = useState();
@@ -30,22 +32,35 @@ export const MainContent = ({ setTriangle }) => {
           <ul className="main-content__quotes">
             {workPreview && (
               <>
-                {[...Array(3)].map((_, i) => (
-                  <Quot text={workPreview[i].paragraph_text} key={`link${i}`} />
+                {mainQuotes.map((quotes) => (
+                  <Quot
+                    title={quotes.title}
+                    text={quotes.work}
+                    key={quotes.id}
+                    link={quotes.link}
+                  />
 
-                  // <Link
-                  //   to={`MainPageWorkPreview/Гуманитарные/25/Гум/14`}
-                  //   className="main-content__quot"
-                  //   key={`link${i}`}
-                  // >
-                  //   {workPreview[i].paragraph_text}
-                  // </Link>
-                ))}
+                  ))
+
+
+                }
+                {/*{[...Array(3)].map((_, i) => (*/}
+                {/*  <Quot text={workPreview[i].paragraph_text} key={`link${i}`} />*/}
+
+                {/*  // <Link*/}
+                {/*  //   to={`MainPageWorkPreview/Гуманитарные/25/Гум/14`}*/}
+                {/*  //   className="main-content__quot"*/}
+                {/*  //   key={`link${i}`}*/}
+                {/*  // >*/}
+                {/*  //   {workPreview[i].paragraph_text}*/}
+                {/*  // </Link>*/}
+                {/*))}*/}
               </>
             )}
           </ul>
         </nav>
-        {/* <div className="main-content__commercial-container"></div> */}
+        <img className="main-content__gif" src={logoGif}/>
+         {/*<div className="main-content__commercial-container"></div>*/}
       </div>
     </div>
   );

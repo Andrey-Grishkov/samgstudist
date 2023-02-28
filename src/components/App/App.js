@@ -8,6 +8,7 @@ import AboutProject from "../AboutProject/AboutProject";
 import AboutTeam from "../AboutTeam/AboutTeam";
 import Footer from "../Footer/Footer";
 import { fetchDisciplins } from "../../utils/MainApi";
+import {menuImg} from '../../utils/constants'
 
 function App() {
   const location = useLocation();
@@ -23,15 +24,21 @@ function App() {
     fetchData();
   }, []);
 
+  const disciplinsImage = disciplins
+
+  for(let i =0; i <disciplinsImage.length; i++){
+    disciplinsImage[i].img=menuImg[i]
+  }
+
   return (
     <div className={`page ${fullScreen ? "page_fullScreened" : ""}`}>
       <Header
         setFullScreen={setFullScreen}
         inputRef={inputRef}
-        disciplins={disciplins}
+        disciplins={disciplinsImage}
       />
       <Routes>
-        <Route path="/*" element={<Main disciplins={disciplins} />}></Route>
+        <Route path="/*" element={<Main disciplins={disciplinsImage} />}></Route>
         <Route
           path="/about-project"
           element={<AboutProject inputFocus={inputFocus} />}
