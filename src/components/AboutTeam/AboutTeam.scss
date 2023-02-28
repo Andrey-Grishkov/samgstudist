@@ -2,31 +2,112 @@
 
 .about-team {
   width: 100%;
-  // min-height: 100vh;
   height: 100%;
-  background-image: url("../../images/matrix_1.png");
+  background-image: url('../../images/matrix_desc.svg');
+  background-size: 100%;
   background-color: black;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
 
+  @media screen and (max-width: $base-width768) {
+    background-image: url('../../images/about-team__matrix-small.svg');
+    background-size: 100%;
+    background-color: black;
+    background-repeat: no-repeat;
+  }
+
+  &__logo {
+    display: none;
+
+    @media screen and (max-width: $base-width768) {
+      width: 100%;
+      @include flex(row, center, center);
+      position: absolute;
+      top: 7px;
+      left: 0;
+    }
+  }
+
   &__button {
     box-sizing: border-box;
-    position: absolute;
-    top: 1.53vw;
-    left: 1.25vw;
+    margin: 1.53vw 0 0 1.25vw;
     border-radius: 0.69vw;
     color: white;
     border: 3px solid #8f01ff;
     background-color: #580bff;
-    padding:  0.43% 0 0.43% 0.90%;
-    width: 12.15%;
+    padding: 0.1% 0 0 0.5%;
+    width: 11%;
     height: 39px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .9;
+    }
+
+    @media screen and (max-width: $base-width1280) {
+      width: 12%;
+      height: 34px;
+    }
+
+    @media screen and (max-width: $base-width960) {
+      width: 15%;
+      margin: 2.53vw 0 0 4.25vw;
+    }
+
+    @media screen and (max-width: $base-width768) {
+      height: 28px;
+      margin: 12.53vw 7.25vw 0;
+    }
+
+    @media screen and (max-width: $base-width620) {
+      height: 26px;
+      width: 18%;
+      margin-top: 16vw;
+      padding-top: 0.4%;
+    }
+
+    @media screen and (max-width: $base-width540) {
+      height: 23px;
+      width: 20%;
+      padding-top: 0.4%;
+      margin-top: 20vw;
+    }
+
+    @media screen and (max-width: $base-width384) {
+      width: 24%;
+      margin-top: 25vw;
+      margin-left: 10vw;
+    }
   }
 
   &__subtitle {
-    @include font("Proza_Libre", 21px, 26px);
-    width: 120px;
+    @include font("Proza_Libre", 21px, 1.31);
+    width: 110px;
+
+    @media screen and (max-width: $base-width1280) {
+      @include font("Proza_Libre", 18px, 1.21);
+      width: 90px;
+    }
+
+    @media screen and (max-width: $base-width1024) {
+      @include font("Proza_Libre", 16px, 1.21);
+      width: 80px;
+    }
+
+    @media screen and (max-width: $base-width960) {
+      @include font("Proza_Libre", 14px, 1.21);
+      width: 70px;
+    }
+
+    @media screen and (max-width: $base-width768) {
+      @include font("Proza_Libre", 12px, 1.07);
+    }
+
+    @media screen and (max-width: $base-width540) {
+      @include font("Proza_Libre", 10px, 1.07);
+      margin-bottom: 0.1%;
+    }
   }
 
   &__link {
@@ -35,39 +116,79 @@
     gap: 10px;
     color: white;
     text-decoration: none;
-    margin: 0 auto;
     z-index: 2;
+
+    @media screen and (max-width: $base-width768) {
+      gap: 5px;
+    }
   }
 
   &__arrow {
     align-self: center;
     padding-bottom: 4px;
+
+    @media screen and (max-width: $base-width1280) {
+      width: 23px;
+    }
+
+    @media screen and (max-width: $base-width1024) {
+      width: 20px;
+    }
+
+    @media screen and (max-width: $base-width960) {
+      width: 18px;
+    }
   }
+
   &__container {
     @include flex(column, flex-start, flex-start);
-    position: absolute;
-    top: 47px;
-    right: 41px;
+    position: relative;
+    margin: 3vh auto;
     box-sizing: border-box;
-    width: 39%;
-    height: 86%;
+    width: 49%;
+    height: 71%;
     padding: 3px;
     border-radius: 10px;
     z-index: 1;
     mask-composite: exclude;
     overflow: scroll;
-    background-image: linear-gradient(
-      rgba(0, 255, 133, 1),
-      rgba(0, 102, 255, 1),
-      rgba(173, 0, 255, 0.97)
-    );
+    background-image: linear-gradient(rgba(0, 255, 133, 1),
+        rgba(0, 102, 255, 1),
+        rgba(173, 0, 255, 0.97));
+
+    @media screen and (max-width: $base-width1280) {
+      width: 60%;
+    }
+
+    @media screen and (max-width: $base-width768) {
+      width: 70%;
+      height: 60%;
+    }
+
+    @media screen and (max-width: $base-width486) {
+      width: 80%;
+      height: 65%;
+    }
   }
 
   &__title {
-    margin: 10px auto;
+    margin: 20px auto 10px;
     text-align: center;
     color: white;
+    z-index: 5;
     @include font("Proza_Libre", 32px, 1.33);
+
+    @media screen and (max-width: $base-width1024) {
+      @include font("Proza_Libre", 26px, 1.33);
+    }
+
+    @media screen and (max-width: $base-width768) {
+      @include font("Proza_Libre", 22px, 1.33);
+    }
+
+    @media screen and (max-width: $base-width486) {
+      @include font("Proza_Libre", 18px, 1.33);
+    }
   }
 
   &__list {
@@ -78,28 +199,48 @@
     overflow: scroll;
     background-color: black;
     border-radius: 10px;
-    z-index: 2;
     box-sizing: border-box;
     margin: 0;
+    padding-left: 0;
 
     &_title {
       @include font("Proza_Libre", 24px, 1.33);
-      margin: 0 0 5px;
+      margin: 0 0 8px;
       color: white;
+      padding-left: 80px;
+
+      @media screen and (max-width: $base-width1024) {
+        @include font("Proza_Libre", 21px, 1.33);
+        padding-left: 50px;
+      }
+
+      @media screen and (max-width: $base-width768) {
+        @include font("Proza_Libre", 16px, 1.21);
+        padding-left: 20px;
+      }
+
+      @media screen and (max-width: $base-width486) {
+        @include font("Proza_Libre", 12px, 1.1);
+        padding-left: 20px;
+      }
     }
   }
 
   &__img {
-    &_cart {
-      position: absolute;
-      bottom: 0;
-      left: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @media screen and (max-width: $base-width486) {
+      width: 160%;
     }
 
-    &_peoples {
-      position: absolute;
-      bottom: 0;
-      left: 5px;
+    &_logo {
+      width: 80px;
+    }
+
+    &_title {
+      width: 150px;
     }
   }
 }

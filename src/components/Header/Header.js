@@ -26,8 +26,6 @@ const Header = ({ inputRef, setFullScreen, disciplins }) => {
   return (
     <header className={`header ${about_team ? "header__team" : ""}`}>
       <Logo flag={true} />
-      {/*<div className="header__line"></div>*/}
-
       {about_team ? (
         <h1 className="header__title">О команде</h1>
       ) : (

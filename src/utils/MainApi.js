@@ -20,3 +20,9 @@ export const fetchWork = async (listId, materialId, page = 0, limit) =>
   getRequest(`${listId}/material/${materialId}/`, {
     params: { limit, offset: limit * page },
   });
+//запрос работы по слову
+export const getWorksOfSearch = async (words) =>
+  getRequest("search/", {
+    params: {HTTP_SEARCH: words},
+  });
+  

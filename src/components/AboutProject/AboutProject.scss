@@ -32,6 +32,30 @@
     position: relative;
     margin: 15px 0 0 80px;
     @include font('Pacifico', 35px, 1);
+
+    @media screen and (max-width: $base-width1024) {
+      @include flex(row, center, center);
+      margin: 15px 0 0;
+      @include font('Pacifico', 32px, 1);
+    }
+
+    @media screen and (max-width: $base-width860) {
+      @include font('Pacifico', 28px, 1);
+      margin-top: 30px;
+    }
+
+    @media screen and (max-width: $base-width768) {
+      @include font('Pacifico', 24px, 1);
+    }
+
+    @media screen and (max-width: $base-width620) {
+      @include font('Pacifico', 16px, 1.1);
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: $base-width486) {
+      margin-top: 23px;
+    }
   }
 
   &__list {
@@ -41,13 +65,24 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    // width: 840px;
     position: relative;
     z-index: 2;
+
+    @media screen and (max-width: $base-width768) {
+      gap: 32px
+    }
+
+    @media screen and (max-width: $base-width620) {
+      margin-top: 15px;
+    }
+
+    @media screen and (max-width: $base-width486) {
+      margin-top: 26px;
+    }
   }
 
   &__el {
-    height: 150px;
+    height: 16vh;
     @include flex(row, space-between, center);
     border: 1px solid #2E49D9;
     background-color: #2E49D9;
@@ -56,24 +91,65 @@
     padding: 40px 30px 40px 20px;
     gap: 30px;
     width: 59%;
-    // width: 840px;
     z-index: 2;
     box-sizing: border-box;
+
+    @media screen and (max-width: $base-width860) {
+      height: 14vh;
+    }
+
+    @media screen and (max-width: $base-width768) {
+      height: 12vh;
+    }
+
+    @media screen and (max-width: $base-width620) {
+      height: 14vh;
+      width: 70vw;
+      padding: 15px 30px 15px 40px;
+    }
+
+    @media screen and (max-width: $base-width486) {
+      width: 90vw;
+    }
   }
 
   &__text {
-
     text-align: start;
     width: 69%;
     @include font('Poppins', 21px, 1.52);
     color: white;
     margin: 0 auto 0 108px;
     box-sizing: border-box;
+
+    @media screen and (max-width: $base-width1024) {
+      @include font('Poppins', 18px, 1.41);
+      margin-left: 65px;
+    }
+
+    @media screen and (max-width: $base-width860) {
+      @include font('Poppins', 16px, 1.41);
+      margin-left: 45px;
+    }
+
+    @media screen and (max-width: $base-width768) {
+      @include font('Poppins', 12px, 1.51);
+      margin: 5px 5px 0 15px;
+    }
+
+    @media screen and (max-width: $base-width620) {
+      @include font('Poppins', 12px, 1.51);
+      margin: 0;
+    }
+
+    @media screen and (max-width: $base-width486) {
+      width: 100%;
+    }
   }
 
   &__link {
     position: relative;
     cursor: pointer;
+    margin-left: 1px;
 
     &:hover {
       opacity: .5;
@@ -82,11 +158,72 @@
     &_vector {
       margin-right: 20px;
     }
+
   }
 
   &__img {
     position: relative;
     z-index: 22;
+
+    @media screen and (max-width: $base-width860) {
+      display: none;
+    }
+
+    &_mini {
+      display: none;
+
+      @media screen and (max-width: $base-width860) {
+        display: block;
+      }
+
+      &-vector {
+        background-image: url('../../images/about-project__arrow-small.svg');
+        width: 65px;
+        height: 65px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -30px;
+        top: -30px;
+
+        @media screen and (max-width: $base-width768) {
+          width: 37px;
+          top: -20px;
+        }
+      }
+
+      &-glass {
+        background-image: url('../../images/about-project__glass.svg');
+        width: 65px;
+        height: 65px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -10px;
+        top: -30px;
+
+        @media screen and (max-width: $base-width768) {
+          width: 37px;
+          top: -20px;
+        }
+      }
+
+      &-group {
+        background-image: url('../../images/about-project__group.svg');
+        width: 65px;
+        height: 65px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -10px;
+        top: -30px;
+
+        @media screen and (max-width: $base-width768) {
+          width: 37px;
+          top: -20px;
+        }
+      }
+    }
   }
 
   &__circle {
@@ -97,11 +234,16 @@
     background-repeat: no-repeat;
     bottom: -18px;
     left: -10px;
+
+    @media screen and (max-width: $base-width860) {
+      display: none;
+    }
   }
 }
 
 .glass {
   bottom: -2px;
+  left: -5px;
 }
 
 .vector {

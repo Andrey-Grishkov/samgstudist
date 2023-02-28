@@ -5,12 +5,10 @@
   width: 100%;
   height: 13.87%;
   @include flex(row, flex-start, center);
-  background: linear-gradient(
-                  270deg,
-                  rgba(0, 255, 148, 0.42) 0%,
-                  rgba(0, 102, 255, 0.42) 48.66%,
-                  rgba(219, 0, 255, 0.2436) 100%
-  );
+  background: linear-gradient(270deg,
+      rgba(0, 255, 148, 0.42) 0%,
+      rgba(0, 102, 255, 0.42) 48.66%,
+      rgba(219, 0, 255, 0.2436) 100%);
 
   @media screen and (max-width: $base-width620) {
     height: 10%;
@@ -45,17 +43,23 @@
     @media screen and (max-width: $base-width1280) {
       @include font("Poppins", 22px, 19px);
     }
+
+    @media screen and (max-width: $base-width768) {
+      display: none;
+    }
   }
 
   &__team {
-    background-image: linear-gradient(
-      90deg,
-      #8f00ff 49.06%,
-      rgba(66, 0, 255, 0.95) 100%,
-      rgba(255, 0, 0, 0) 100%
-    );
+    background-image: linear-gradient(90deg,
+        #8f00ff 49.06%,
+        rgba(66, 0, 255, 0.95) 100%,
+        rgba(255, 0, 0, 0) 100%);
 
     color: white;
     @include font("Poppins", 24px, 19px);
+
+    @media screen and (max-width: $base-width768) {
+      display: none;
+    }
   }
 }

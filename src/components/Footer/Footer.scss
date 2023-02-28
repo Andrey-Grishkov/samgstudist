@@ -19,13 +19,21 @@
   }
 
   @media screen and (max-width: $base-width320) {
-    width: 90%;
-    height: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
     top: 85%;
+    width: 15%;
+  }
+
+  &__about-team {
+    left: 17%;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $base-width620) {
+      width: 80%;
+      left: 0%;
+    }
+    @media screen and (max-width: $base-width320) {
+      width: 90%;
+    }
   }
 }
 
