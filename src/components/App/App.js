@@ -46,11 +46,6 @@ function App() {
         <Route path="/about-team" element={<AboutTeam />}></Route>
       </Routes>
       {location.pathname !== "/about-team" && <Footer />}
-      {/* <script ЭТО ЧТО ЗА ЧУДО?
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3213639437561510"
-        crossOrigin="anonymous"
-      ></script>  */}
     </div>
   );
 }

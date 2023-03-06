@@ -5,24 +5,24 @@
 }
 
 .main-content {
-  background: url("../../images/main__image-women.svg") 2% 37vh/550px no-repeat;
+  //background: url("../../images/main__image-women.svg") 2% 37vh/550px no-repeat;
   margin-left: 5%;
   width: 65%;
   height: 100%;
   font-family: Proza_Libre;
 
   @media screen and (max-width: $base-width1350) {
-    background: url("../../images/main__image-women.svg") 2% 45vh/450px no-repeat;
+    //background: url("../../images/main__image-women.svg") 2% 45vh/450px no-repeat;
   }
 
   @media screen and (max-width: $base-width1152) {
-    background: url("../../images/main__image-women.svg") 0 49vh/400px no-repeat;
+    //background: url("../../images/main__image-women.svg") 0 49vh/400px no-repeat;
   }
 
   @media screen and (max-width: $base-width860) {
     margin-left: 3%;
     min-width: 65%;
-    background: url("../../images/main__image-women.svg") 30% 49vh/400px no-repeat;
+    //background: url("../../images/main__image-women.svg") 30% 49vh/400px no-repeat;
   }
 
   @media screen and (max-width: $base-width768) {
@@ -33,22 +33,22 @@
     min-width: 100%;
     min-height: 100%;
     margin: 0;
-    background: url("../../images/main__image-women.svg") 50% 98%/445px
-      no-repeat;
+    //background: url("../../images/main__image-women.svg") 50% 98%/445px
+    //  no-repeat;
   }
 
   @media screen and (max-width: $base-width486) {
-    background: url("../../images/main__image-women.svg") 50% 97%/390px
-      no-repeat;
+    //background: url("../../images/main__image-women.svg") 50% 97%/390px
+    //  no-repeat;
   }
 
   @media screen and (max-width: $base-width384) {
-    background: url("../../images/main__image-women.svg") 50% 96%/330px
-      no-repeat;
+    //background: url("../../images/main__image-women.svg") 50% 96%/330px
+    //  no-repeat;
   }
 
   @media screen and (max-width: $base-width320) {
-    background: url("../../images/main__image-women.svg") 50% 84%/70% no-repeat;
+    //background: url("../../images/main__image-women.svg") 50% 84%/70% no-repeat;
   }
 
   &__container {
@@ -63,7 +63,11 @@
   &__title {
     margin: 3% 0 0 0;
     padding: 0;
-    @include font("Popins", 220%, 80.52%);
+    @include font("Popins", 320%, 80.52%);
+
+    @media screen and (max-width: $base-width2020) {
+      @include font("Popins", 220%, 80.52%);
+    }
 
     @media screen and (max-width: $base-width1080) {
       @include font("Popins", 180%, 80.52%);
@@ -99,7 +103,11 @@
     @extend %margin-padding;
     color: #4d4848;
     width: 100%;
-    @include font("Proza_Libre", 163%, 115.52%);
+    @include font("Proza_Libre", 263%, 115.52%);
+
+    @media screen and (max-width: $base-width2020) {
+      @include font("Proza_Libre", 163%, 115.52%);
+    }
 
     @media screen and (max-width: $base-width860) {
       @include font("Proza_Libre", 125%, 115.52%);
@@ -130,7 +138,11 @@
 
   &__quotes-title {
     @extend %margin-padding;
-    @include font("Proza_Libre", 150%, 137.5%);
+    @include font("Proza_Libre", 250%, 137.5%);
+
+    @media screen and (max-width: $base-width2020) {
+      @include font("Proza_Libre", 150%, 137.5%);
+    }
 
     @media screen and (max-width: $base-width860) {
       margin-top: 1.5%;
@@ -173,6 +185,7 @@
     padding: 0;
     height: 100%;
     min-width: 100%;
+    z-index: 2;
     @include flex(row, space-between, flex-start);
 
     @media screen and (max-width: $base-width860) {
@@ -194,23 +207,23 @@
     }
   }
 
-  &__gif {
-    position: absolute;
-    width: 15vw;
-    height: 15vw;
-    object-fit: contain;
-    top: 65vh;
-    left: 80vw;
-    background: none;
-
-    @media screen and (max-width: $base-width1350) {
-      top: 70vh;
-    }
-
-    @media screen and (max-width: $base-width860) {
-      display: none;
-    }
-  }
+  //&__gif {
+  //  position: absolute;
+  //  width: 15vw;
+  //  height: 15vw;
+  //  object-fit: contain;
+  //  top: 65vh;
+  //  left: 80vw;
+  //  background: none;
+  //
+  //  @media screen and (max-width: $base-width1350) {
+  //    top: 70vh;
+  //  }
+  //
+  //  @media screen and (max-width: $base-width860) {
+  //    display: none;
+  //  }
+  //}
 
   &__commercial-container {
     background-color: #fff;

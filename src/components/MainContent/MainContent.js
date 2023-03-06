@@ -59,7 +59,7 @@ export const MainContent = ({ setTriangle }) => {
             )}
           </ul>
         </nav>
-        <img className="main-content__gif" src={logoGif}/>
+        {/*<img className="main-content__gif" src={logoGif}/>*/}
          {/*<div className="main-content__commercial-container"></div>*/}
       </div>
     </div>

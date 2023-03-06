@@ -52,11 +52,19 @@
   &__link {
     margin-left: 0;
     text-decoration: none;
-    @include font('Poppins', 21px, 32px);
+    @include font('Poppins', 35px, 32px);
     color: black;
     &:hover {
       padding-bottom: 10px;
       border-bottom: black 1px solid;
+    }
+
+    @media screen and (max-width: $base-width2020) {
+      @include font('Poppins', 25px, 32px);
+    }
+
+    @media screen and (max-width: $base-width1440) {
+      @include font('Poppins', 21px, 32px);
     }
 
     @media screen and (max-width: $base-width1024) {

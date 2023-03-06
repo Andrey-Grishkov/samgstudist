@@ -9,11 +9,15 @@
   min-height: 250px;
   border: 1px solid black;
   border-radius: 10px;
-  @include font("Poppins", 18px, 124.02%);
+  @include font("Poppins", 25px, 164.02%);
   font-weight: 500;
   text-decoration: none;
   color: black;
   position: relative;
+
+  @media screen and (max-width: $base-width2020) {
+    @include font("Poppins", 18px, 124.02%);
+  }
 
   @media screen and (max-width: $base-width1152) {
     width: 30%;
@@ -35,6 +39,7 @@
 
   @media screen and (max-width: $base-width320) {
     width: 85%;
+    min-height: 13vh;
     @include font("Proza_Libre", 12px, 124.02%);
   }
 
@@ -56,6 +61,7 @@
 
     @media screen and (max-width: $base-width320) {
       min-height: 9vh;
+      max-height: 13vh;
     }
 
   }

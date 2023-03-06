@@ -4,8 +4,12 @@ $base-height: 40%;
 
 .menu {
   width: 25%;
-  margin: 3% 0 0 1.5%;
+  margin: 3% 0 0 3%;
   height: 85%;
+
+  @media screen and (max-width: $base-width2020) {
+    margin: 3% 0 0 1.5%;
+  }
 
   @media screen and (max-width: $base-width860) {
     width: 75%;
@@ -67,6 +71,26 @@ $base-height: 40%;
     overflow: hidden;
     @include flex(column, flex-start, flex-start);
     gap: 20px;
+
+    @media screen and (max-width: $base-width2020) {
+      height: 80%;
+    }
+
+    @media screen and (max-width: $base-width1920) {
+      height: 80%;
+    }
+
+    @media screen and (max-width: $base-width1560) {
+      height: 90%;
+    }
+
+    @media screen and (max-width: $base-width1440) {
+      height: 100%;
+    }
+
+    @media screen and (max-width: $base-width1334) {
+      height: 90%;
+    }
 
     @media screen and (max-width: $base-width620) {
       height: 60%;

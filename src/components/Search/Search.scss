@@ -72,7 +72,7 @@
     border: none;
     //color: black;
     border: black 1px solid;
-    @include font('Poppins', 21px, 32px);
+    @include font('Poppins', 30px, 32px);
     width: 100%;
     height: 4.7vh;
     //margin-top: 17px;
@@ -80,6 +80,9 @@
     //border-left: none;
     padding: 0 0 0 20%;
 
+    @media screen and (max-width: $base-width2020) {
+      @include font('Poppins', 21px, 32px);
+    }
 
     &__name:focus {
       border: none;
