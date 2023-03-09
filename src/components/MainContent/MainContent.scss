@@ -65,7 +65,7 @@
     padding: 0;
     @include font("Popins", 320%, 80.52%);
 
-    @media screen and (max-width: $base-width2020) {
+    @media screen and (max-width: $base-width2400) {
       @include font("Popins", 220%, 80.52%);
     }
 
@@ -105,7 +105,7 @@
     width: 100%;
     @include font("Proza_Libre", 263%, 115.52%);
 
-    @media screen and (max-width: $base-width2020) {
+    @media screen and (max-width: $base-width2400) {
       @include font("Proza_Libre", 163%, 115.52%);
     }
 
@@ -140,7 +140,7 @@
     @extend %margin-padding;
     @include font("Proza_Libre", 250%, 137.5%);
 
-    @media screen and (max-width: $base-width2020) {
+    @media screen and (max-width: $base-width2400) {
       @include font("Proza_Libre", 150%, 137.5%);
     }
 

@@ -30,6 +30,10 @@
     height: 100%;
     fill: black;
 
+    @media screen and (max-width: $base-width1560) {
+      margin-top: -5px;
+    }
+
     &:hover {
       fill: blueviolet;
       transform: scale(1.05);

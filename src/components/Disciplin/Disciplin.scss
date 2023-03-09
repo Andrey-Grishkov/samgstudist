@@ -18,7 +18,7 @@
     height: 2*42px;
   }
 
-  @media screen and (max-width: $base-width2020) {
+  @media screen and (max-width: $base-width2400) {
     height: 42px;
   }
 
@@ -39,7 +39,7 @@
   }
 
   @media screen and (max-width: $base-width320) {
-    width: 80%;
+    width: 100%;
   }
 
   &__img {
@@ -51,7 +51,7 @@
       height: 3*25px;
     }
 
-    @media screen and (max-width: $base-width2020) {
+    @media screen and (max-width: $base-width2400) {
       width: 1.5*36px;
       height: 1.5*25px;
     }
@@ -76,6 +76,12 @@
       height: 25px;
     }
 
+    @media screen and (max-width: $base-width320) {
+      padding-left: 7px;
+      width: 0.8*36px;
+      height: 0.8*25px;
+    }
+
   }
 
   &__text {
@@ -88,7 +94,7 @@
     font-weight: 600;
     cursor: pointer;
 
-    @media screen and (max-width: $base-width2020) {
+    @media screen and (max-width: $base-width2400) {
       @include font('Proza Libre', 21px, 109.31%);
     }
 
@@ -124,6 +130,11 @@
 
     @media screen and (max-width: $base-width384) {
       @include font("Proza_Libre", 15px, 19px);
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: $base-width320) {
+      @include font("Proza_Libre", 10px, 19px);
       font-weight: 600;
     }
   }

@@ -15,12 +15,12 @@
 }
 
 $base-width3088: 3088px;
-$base-width2020: 2020px;
+$base-width2400: 2400px;
 $base-width1920: 1920px;
 $base-width1560: 1560px;
 $base-width1440: 1440px;
 $base-width1350: 1350px;
-$base-width1334: 1334px;
+$base-width1334: 1335px;
 $base-width1280: 1280px;
 $base-width1152: 1152px;
 $base-width1080: 1080px;
@@ -37,7 +37,29 @@ $base-width320: 320px;
 :root {
     --quantityQuotText: 120;
     --quantityQuotTitle: 50;
-    --quantityWorkPreviewText: 2000;
+    --quantityWorkPreviewText: 2300;
+
+    @media screen and (max-width: $base-width1920) {
+        --quantityQuotText: 200;
+        --quantityQuotTitle: 45;
+        --quantityWorkPreviewText: 1800;
+    }
+
+    @media screen and (max-width: $base-width1560) {
+        --quantityQuotText: 120;
+        --quantityQuotTitle: 50;
+        --quantityWorkPreviewText: 800;
+    }
+
+    @media screen and (max-width: $base-width1440) {
+        --quantityQuotText: 120;
+        --quantityQuotTitle: 50;
+        --quantityWorkPreviewText: 1300;
+    }
+
+    @media screen and (max-width: $base-width1334) {
+        --quantityWorkPreviewText: 700;
+    }
 
     @media screen and (max-width: $base-width1280) {
         --quantityQuotText: 90;

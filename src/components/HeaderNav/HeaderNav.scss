@@ -59,7 +59,7 @@
       border-bottom: black 1px solid;
     }
 
-    @media screen and (max-width: $base-width2020) {
+    @media screen and (max-width: $base-width2400) {
       @include font('Poppins', 25px, 32px);
     }
 

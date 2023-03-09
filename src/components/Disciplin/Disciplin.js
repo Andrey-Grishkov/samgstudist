@@ -6,7 +6,7 @@ import {setDisciplinTitle} from "../../store/actions";
 import {Link} from "react-router-dom";
 import {replaceSpace} from "../../utils/functions";
 
-export const Disciplin = ({ disciplin }) => {
+export const Disciplin = ({ disciplin, onClick }) => {
   const dispatch = useDispatch();
 
   return (
@@ -17,6 +17,7 @@ export const Disciplin = ({ disciplin }) => {
       }`}
       className="disciplin"
       key={`Link-${disciplin.id}`}
+      onClick={onClick}
     >
       <img className='disciplin__img' src={disciplin.img} alt='disciplin image'/>
     <p
